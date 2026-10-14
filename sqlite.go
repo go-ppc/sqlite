@@ -89,6 +89,11 @@ func interruptOnDone(
 
 	donech := make(chan struct{})
 
+	// Calls on a connection do not overlap, but they nest, e.g. preparing
+	// inside an exec, so the outer call's channel is restored afterwards
+	prevCallDone := c.callDone
+	c.callDone = ctx.Done()
+
 	go func() {
 		select {
 		case <-ctx.Done():
@@ -112,6 +117,7 @@ func interruptOnDone(
 		atomic.StoreInt32(done, 1)
 		donemu.Unlock()
 		close(donech)
+		c.callDone = prevCallDone
 	}
 }
 
@@ -497,7 +503,7 @@ func applyQueryParams(c *conn, query string, defensive bool) error {
 func unlockNotify(t *libc.TLS, ppArg uintptr, nArg int32) {
 	for i := int32(0); i < nArg; i++ {
 		mu := *(*uintptr)(unsafe.Pointer(ppArg))
-		(*mutex)(unsafe.Pointer(mu)).Unlock()
+		(*mutex)(unsafe.Pointer(mu)).wake()
 		ppArg += ptrSize
 	}
 }

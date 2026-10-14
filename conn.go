@@ -11,6 +11,7 @@ import (
 	"strconv"
 	"strings"
 	"sync"
+	"sync/atomic"
 	"time"
 	"unsafe"
 
@@ -26,6 +27,20 @@ type conn struct {
 	// Context handling can cause conn.Close and conn.interrupt to be invoked
 	// concurrently.
 	sync.Mutex
+
+	// unlockWaitMu guards unlockWait, the mutex a call on this connection
+	// is blocked on while it waits for a shared-cache lock (see retry), and
+	// unlockInterrupted, set when interrupt woke that call rather than the
+	// connection holding the lock.
+	unlockWaitMu      sync.Mutex
+	unlockWait        uintptr
+	unlockInterrupted bool
+
+	// callDone is the Done channel of the context of the call in progress
+	// on this connection, if it has one, set by interruptOnDone, so that a
+	// wait for a shared-cache lock that begins after the context is done,
+	// when interrupt has already run, ends at once.
+	callDone <-chan struct{}
 
 	writeTimeFormat   string
 	beginMode         string
@@ -449,9 +464,22 @@ func (c *conn) step(pstmt uintptr) (int, error) {
 	}
 }
 
+// retry waits until the connection holding the shared-cache lock that made
+// pstmt, or the statement being prepared when pstmt is 0, return
+// SQLITE_LOCKED_SHAREDCACHE releases it. busy_timeout does not apply to that
+// code, so the wait is not bounded by it; it ends early, with an error, when
+// the context of the call is done and interrupt wakes it.
 func (c *conn) retry(pstmt uintptr) error {
 	mu := mutexAlloc(c.tls)
-	(*mutex)(unsafe.Pointer(mu)).Lock()
+	m := (*mutex)(unsafe.Pointer(mu))
+	m.Lock()
+
+	// Published before the callback is registered, so that an interrupt
+	// arriving at any point from now on wakes the wait below
+	c.unlockWaitMu.Lock()
+	c.unlockWait = mu
+	c.unlockWaitMu.Unlock()
+
 	rc := sqlite3.Xsqlite3_unlock_notify(
 		c.tls,
 		c.db,
@@ -460,15 +488,42 @@ func (c *conn) retry(pstmt uintptr) error {
 		}{unlockNotify})),
 		mu,
 	)
-	if rc == sqlite3.SQLITE_LOCKED { // Deadlock, see https://www.sqlite.org/c3ref/unlock_notify.html
-		(*mutex)(unsafe.Pointer(mu)).Unlock()
-		mutexFree(c.tls, mu)
-		return c.errstr(rc)
+	// A context done before the mutex was published was missed by
+	// interrupt, so it is checked here; one done from now on wakes the wait
+	callDoneEarly := false
+	if c.callDone != nil {
+		select {
+		case <-c.callDone:
+			callDoneEarly = true
+		default:
+		}
 	}
 
-	(*mutex)(unsafe.Pointer(mu)).Lock()
-	(*mutex)(unsafe.Pointer(mu)).Unlock()
+	if rc != sqlite3.SQLITE_LOCKED && !callDoneEarly { // SQLITE_LOCKED is a deadlock, see https://www.sqlite.org/c3ref/unlock_notify.html
+		m.Lock()
+	}
+
+	c.unlockWaitMu.Lock()
+	c.unlockWait = 0
+	interrupted := c.unlockInterrupted || callDoneEarly
+	c.unlockInterrupted = false
+	c.unlockWaitMu.Unlock()
+
+	if rc != sqlite3.SQLITE_LOCKED {
+		// Cancels the callback if interrupt woke the wait, and in any case
+		// returns only once no callback is running: SQLite invokes it, and
+		// handles this call, under the same mutex, so mu can be freed
+		sqlite3.Xsqlite3_unlock_notify(c.tls, c.db, 0, 0)
+	}
 	mutexFree(c.tls, mu)
+
+	switch {
+	case rc == sqlite3.SQLITE_LOCKED:
+		return c.errstr(rc)
+	case interrupted:
+		return c.errstr(sqlite3.SQLITE_INTERRUPT)
+	}
+
 	if pstmt != 0 {
 		sqlite3.Xsqlite3_reset(c.tls, pstmt)
 	}
@@ -825,6 +880,14 @@ func (c *conn) interrupt(pdb uintptr) (err error) {
 		sqlite3.Xsqlite3_interrupt(tls, pdb)
 		tls.Close()
 	}
+
+	// A call waiting for a shared-cache lock is not running inside SQLite,
+	// so sqlite3_interrupt does not reach it; it is woken here instead
+	c.unlockWaitMu.Lock()
+	if mu := c.unlockWait; mu != 0 && (*mutex)(unsafe.Pointer(mu)).wake() {
+		c.unlockInterrupted = true
+	}
+	c.unlockWaitMu.Unlock()
 	return nil
 }
 
@@ -1181,7 +1244,31 @@ func (c *conn) Prepare(query string) (ds driver.Stmt, err error) {
 }
 
 func (c *conn) prepare(ctx context.Context, query string) (s driver.Stmt, err error) {
-	//TODO use ctx
+	return c.newStmtContext(ctx, query)
+}
+
+// newStmtContext is newStmt for a call with a context: preparing a statement
+// can wait for a shared-cache lock, and the wait ends early, with ctx.Err(),
+// once ctx is done.
+func (c *conn) newStmtContext(ctx context.Context, query string) (s *stmt, err error) {
+	if ctx == nil || ctx.Done() == nil {
+		return newStmt(c, query)
+	}
+
+	select {
+	case <-ctx.Done():
+		return nil, ctx.Err()
+	default:
+	}
+
+	var done int32
+	defer interruptOnDone(ctx, c, &done)()
+	defer func() {
+		if err != nil && atomic.LoadInt32(&done) != 0 {
+			s, err = nil, ctx.Err()
+		}
+	}()
+
 	return newStmt(c, query)
 }
 
@@ -1203,9 +1290,9 @@ func (c *conn) Query(query string, args []driver.Value) (dr driver.Rows, err err
 }
 
 func (c *conn) query(ctx context.Context, query string, args []driver.NamedValue) (r driver.Rows, err error) {
-	// Use newStmt directly. c.prepare wraps this, but we need the concrete *stmt type
+	// Use newStmtContext directly. c.prepare wraps this, but we need the concrete *stmt type
 	// to manipulate the handle ownership below.
-	s, err := newStmt(c, query)
+	s, err := c.newStmtContext(ctx, query)
 	if err != nil {
 		return nil, err
 	}
