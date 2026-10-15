@@ -89,10 +89,10 @@ func interruptOnDone(
 
 	donech := make(chan struct{})
 
-	// Calls on a connection do not overlap, but they nest, e.g. preparing
-	// inside an exec, so the outer call's channel is restored afterwards
-	prevCallDone := c.callDone
-	c.callDone = ctx.Done()
+	// A wait for a shared-cache lock during the call ends once ctx is done,
+	// see retry; the outer call's context is restored afterwards
+	prevWaitCtx := c.waitCtx
+	c.waitCtx = ctx
 
 	go func() {
 		select {
@@ -117,7 +117,7 @@ func interruptOnDone(
 		atomic.StoreInt32(done, 1)
 		donemu.Unlock()
 		close(donech)
-		c.callDone = prevCallDone
+		c.waitCtx = prevWaitCtx
 	}
 }
 

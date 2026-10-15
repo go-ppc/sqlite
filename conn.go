@@ -28,19 +28,15 @@ type conn struct {
 	// concurrently.
 	sync.Mutex
 
-	// unlockWaitMu guards unlockWait, the mutex a call on this connection
-	// is blocked on while it waits for a shared-cache lock (see retry), and
-	// unlockInterrupted, set when interrupt woke that call rather than the
-	// connection holding the lock.
-	unlockWaitMu      sync.Mutex
-	unlockWait        uintptr
-	unlockInterrupted bool
+	// waitCtx is the context of the call in progress on this connection, if
+	// it has one, so that a wait for a shared-cache lock in retry ends once
+	// it is done. Calls on a connection do not overlap, but they nest, e.g.
+	// preparing inside an exec, so each restores the outer call's.
+	waitCtx context.Context
 
-	// callDone is the Done channel of the context of the call in progress
-	// on this connection, if it has one, set by interruptOnDone, so that a
-	// wait for a shared-cache lock that begins after the context is done,
-	// when interrupt has already run, ends at once.
-	callDone <-chan struct{}
+	// waitingForLock is set while retry waits for a shared-cache lock, so
+	// that tests can see the wait.
+	waitingForLock atomic.Bool
 
 	writeTimeFormat   string
 	beginMode         string
@@ -467,19 +463,13 @@ func (c *conn) step(pstmt uintptr) (int, error) {
 // retry waits until the connection holding the shared-cache lock that made
 // pstmt, or the statement being prepared when pstmt is 0, return
 // SQLITE_LOCKED_SHAREDCACHE releases it. busy_timeout does not apply to that
-// code, so the wait is not bounded by it; it ends early, with an error, when
-// the context of the call is done and interrupt wakes it.
+// code, so the wait is not bounded by it; it ends early, with the context's
+// error, once the context of the call (waitCtx) is done, also if it is done
+// before the wait begins.
 func (c *conn) retry(pstmt uintptr) error {
 	mu := mutexAlloc(c.tls)
 	m := (*mutex)(unsafe.Pointer(mu))
 	m.Lock()
-
-	// Published before the callback is registered, so that an interrupt
-	// arriving at any point from now on wakes the wait below
-	c.unlockWaitMu.Lock()
-	c.unlockWait = mu
-	c.unlockWaitMu.Unlock()
-
 	rc := sqlite3.Xsqlite3_unlock_notify(
 		c.tls,
 		c.db,
@@ -488,40 +478,44 @@ func (c *conn) retry(pstmt uintptr) error {
 		}{unlockNotify})),
 		mu,
 	)
-	// A context done before the mutex was published was missed by
-	// interrupt, so it is checked here; one done from now on wakes the wait
-	callDoneEarly := false
-	if c.callDone != nil {
-		select {
-		case <-c.callDone:
-			callDoneEarly = true
-		default:
-		}
+	if rc == sqlite3.SQLITE_LOCKED { // Deadlock, see https://www.sqlite.org/c3ref/unlock_notify.html
+		m.Unlock()
+		mutexFree(c.tls, mu)
+		return c.errstr(rc)
 	}
 
-	if rc != sqlite3.SQLITE_LOCKED && !callDoneEarly { // SQLITE_LOCKED is a deadlock, see https://www.sqlite.org/c3ref/unlock_notify.html
-		m.Lock()
+	// The callback or, once the context is done, ctxWake unlocks m, which
+	// ends the wait. context.AfterFunc runs ctxWake at once if the context
+	// is done already.
+	ctx := c.waitCtx
+	var ctxWoke bool
+	var ctxWakeDone chan struct{}
+	var stop func() bool
+	if ctx != nil && ctx.Done() != nil {
+		ctxWakeDone = make(chan struct{})
+		stop = context.AfterFunc(ctx, func() {
+			ctxWoke = m.wake()
+			close(ctxWakeDone)
+		})
 	}
 
-	c.unlockWaitMu.Lock()
-	c.unlockWait = 0
-	interrupted := c.unlockInterrupted || callDoneEarly
-	c.unlockInterrupted = false
-	c.unlockWaitMu.Unlock()
+	c.waitingForLock.Store(true)
+	m.Lock()
+	c.waitingForLock.Store(false)
 
-	if rc != sqlite3.SQLITE_LOCKED {
-		// Cancels the callback if interrupt woke the wait, and in any case
-		// returns only once no callback is running: SQLite invokes it, and
-		// handles this call, under the same mutex, so mu can be freed
-		sqlite3.Xsqlite3_unlock_notify(c.tls, c.db, 0, 0)
+	// A ctxWake that has started may still use m, so it is waited for
+	if stop != nil && !stop() {
+		<-ctxWakeDone
 	}
+
+	// Cancels the callback if the context ended the wait, and in any case
+	// returns only once no callback is running: SQLite invokes it, and
+	// handles this call, under the same mutex, so mu can be freed
+	sqlite3.Xsqlite3_unlock_notify(c.tls, c.db, 0, 0)
 	mutexFree(c.tls, mu)
 
-	switch {
-	case rc == sqlite3.SQLITE_LOCKED:
-		return c.errstr(rc)
-	case interrupted:
-		return c.errstr(sqlite3.SQLITE_INTERRUPT)
+	if ctxWoke {
+		return ctx.Err()
 	}
 
 	if pstmt != 0 {
@@ -880,14 +874,6 @@ func (c *conn) interrupt(pdb uintptr) (err error) {
 		sqlite3.Xsqlite3_interrupt(tls, pdb)
 		tls.Close()
 	}
-
-	// A call waiting for a shared-cache lock is not running inside SQLite,
-	// so sqlite3_interrupt does not reach it; it is woken here instead
-	c.unlockWaitMu.Lock()
-	if mu := c.unlockWait; mu != 0 && (*mutex)(unsafe.Pointer(mu)).wake() {
-		c.unlockInterrupted = true
-	}
-	c.unlockWaitMu.Unlock()
 	return nil
 }
 
@@ -1249,25 +1235,19 @@ func (c *conn) prepare(ctx context.Context, query string) (s driver.Stmt, err er
 
 // newStmtContext is newStmt for a call with a context: preparing a statement
 // can wait for a shared-cache lock, and the wait ends early, with ctx.Err(),
-// once ctx is done.
-func (c *conn) newStmtContext(ctx context.Context, query string) (s *stmt, err error) {
-	if ctx == nil || ctx.Done() == nil {
-		return newStmt(c, query)
-	}
-
-	select {
-	case <-ctx.Done():
-		return nil, ctx.Err()
-	default:
-	}
-
-	var done int32
-	defer interruptOnDone(ctx, c, &done)()
-	defer func() {
-		if err != nil && atomic.LoadInt32(&done) != 0 {
-			s, err = nil, ctx.Err()
+// once ctx is done. Only the wait watches ctx, see retry.
+func (c *conn) newStmtContext(ctx context.Context, query string) (*stmt, error) {
+	if ctx != nil {
+		select {
+		case <-ctx.Done():
+			return nil, ctx.Err()
+		default:
 		}
-	}()
+	}
+
+	prevWaitCtx := c.waitCtx
+	c.waitCtx = ctx
+	defer func() { c.waitCtx = prevWaitCtx }()
 
 	return newStmt(c, query)
 }
