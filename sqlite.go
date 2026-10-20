@@ -71,12 +71,11 @@ var parseTimeFormats = []string{
 	"2006-01-02",
 }
 
-var cancellationFlags = struct {
-	mu sync.RWMutex
-	m  map[uintptr]*int32
-}{
-	m: make(map[uintptr]*int32),
-}
+// cancellationFlags maps a connection handle to its conn's canceled flag, which
+// canceledProgress reads. A connection stores its entry on its first call with
+// a context and Close removes it, so the map is not written per call and the
+// lookups of concurrent connections do not contend.
+var cancellationFlags sync.Map // uintptr -> *atomic.Int32
 
 // interruptOnDone sets up a goroutine to interrupt the provided db when the
 // context is canceled, and returns a function the caller must defer so it
@@ -93,9 +92,11 @@ func interruptOnDone(
 	// SQLite clears an interrupt delivered before the first active VM starts.
 	// Check every 1000 VM steps; shorter statements may still finish after a
 	// lost interrupt. The driver owns the connection's only progress-handler slot.
-	cancellationFlags.mu.Lock()
-	cancellationFlags.m[c.db] = done
-	cancellationFlags.mu.Unlock()
+	if !c.canceledRegistered {
+		cancellationFlags.Store(c.db, &c.canceled)
+		c.canceledRegistered = true
+	}
+	c.canceled.Store(0)
 	sqlite3.Xsqlite3_progress_handler(c.tls, c.db, 1000, cFuncPointer(canceledProgress), c.db)
 	// donemu prevents a TOCTOU logical race between checking the done flag and
 	// calling interrupt in the select statement below.
@@ -116,6 +117,7 @@ func interruptOnDone(
 			// nothing, or even possibly an unrelated later call to exec.
 			donemu.Lock()
 			if atomic.CompareAndSwapInt32(done, 0, 1) {
+				c.canceled.Store(1)
 				c.interrupt(c.db)
 			}
 			donemu.Unlock()
@@ -132,21 +134,15 @@ func interruptOnDone(
 		donemu.Unlock()
 		close(donech)
 		sqlite3.Xsqlite3_progress_handler(c.tls, c.db, 0, 0, 0)
-		cancellationFlags.mu.Lock()
-		delete(cancellationFlags.m, c.db)
-		cancellationFlags.mu.Unlock()
 		c.waitCtx = prevWaitCtx
 	}
 }
 
 func canceledProgress(_ *libc.TLS, db uintptr) int32 {
-	cancellationFlags.mu.RLock()
-	flag := cancellationFlags.m[db]
-	cancellationFlags.mu.RUnlock()
-	if flag == nil {
-		return 0
+	if flag, ok := cancellationFlags.Load(db); ok {
+		return flag.(*atomic.Int32).Load()
 	}
-	return atomic.LoadInt32(flag)
+	return 0
 }
 
 func getVFSName(query string) (r string, err error) {

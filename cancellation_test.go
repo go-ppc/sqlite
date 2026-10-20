@@ -53,4 +53,40 @@ func TestInterruptBeforeFirstStep(t *testing.T) {
 	if got, err := c.columnInt64(s.pstmt, 0); err != nil || got != 50005000 {
 		t.Fatalf("uncanceled result: got=%d err=%v", got, err)
 	}
+
+	// Nor to the next call with a context: the flag the progress handler reads
+	// outlives the call that set it.
+	if err := c.reset(s.pstmt); err != nil {
+		t.Fatal(err)
+	}
+	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel()
+	stop := interruptOnDone(ctx, c, nil)
+	rc, err := c.step(s.pstmt)
+	stop()
+	if err != nil || rc != sqlite3.SQLITE_ROW {
+		t.Fatalf("execution with a live context after cancellation: rc=%d err=%v", rc, err)
+	}
+}
+
+// Closing a connection must forget its cancellation flag: the handle value can
+// be reused by a connection opened later.
+func TestCancellationFlagCloseCleanup(t *testing.T) {
+	c, err := newConn(":memory:")
+	if err != nil {
+		t.Fatal(err)
+	}
+	db := c.db
+	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel()
+	interruptOnDone(ctx, c, nil)()
+	if _, ok := cancellationFlags.Load(db); !ok {
+		t.Fatal("cancellation flag not registered")
+	}
+	if err := c.Close(); err != nil {
+		t.Fatal(err)
+	}
+	if _, ok := cancellationFlags.Load(db); ok {
+		t.Fatal("closed connection retained its cancellation flag")
+	}
 }

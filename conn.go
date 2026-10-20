@@ -34,6 +34,12 @@ type conn struct {
 	// preparing inside an exec, so each restores the outer call's.
 	waitCtx context.Context
 
+	// canceled is set once the context of the call in progress is done, see
+	// interruptOnDone. canceledRegistered records that cancellationFlags
+	// holds it for db.
+	canceled           atomic.Int32
+	canceledRegistered bool
+
 	// waitingForLock is set while retry waits for a shared-cache lock, so
 	// that tests can see the wait.
 	waitingForLock atomic.Bool
@@ -1067,6 +1073,8 @@ func (c *conn) Close() (err error) {
 	if c.db != 0 {
 		unregisterAuthorizer(c.db)
 		unregisterHooks(c.db)
+		cancellationFlags.Delete(c.db)
+		c.canceledRegistered = false
 		if err := c.closeV2(c.db); err != nil {
 			return err
 		}
