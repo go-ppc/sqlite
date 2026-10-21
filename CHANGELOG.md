@@ -2,7 +2,8 @@
 
 Entries for v1.38.1 through v1.44.1 and for v1.49.1 were added on 2026-09-05, reconstructed from the git history and the merge requests they cite; they were missing at release time.
 
- - 2026-09-30 v1.61.0:
+ - 2026-10-21 v1.61.0:
+     - Upgrade to [SQLite 3.54.1](https://sqlite.org/releaselog/3_54_1.html), re-vendoring `lib/` from [modernc.org/libsqlite3 v1.15.2](https://gitlab.com/cznic/libsqlite3/-/tags/v1.15.2) and `vec/` from [modernc.org/libsqlite_vec v0.7.0](https://gitlab.com/cznic/libsqlite_vec/-/tags/v0.7.0); sqlite-vec stays v0.1.9. The pinned `modernc.org/libc` becomes [v1.79.0](https://gitlab.com/cznic/libc/-/tags/v1.79.0); as always, downstream `go.mod` files must pin the same `modernc.org/libc` version this repository's `go.mod` does, see [GitLab issue #177](https://gitlab.com/cznic/sqlite/-/issues/177).
      - Add `_time_format=string_no_monotonic`, **opt-in**: times are written in the default layout but without Go's monotonic clock reading, the ` m=+...` suffix, so a scanned time matches its row again when bound in `WHERE col = ?`. The default is unchanged. Resolves [GitLab issue #259](https://gitlab.com/cznic/sqlite/-/issues/259). See [GitLab merge request #142](https://gitlab.com/cznic/sqlite/-/merge_requests/142), thanks 不插电 (@r27153733)!
      - Each release tag now gets a signed provenance document, linked from its GitLab release; `VERIFYING.md` says what it proves and how to check one. Tooling only. See [GitLab merge request #141](https://gitlab.com/cznic/sqlite/-/merge_requests/141).
      - Add an opt-in SQLite authorizer per connection: `AuthorizerRegisterer`, reached through `sql.Conn.Raw` or installed on every pooled connection from `RegisterConnectionHook`; existing connections are unchanged. Resolves [GitLab issue #256](https://gitlab.com/cznic/sqlite/-/issues/256). See [GitLab merge request #139](https://gitlab.com/cznic/sqlite/-/merge_requests/139), thanks Tedla Brandsema (@TedlaBrandsema)!

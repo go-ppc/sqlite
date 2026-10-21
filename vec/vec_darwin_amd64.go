@@ -4,6 +4,110 @@
 
 package vec
 
+type Trusage_info_current = struct {
+	Fri_uuid                          [16]Tuint8_t
+	Fri_user_time                     Tuint64_t
+	Fri_system_time                   Tuint64_t
+	Fri_pkg_idle_wkups                Tuint64_t
+	Fri_interrupt_wkups               Tuint64_t
+	Fri_pageins                       Tuint64_t
+	Fri_wired_size                    Tuint64_t
+	Fri_resident_size                 Tuint64_t
+	Fri_phys_footprint                Tuint64_t
+	Fri_proc_start_abstime            Tuint64_t
+	Fri_proc_exit_abstime             Tuint64_t
+	Fri_child_user_time               Tuint64_t
+	Fri_child_system_time             Tuint64_t
+	Fri_child_pkg_idle_wkups          Tuint64_t
+	Fri_child_interrupt_wkups         Tuint64_t
+	Fri_child_pageins                 Tuint64_t
+	Fri_child_elapsed_abstime         Tuint64_t
+	Fri_diskio_bytesread              Tuint64_t
+	Fri_diskio_byteswritten           Tuint64_t
+	Fri_cpu_time_qos_default          Tuint64_t
+	Fri_cpu_time_qos_maintenance      Tuint64_t
+	Fri_cpu_time_qos_background       Tuint64_t
+	Fri_cpu_time_qos_utility          Tuint64_t
+	Fri_cpu_time_qos_legacy           Tuint64_t
+	Fri_cpu_time_qos_user_initiated   Tuint64_t
+	Fri_cpu_time_qos_user_interactive Tuint64_t
+	Fri_billed_system_time            Tuint64_t
+	Fri_serviced_system_time          Tuint64_t
+	Fri_logical_writes                Tuint64_t
+	Fri_lifetime_max_phys_footprint   Tuint64_t
+	Fri_instructions                  Tuint64_t
+	Fri_cycles                        Tuint64_t
+	Fri_billed_energy                 Tuint64_t
+	Fri_serviced_energy               Tuint64_t
+	Fri_interval_max_phys_footprint   Tuint64_t
+	Fri_runnable_time                 Tuint64_t
+	Fri_flags                         Tuint64_t
+	Fri_user_ptime                    Tuint64_t
+	Fri_system_ptime                  Tuint64_t
+	Fri_pinstructions                 Tuint64_t
+	Fri_pcycles                       Tuint64_t
+	Fri_energy_nj                     Tuint64_t
+	Fri_penergy_nj                    Tuint64_t
+	Fri_secure_time_in_system         Tuint64_t
+	Fri_secure_ptime_in_system        Tuint64_t
+	Fri_neural_footprint              Tuint64_t
+	Fri_lifetime_max_neural_footprint Tuint64_t
+	Fri_interval_max_neural_footprint Tuint64_t
+	Fri_reserved                      [9]Tuint64_t
+}
+
+type Trusage_info_v6 = struct {
+	Fri_uuid                          [16]Tuint8_t
+	Fri_user_time                     Tuint64_t
+	Fri_system_time                   Tuint64_t
+	Fri_pkg_idle_wkups                Tuint64_t
+	Fri_interrupt_wkups               Tuint64_t
+	Fri_pageins                       Tuint64_t
+	Fri_wired_size                    Tuint64_t
+	Fri_resident_size                 Tuint64_t
+	Fri_phys_footprint                Tuint64_t
+	Fri_proc_start_abstime            Tuint64_t
+	Fri_proc_exit_abstime             Tuint64_t
+	Fri_child_user_time               Tuint64_t
+	Fri_child_system_time             Tuint64_t
+	Fri_child_pkg_idle_wkups          Tuint64_t
+	Fri_child_interrupt_wkups         Tuint64_t
+	Fri_child_pageins                 Tuint64_t
+	Fri_child_elapsed_abstime         Tuint64_t
+	Fri_diskio_bytesread              Tuint64_t
+	Fri_diskio_byteswritten           Tuint64_t
+	Fri_cpu_time_qos_default          Tuint64_t
+	Fri_cpu_time_qos_maintenance      Tuint64_t
+	Fri_cpu_time_qos_background       Tuint64_t
+	Fri_cpu_time_qos_utility          Tuint64_t
+	Fri_cpu_time_qos_legacy           Tuint64_t
+	Fri_cpu_time_qos_user_initiated   Tuint64_t
+	Fri_cpu_time_qos_user_interactive Tuint64_t
+	Fri_billed_system_time            Tuint64_t
+	Fri_serviced_system_time          Tuint64_t
+	Fri_logical_writes                Tuint64_t
+	Fri_lifetime_max_phys_footprint   Tuint64_t
+	Fri_instructions                  Tuint64_t
+	Fri_cycles                        Tuint64_t
+	Fri_billed_energy                 Tuint64_t
+	Fri_serviced_energy               Tuint64_t
+	Fri_interval_max_phys_footprint   Tuint64_t
+	Fri_runnable_time                 Tuint64_t
+	Fri_flags                         Tuint64_t
+	Fri_user_ptime                    Tuint64_t
+	Fri_system_ptime                  Tuint64_t
+	Fri_pinstructions                 Tuint64_t
+	Fri_pcycles                       Tuint64_t
+	Fri_energy_nj                     Tuint64_t
+	Fri_penergy_nj                    Tuint64_t
+	Fri_secure_time_in_system         Tuint64_t
+	Fri_secure_ptime_in_system        Tuint64_t
+	Fri_neural_footprint              Tuint64_t
+	Fri_lifetime_max_neural_footprint Tuint64_t
+	Fri_interval_max_neural_footprint Tuint64_t
+	Fri_reserved                      [9]Tuint64_t
+}
+
 const m_FP_CHOP = 3
 
 const m_FP_PREC_24B = 0
@@ -20,6 +124,8 @@ const m_FP_RND_UP = 2
 
 const m_FP_STATE_BYTES = 512
 
+const m_IOPOL_TYPE_VFS_IGNORE_CONTENT_PROTECTION = 6
+
 const m_PTHREAD_STACK_MIN = 8192
 
 const m_TARGET_OS_ARROW = 0
@@ -27,6 +133,8 @@ const m_TARGET_OS_ARROW = 0
 const m__I386_SIGNAL_H_ = 1
 
 const m__X86_INSTRUCTION_STATE_CACHELINE_SIZE = 64
+
+const m___BRIDGEOS_26_5 = 260500
 
 const m___DARWIN_ONLY_64_BIT_INO_T = 0
 
@@ -36,6 +144,10 @@ const m___DARWIN_SUF_1050 = "$1050"
 
 const m___DARWIN_SUF_64_BIT_INO_T = "$INODE64"
 
+const m___ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__ = 260500
+
+const m___ENVIRONMENT_OS_VERSION_MIN_REQUIRED__ = 260500
+
 const m___LASTBRANCH_MAX = 32
 
 const m___SSE3__ = 1
@@ -43,6 +155,12 @@ const m___SSE3__ = 1
 const m___SSE4_1__ = 1
 
 const m___SSSE3__ = 1
+
+const m___VERSION__ = "Apple LLVM 21.0.0 (clang-2100.1.1.101)"
+
+const m___apple_build_version__ = 21000101
+
+const m___clang_version__ = "21.0.0 (clang-2100.1.1.101)"
 
 const m___core2 = 1
 

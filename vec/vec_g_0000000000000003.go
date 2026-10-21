@@ -122,58 +122,6 @@ type Trusage = struct {
 	Fru_nivcsw   int64
 }
 
-type Trusage_info_current = struct {
-	Fri_uuid                          [16]Tuint8_t
-	Fri_user_time                     Tuint64_t
-	Fri_system_time                   Tuint64_t
-	Fri_pkg_idle_wkups                Tuint64_t
-	Fri_interrupt_wkups               Tuint64_t
-	Fri_pageins                       Tuint64_t
-	Fri_wired_size                    Tuint64_t
-	Fri_resident_size                 Tuint64_t
-	Fri_phys_footprint                Tuint64_t
-	Fri_proc_start_abstime            Tuint64_t
-	Fri_proc_exit_abstime             Tuint64_t
-	Fri_child_user_time               Tuint64_t
-	Fri_child_system_time             Tuint64_t
-	Fri_child_pkg_idle_wkups          Tuint64_t
-	Fri_child_interrupt_wkups         Tuint64_t
-	Fri_child_pageins                 Tuint64_t
-	Fri_child_elapsed_abstime         Tuint64_t
-	Fri_diskio_bytesread              Tuint64_t
-	Fri_diskio_byteswritten           Tuint64_t
-	Fri_cpu_time_qos_default          Tuint64_t
-	Fri_cpu_time_qos_maintenance      Tuint64_t
-	Fri_cpu_time_qos_background       Tuint64_t
-	Fri_cpu_time_qos_utility          Tuint64_t
-	Fri_cpu_time_qos_legacy           Tuint64_t
-	Fri_cpu_time_qos_user_initiated   Tuint64_t
-	Fri_cpu_time_qos_user_interactive Tuint64_t
-	Fri_billed_system_time            Tuint64_t
-	Fri_serviced_system_time          Tuint64_t
-	Fri_logical_writes                Tuint64_t
-	Fri_lifetime_max_phys_footprint   Tuint64_t
-	Fri_instructions                  Tuint64_t
-	Fri_cycles                        Tuint64_t
-	Fri_billed_energy                 Tuint64_t
-	Fri_serviced_energy               Tuint64_t
-	Fri_interval_max_phys_footprint   Tuint64_t
-	Fri_runnable_time                 Tuint64_t
-	Fri_flags                         Tuint64_t
-	Fri_user_ptime                    Tuint64_t
-	Fri_system_ptime                  Tuint64_t
-	Fri_pinstructions                 Tuint64_t
-	Fri_pcycles                       Tuint64_t
-	Fri_energy_nj                     Tuint64_t
-	Fri_penergy_nj                    Tuint64_t
-	Fri_secure_time_in_system         Tuint64_t
-	Fri_secure_ptime_in_system        Tuint64_t
-	Fri_neural_footprint              Tuint64_t
-	Fri_lifetime_max_neural_footprint Tuint64_t
-	Fri_interval_max_neural_footprint Tuint64_t
-	Fri_reserved                      [9]Tuint64_t
-}
-
 type Trusage_info_t = uintptr
 
 type Trusage_info_v0 = struct {
@@ -340,58 +288,6 @@ type Trusage_info_v5 = struct {
 	Fri_interval_max_phys_footprint   Tuint64_t
 	Fri_runnable_time                 Tuint64_t
 	Fri_flags                         Tuint64_t
-}
-
-type Trusage_info_v6 = struct {
-	Fri_uuid                          [16]Tuint8_t
-	Fri_user_time                     Tuint64_t
-	Fri_system_time                   Tuint64_t
-	Fri_pkg_idle_wkups                Tuint64_t
-	Fri_interrupt_wkups               Tuint64_t
-	Fri_pageins                       Tuint64_t
-	Fri_wired_size                    Tuint64_t
-	Fri_resident_size                 Tuint64_t
-	Fri_phys_footprint                Tuint64_t
-	Fri_proc_start_abstime            Tuint64_t
-	Fri_proc_exit_abstime             Tuint64_t
-	Fri_child_user_time               Tuint64_t
-	Fri_child_system_time             Tuint64_t
-	Fri_child_pkg_idle_wkups          Tuint64_t
-	Fri_child_interrupt_wkups         Tuint64_t
-	Fri_child_pageins                 Tuint64_t
-	Fri_child_elapsed_abstime         Tuint64_t
-	Fri_diskio_bytesread              Tuint64_t
-	Fri_diskio_byteswritten           Tuint64_t
-	Fri_cpu_time_qos_default          Tuint64_t
-	Fri_cpu_time_qos_maintenance      Tuint64_t
-	Fri_cpu_time_qos_background       Tuint64_t
-	Fri_cpu_time_qos_utility          Tuint64_t
-	Fri_cpu_time_qos_legacy           Tuint64_t
-	Fri_cpu_time_qos_user_initiated   Tuint64_t
-	Fri_cpu_time_qos_user_interactive Tuint64_t
-	Fri_billed_system_time            Tuint64_t
-	Fri_serviced_system_time          Tuint64_t
-	Fri_logical_writes                Tuint64_t
-	Fri_lifetime_max_phys_footprint   Tuint64_t
-	Fri_instructions                  Tuint64_t
-	Fri_cycles                        Tuint64_t
-	Fri_billed_energy                 Tuint64_t
-	Fri_serviced_energy               Tuint64_t
-	Fri_interval_max_phys_footprint   Tuint64_t
-	Fri_runnable_time                 Tuint64_t
-	Fri_flags                         Tuint64_t
-	Fri_user_ptime                    Tuint64_t
-	Fri_system_ptime                  Tuint64_t
-	Fri_pinstructions                 Tuint64_t
-	Fri_pcycles                       Tuint64_t
-	Fri_energy_nj                     Tuint64_t
-	Fri_penergy_nj                    Tuint64_t
-	Fri_secure_time_in_system         Tuint64_t
-	Fri_secure_ptime_in_system        Tuint64_t
-	Fri_neural_footprint              Tuint64_t
-	Fri_lifetime_max_neural_footprint Tuint64_t
-	Fri_interval_max_neural_footprint Tuint64_t
-	Fri_reserved                      [9]Tuint64_t
 }
 
 type Tsig_atomic_t = int32
@@ -4600,8 +4496,6 @@ const m_IOPOL_TYPE_VFS_DISALLOW_RW_FOR_O_EVTONLY = 10
 
 const m_IOPOL_TYPE_VFS_ENTITLED_RESERVE_ACCESS = 14
 
-const m_IOPOL_TYPE_VFS_IGNORE_CONTENT_PROTECTION = 6
-
 const m_IOPOL_TYPE_VFS_IGNORE_PERMISSIONS = 7
 
 const m_IOPOL_TYPE_VFS_MATERIALIZE_DATALESS_FILES = 3
@@ -5446,8 +5340,6 @@ const m___BRIDGEOS_10_3 = 100300
 
 const m___BRIDGEOS_10_4 = 100400
 
-const m___BRIDGEOS_26_5 = 260500
-
 const m___BRIDGEOS_2_0 = 20000
 
 const m___BRIDGEOS_3_0 = 30000
@@ -5607,10 +5499,6 @@ const m___DRIVERKIT_25_5 = 250500
 const m___DYNAMIC__ = 1
 
 const m___ENABLE_LEGACY_MAC_AVAILABILITY = 1
-
-const m___ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__ = 260000
-
-const m___ENVIRONMENT_OS_VERSION_MIN_REQUIRED__ = 260000
 
 const m___IPHONE_10_0 = 100000
 
@@ -6116,8 +6004,6 @@ const m___TVOS_9_1 = 90100
 
 const m___TVOS_9_2 = 90200
 
-const m___VERSION__ = "Apple LLVM 21.0.0 (clang-2100.1.1.101)"
-
 const m___VISIONOS_1_0 = 10000
 
 const m___VISIONOS_1_1 = 10100
@@ -6280,15 +6166,11 @@ const m___WATCHOS_9_5 = 90500
 
 const m___WATCHOS_9_6 = 90600
 
-const m___apple_build_version__ = 21000101
-
 const m___clang_major__ = 21
 
 const m___clang_minor__ = 0
 
 const m___clang_patchlevel__ = 0
-
-const m___clang_version__ = "21.0.0 (clang-2100.1.1.101)"
 
 const m___exported_hidden = "__private_extern__"
 

@@ -11,3 +11,5 @@ const m__POSIX_CLOCKRES_MIN = 20000000
 const m__POSIX_SEM_VALUE_MAX = 32767
 
 const m__XOPEN_NAME_MAX = 255
+
+const m___GNUC_MINOR__ = 2

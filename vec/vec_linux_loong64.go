@@ -22,13 +22,13 @@ const m__LOONGARCH_SZPTR = 64
 
 const m__LOONGARCH_TUNE = "generic"
 
+const m___BITINT_MAXWIDTH__ = 65535
+
 const m___GCC_ATOMIC_CHAR8_T_LOCK_FREE = 2
 
-const m___GNUC_MINOR__ = 3
+const m___GNUC__ = 16
 
-const m___GNUC__ = 15
-
-const m___GXX_ABI_VERSION = 1020
+const m___GXX_ABI_VERSION = 1021
 
 const m___LLACCUM_EPSILON__ = "0x1P-63LLK"
 
@@ -50,7 +50,7 @@ const m___ULLACCUM_IBIT__ = 64
 
 const m___ULLACCUM_MAX__ = "0XFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFP-64ULLK"
 
-const m___VERSION__ = "15.3.0"
+const m___VERSION__ = "16.2.0"
 
 const m___loongarch64 = 1
 
