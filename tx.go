@@ -86,7 +86,7 @@ func (t *tx) exec(ctx context.Context, sql string) (err error) {
 		var done int32
 		defer interruptOnDone(ctx, t.c, &done)()
 		defer func() {
-			if err != nil && atomic.LoadInt32(&done) != 0 {
+			if err != nil && (atomic.LoadInt32(&done) != 0 || t.c.canceled.Load() != 0) {
 				err = ctx.Err()
 			}
 		}()

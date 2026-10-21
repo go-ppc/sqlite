@@ -1074,6 +1074,7 @@ func (c *conn) Close() (err error) {
 		unregisterAuthorizer(c.db)
 		unregisterHooks(c.db)
 		cancellationFlags.Delete(c.db)
+		busyConns.Delete(c.db)
 		c.canceledRegistered = false
 		if err := c.closeV2(c.db); err != nil {
 			return err
@@ -1242,8 +1243,9 @@ func (c *conn) prepare(ctx context.Context, query string) (s driver.Stmt, err er
 }
 
 // newStmtContext is newStmt for a call with a context: preparing a statement
-// can wait for a shared-cache lock, and the wait ends early, with ctx.Err(),
-// once ctx is done. Only the wait watches ctx, see retry.
+// can wait for a shared-cache lock, or for a lock under busy_timeout, and
+// either wait ends early, with ctx.Err(), once ctx is done. Only the waits
+// watch ctx, see retry and busyHandler.
 func (c *conn) newStmtContext(ctx context.Context, query string) (*stmt, error) {
 	if ctx != nil {
 		select {
@@ -1257,7 +1259,16 @@ func (c *conn) newStmtContext(ctx context.Context, query string) (*stmt, error) 
 	c.waitCtx = ctx
 	defer func() { c.waitCtx = prevWaitCtx }()
 
-	return newStmt(c, query)
+	if ctx != nil && ctx.Done() != nil {
+		c.ensureBusyHandler()
+	}
+	s, err := newStmt(c, query)
+	if err != nil && ctx != nil && ctx.Err() != nil {
+		// A wait for a lock that the context ended, see busyHandler, or any
+		// other failure once the context is done: report the context
+		return nil, ctx.Err()
+	}
+	return s, err
 }
 
 // Queryer is an optional interface that may be implemented by a Conn.

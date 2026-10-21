@@ -108,6 +108,7 @@ func interruptOnDone(
 	// see retry; the outer call's context is restored afterwards
 	prevWaitCtx := c.waitCtx
 	c.waitCtx = ctx
+	c.ensureBusyHandler()
 
 	go func() {
 		select {
