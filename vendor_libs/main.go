@@ -23,10 +23,13 @@ import (
 )
 
 var (
+	targetFlag = flag.String("target", "", "vendor only this GOOS/GOARCH engine; do not vendor vec")
+
 	// undupPkg is the deduplicator, used only to expand a source checkout that
 	// ships deduplicated; see srcDir. The Makefile passes its own pin, so the
 	// repo has a single version of record. This default only keeps a bare
 	// ./vendor run working.
+
 	undupPkg = flag.String("undup", "modernc.org/undup@v0.0.5", "pkg@version of the deduplicator used to expand a deduplicated source checkout")
 
 	// The source checkouts. Flags so this can be pointed at scratch copies for
@@ -172,9 +175,139 @@ func srcDir(dir, base string) string {
 	return tmp
 }
 
+type engineTarget struct{ goos, goarch string }
+
+var defaultEngineTargets = []engineTarget{
+	{"darwin", "amd64"},
+	{"darwin", "arm64"},
+	{"freebsd", "386"},
+	{"freebsd", "amd64"},
+	{"freebsd", "arm"},
+	{"freebsd", "arm64"},
+	{"linux", "386"},
+	{"linux", "amd64"},
+	{"linux", "arm"},
+	{"linux", "arm64"},
+	{"linux", "loong64"},
+	{"linux", "ppc64le"},
+	{"linux", "riscv64"},
+	{"linux", "s390x"},
+	{"netbsd", "amd64"},
+	{"openbsd", "amd64"},
+	{"openbsd", "arm64"},
+	{"windows", "386"},
+	{"windows", "amd64"},
+}
+
+func engineTargets(target string) ([]engineTarget, error) {
+	if target == "" {
+		return defaultEngineTargets, nil
+	}
+	parts := strings.Split(target, "/")
+	if len(parts) != 2 || parts[0] == "" || parts[1] == "" {
+		return nil, fmt.Errorf("invalid-target: expected one GOOS/GOARCH, got %q", target)
+	}
+	v := engineTarget{parts[0], parts[1]}
+	for _, known := range append(append([]engineTarget{}, defaultEngineTargets...),
+		engineTarget{"darwin", "ppc"}, engineTarget{"darwin", "ppc64"}, engineTarget{"linux", "ppc"}) {
+		if v == known {
+			return []engineTarget{v}, nil
+		}
+	}
+	return nil, fmt.Errorf("unknown-target: %q", target)
+}
+
+func transformEngine(ifn string, in []byte) ([]byte, error) {
+	ast, err := gc.ParseFile(ifn, in)
+	if err != nil {
+		return nil, err
+	}
+
+	b := bytes.NewBuffer(nil)
+	s := ast.SourceFile.PackageClause.Source(true)
+	s = strings.Replace(s, "package libsqlite3", "package sqlite3", 1)
+	fmt.Fprintln(b, s)
+	fmt.Fprint(b, ast.SourceFile.ImportDeclList.Source(true))
+	taken := map[string]struct{}{}
+	for n := ast.SourceFile.TopLevelDeclList; n != nil; n = n.List {
+		switch x := n.TopLevelDecl.(type) {
+		case *gc.TypeDeclNode:
+			adn := x.TypeSpecList.TypeSpec.(*gc.AliasDeclNode)
+			nm := adn.IDENT.Src()
+			taken[nm] = struct{}{}
+		case *gc.ConstDeclNode:
+			// Some targets (e.g. netbsd/amd64) emit spurious
+			// `const <typename> = 0` macro-eval artifacts that collide
+			// with the un-prefixed type alias generated below. Record
+			// const names so the colliding alias is skipped, leaving the
+			// const (harmless, unreferenced) as the sole declaration.
+			if y, ok := x.ConstSpec.(*gc.ConstSpecNode); ok {
+				taken[y.IDENT.Src()] = struct{}{}
+			}
+		}
+	}
+loop:
+	for n := ast.SourceFile.TopLevelDeclList; n != nil; n = n.List {
+		switch x := n.TopLevelDecl.(type) {
+		case *gc.ConstDeclNode:
+			switch y := x.ConstSpec.(type) {
+			case *gc.ConstSpecNode:
+				// SQLITE_STATIC and SQLITE_TRANSIENT are defined by hand in
+				// lib/defs.go as typed uintptr constants.
+				if nm := y.IDENT.Src(); nm != "SQLITE_TRANSIENT" && nm != "SQLITE_STATIC" {
+					fmt.Fprintln(b, x.Source(true))
+				}
+			default:
+				panic(fmt.Sprintf("%v: %T %q", x.Position(), y, x.Source(false)))
+			}
+
+		case *gc.FunctionDeclNode:
+			fmt.Fprintln(b, x.Source(true))
+		case *gc.TypeDeclNode:
+			fmt.Fprintln(b, x.Source(true))
+			adn := x.TypeSpecList.TypeSpec.(*gc.AliasDeclNode)
+			nm := adn.IDENT.Src()
+			nm2 := nm[1:]
+			if _, ok := taken[nm2]; ok {
+				break
+			}
+
+			if token.IsExported(nm) {
+				fmt.Fprintf(b, "\ntype %s = %s\n", nm2, nm)
+			}
+		case *gc.VarDeclNode:
+			fmt.Fprintln(b, x.Source(true))
+		default:
+			fmt.Printf("%v: TODO %T\n", n.Position(), x)
+			break loop
+		}
+	}
+
+	b.WriteString(`
+type Sqlite3_int64 = sqlite3_int64
+type Sqlite3_mutex_methods = sqlite3_mutex_methods
+type Sqlite3_value = sqlite3_value
+
+type Sqlite3_index_info = sqlite3_index_info
+type Sqlite3_module = sqlite3_module
+type Sqlite3_vtab = sqlite3_vtab
+type Sqlite3_vtab_cursor = sqlite3_vtab_cursor
+
+`)
+	return b.Bytes(), nil
+}
+
 func main() {
 	flag.Parse()
 	defer cleanup()
+
+	targets, err := engineTargets(*targetFlag)
+	if err != nil {
+		fail(2, "%s\n", err)
+	}
+	if *targetFlag != "" && (*preflightFlag || *stampFlag) {
+		fail(2, "target-mode: -target cannot be combined with -preflight or -stamp\n")
+	}
 
 	switch {
 	case *preflightFlag && *stampFlag:
@@ -190,29 +323,8 @@ func main() {
 	// Both source checkouts may ship in either form; resolve each once, before
 	// the per-target loops that read them by name.
 	libDir := srcDir(*libsqlite3Dir, "ccgo")
-	vecDir := srcDir(*libsqliteVecDir, "ccgo")
 
-	for _, v := range []struct{ goos, goarch string }{
-		{"darwin", "amd64"},
-		{"darwin", "arm64"},
-		{"freebsd", "386"},
-		{"freebsd", "amd64"},
-		{"freebsd", "arm"},
-		{"freebsd", "arm64"},
-		{"linux", "386"},
-		{"linux", "amd64"},
-		{"linux", "arm"},
-		{"linux", "arm64"},
-		{"linux", "loong64"},
-		{"linux", "ppc64le"},
-		{"linux", "riscv64"},
-		{"linux", "s390x"},
-		{"netbsd", "amd64"},
-		{"openbsd", "amd64"},
-		{"openbsd", "arm64"},
-		{"windows", "386"},
-		{"windows", "amd64"},
-	} {
+	for _, v := range targets {
 		base := fmt.Sprintf("ccgo_%s_%s.go", v.goos, v.goarch)
 		if v.goos == "windows" && v.goarch == "amd64" {
 			base = "ccgo_windows.go"
@@ -224,87 +336,22 @@ func main() {
 			fail(1, "%s\n", err)
 		}
 
-		ast, err := gc.ParseFile(ifn, in)
+		out, err := transformEngine(ifn, in)
 		if err != nil {
 			fail(1, "%s\n", err)
 		}
 
-		b := bytes.NewBuffer(nil)
-		s := ast.SourceFile.PackageClause.Source(true)
-		s = strings.Replace(s, "package libsqlite3", "package sqlite3", 1)
-		fmt.Fprintln(b, s)
-		fmt.Fprint(b, ast.SourceFile.ImportDeclList.Source(true))
-		taken := map[string]struct{}{}
-		for n := ast.SourceFile.TopLevelDeclList; n != nil; n = n.List {
-			switch x := n.TopLevelDecl.(type) {
-			case *gc.TypeDeclNode:
-				adn := x.TypeSpecList.TypeSpec.(*gc.AliasDeclNode)
-				nm := adn.IDENT.Src()
-				taken[nm] = struct{}{}
-			case *gc.ConstDeclNode:
-				// Some targets (e.g. netbsd/amd64) emit spurious
-				// `const <typename> = 0` macro-eval artifacts that collide
-				// with the un-prefixed type alias generated below. Record
-				// const names so the colliding alias is skipped, leaving the
-				// const (harmless, unreferenced) as the sole declaration.
-				if y, ok := x.ConstSpec.(*gc.ConstSpecNode); ok {
-					taken[y.IDENT.Src()] = struct{}{}
-				}
-			}
-		}
-	loop:
-		for n := ast.SourceFile.TopLevelDeclList; n != nil; n = n.List {
-			switch x := n.TopLevelDecl.(type) {
-			case *gc.ConstDeclNode:
-				switch y := x.ConstSpec.(type) {
-				case *gc.ConstSpecNode:
-					// SQLITE_STATIC and SQLITE_TRANSIENT are defined by hand in
-					// lib/defs.go as typed uintptr constants.
-					if nm := y.IDENT.Src(); nm != "SQLITE_TRANSIENT" && nm != "SQLITE_STATIC" {
-						fmt.Fprintln(b, x.Source(true))
-					}
-				default:
-					panic(fmt.Sprintf("%v: %T %q", x.Position(), y, x.Source(false)))
-				}
-
-			case *gc.FunctionDeclNode:
-				fmt.Fprintln(b, x.Source(true))
-			case *gc.TypeDeclNode:
-				fmt.Fprintln(b, x.Source(true))
-				adn := x.TypeSpecList.TypeSpec.(*gc.AliasDeclNode)
-				nm := adn.IDENT.Src()
-				nm2 := nm[1:]
-				if _, ok := taken[nm2]; ok {
-					break
-				}
-
-				if token.IsExported(nm) {
-					fmt.Fprintf(b, "\ntype %s = %s\n", nm2, nm)
-				}
-			case *gc.VarDeclNode:
-				fmt.Fprintln(b, x.Source(true))
-			default:
-				fmt.Printf("%v: TODO %T\n", n.Position(), x)
-				break loop
-			}
-		}
-
-		b.WriteString(`
-type Sqlite3_int64 = sqlite3_int64
-type Sqlite3_mutex_methods = sqlite3_mutex_methods
-type Sqlite3_value = sqlite3_value
-
-type Sqlite3_index_info = sqlite3_index_info
-type Sqlite3_module = sqlite3_module
-type Sqlite3_vtab = sqlite3_vtab
-type Sqlite3_vtab_cursor = sqlite3_vtab_cursor
-
-`)
 		base = strings.Replace(base, "ccgo_", "sqlite_", 1)
-		if err := os.WriteFile(filepath.Join("lib", base), b.Bytes(), 0660); err != nil {
+		if err := os.WriteFile(filepath.Join("lib", base), out, 0660); err != nil {
 			fail(1, "%s\n", err)
 		}
 	}
+
+	// A lone transpile must not require or rewrite the unrelated vec checkout.
+	if *targetFlag != "" {
+		return
+	}
+	vecDir := srcDir(*libsqliteVecDir, "ccgo")
 
 	{
 		// Unlike SQLite, which is public domain, sqlite-vec is MIT-licensed and
