@@ -6,7 +6,7 @@
 // the base copies must not be selected there. Every other target keeps the
 // base values unchanged; the moved text is byte-identical.
 
-//go:build !(darwin && (ppc || ppc64))
+//go:build !(darwin && (ppc || ppc64)) && !(linux && ppc)
 
 package sqlite3
 
