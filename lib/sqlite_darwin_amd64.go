@@ -20,14 +20,6 @@ const FP_RND_UP = 2
 
 const FP_STATE_BYTES = 512
 
-const MAXPHYS = 131072
-
-const MAXPHYSIO = 131072
-
-const NMBCLUSTERS = 512
-
-const PTHREAD_STACK_MIN = 8192
-
 const TARGET_ABI_USES_IOS_VALUES = 0
 
 const TARGET_CPU_ARM64 = 0
@@ -37,27 +29,6 @@ const TARGET_CPU_X86_64 = 1
 const TARGET_OS_ARROW = 0
 
 type Tboolean_t = uint32
-
-type Tstat64 = struct {
-	Fst_dev           Tdev_t
-	Fst_mode          Tmode_t
-	Fst_nlink         Tnlink_t
-	Fst_ino           t__darwin_ino64_t
-	Fst_uid           Tuid_t
-	Fst_gid           Tgid_t
-	Fst_rdev          Tdev_t
-	Fst_atimespec     Ttimespec
-	Fst_mtimespec     Ttimespec
-	Fst_ctimespec     Ttimespec
-	Fst_birthtimespec Ttimespec
-	Fst_size          Toff_t
-	Fst_blocks        Tblkcnt_t
-	Fst_blksize       Tblksize_t
-	Fst_flags         t__uint32_t
-	Fst_gen           t__uint32_t
-	Fst_lspare        t__int32_t
-	Fst_qspare        [2]t__int64_t
-}
 
 type Tstatfs64 = struct {
 	Ff_bsize       Tuint32_t
@@ -88,8 +59,6 @@ const _X86_INSTRUCTION_STATE_MAX_INSN_BYTES = 2380
 const __DARWIN_ONLY_64_BIT_INO_T = 0
 
 const __DARWIN_ONLY_VERS_1050 = 0
-
-const __DARWIN_SUF_1050 = "$1050"
 
 const __DARWIN_SUF_64_BIT_INO_T = "$INODE64"
 

@@ -202,8 +202,6 @@ const SECURITY_DESCRIPTOR_MIN_LENGTH = 20
 
 const SIZE_OF_80387_REGISTERS = 80
 
-const SSIZE_MAX = 2147483647
-
 const SetClassLongPtrA = "SetClassLongA"
 
 const SetClassLongPtrW = "SetClassLongW"
@@ -1237,29 +1235,6 @@ type TDRIVE_LAYOUT_INFORMATION_GPT = struct {
 }
 
 type TDWORD_PTR = uint32
-
-// C documentation
-//
-//	/*
-//	** A structure for holding a single date and time.
-//	*/
-type TDateTime = struct {
-	F__ccgo_align [0]uint32
-	FiJD          Tsqlite3_int64
-	FY            int32
-	FM            int32
-	FD            int32
-	Fh            int32
-	Fm            int32
-	Ftz           int32
-	Fs            float64
-	FvalidJD      int8
-	FvalidYMD     int8
-	FvalidHMS     int8
-	FnFloor       int8
-	F__ccgo44     uint8
-	F__ccgo_pad17 [3]byte
-}
 
 type TELEMDESC = struct {
 	Ftdesc     TTYPEDESC

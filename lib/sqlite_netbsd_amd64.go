@@ -10,8 +10,6 @@ import (
 	"modernc.org/libc"
 )
 
-const ARG_MAX = 262144
-
 const BC_BASE_MAX = 2147483647
 
 const BC_DIM_MAX = 65535
@@ -4255,10 +4253,6 @@ const _GETGR_R_SIZE_MAX = 1024
 
 const _GETPW_R_SIZE_MAX = 1024
 
-const _IEEE_ = -1
-
-const _LIB_VERSION = "_fdlib_version"
-
 const _NETBSD_SOURCE = 1
 
 const _O_SC_CLK_TCK = 3
@@ -4280,8 +4274,6 @@ const _PC_MIN_HOLE_SIZE = 15
 const _PC_SYMLINK_MAX = 12
 
 const _PC_SYNC_IO = 10
-
-const _POSIX_ = 2
 
 const _POSIX_C_SOURCE = 200112
 
@@ -4507,8 +4499,6 @@ const _SC_V6_LP64_OFF64 = 76
 
 const _SC_V6_LPBIG_OFFBIG = 77
 
-const _SVID_ = 0
-
 const _S_ARCH1 = 65536
 
 const _S_ARCH2 = 131072
@@ -4532,8 +4522,6 @@ const _S_IFSOCK = 49152
 const _S_IFWHT = 57344
 
 const _S_ISVTX = 512
-
-const _XOPEN_ = 1
 
 const _XOPEN_NAME_MAX = 256
 
@@ -11335,8 +11323,6 @@ const _fdlibm_posix = 2
 const _fdlibm_svid = 0
 
 const _fdlibm_xopen = 1
-
-type _fdversion = int32
 
 // C documentation
 //

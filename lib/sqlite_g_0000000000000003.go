@@ -10,51 +10,13 @@ import (
 	"modernc.org/libc"
 )
 
-const ACCESSX_MAX_DESCRIPTORS = 100
-
-const ACCESSX_MAX_TABLESIZE = 16384
-
-const AF_CNT = 21
-
-const AF_COIP = 20
-
-const AF_E164 = 28
-
 const AF_IEEE80211 = 37
 
-const AF_INET6 = 30
-
-const AF_IPX = 23
-
-const AF_ISDN = 28
-
-const AF_LINK = 18
-
-const AF_LOCAL = 1
-
 const AF_MAX = 41
-
-const AF_NATM = 31
-
-const AF_NDRV = 27
-
-const AF_NETBIOS = 33
-
-const AF_PPP = 34
-
-const AF_RESERVED_36 = 36
-
-const AF_ROUTE = 17
-
-const AF_SIP = 24
-
-const AF_SYSTEM = 32
 
 const AF_UTUN = 38
 
 const AF_VSOCK = 40
-
-const ALIGNBYTES = 7
 
 const APPLE_IF_FAM_BOND = 14
 
@@ -94,19 +56,9 @@ const APPLE_IF_FAM_VLAN = 5
 
 const AQ_BUFSZ = 32767
 
-const AQ_HIWATER = 100
-
-const AQ_LOWATER = 10
-
-const AQ_MAXBUFSZ = 1048576
-
-const AQ_MAXHIGH = 10000
-
 const ARG_MAX = 1048576
 
 const ATTRIBUTION_NAME_MAX = 255
-
-const ATTR_BIT_MAP_COUNT = 5
 
 const ATTR_BULK_REQUIRED = 2147483649
 
@@ -136,195 +88,47 @@ const ATTR_CMNEXT_SETMASK = 0
 
 const ATTR_CMNEXT_VALIDMASK = 8188
 
-const ATTR_CMN_ACCESSMASK = 131072
-
-const ATTR_CMN_ACCTIME = 4096
-
 const ATTR_CMN_ADDEDTIME = 268435456
 
-const ATTR_CMN_BKUPTIME = 8192
-
-const ATTR_CMN_CHGTIME = 2048
-
-const ATTR_CMN_CRTIME = 512
-
 const ATTR_CMN_DATA_PROTECT_FLAGS = 1073741824
-
-const ATTR_CMN_DEVID = 2
 
 const ATTR_CMN_DOCUMENT_ID = 1048576
 
 const ATTR_CMN_ERROR = 536870912
 
-const ATTR_CMN_EXTENDED_SECURITY = 4194304
-
-const ATTR_CMN_FILEID = 33554432
-
-const ATTR_CMN_FLAGS = 262144
-
-const ATTR_CMN_FNDRINFO = 16384
-
-const ATTR_CMN_FSID = 4
-
 const ATTR_CMN_FULLPATH = 134217728
 
 const ATTR_CMN_GEN_COUNT = 524288
 
-const ATTR_CMN_GRPID = 65536
-
-const ATTR_CMN_GRPUUID = 16777216
-
-const ATTR_CMN_MODTIME = 1024
-
-const ATTR_CMN_NAME = 1
-
-const ATTR_CMN_NAMEDATTRCOUNT = 524288
-
-const ATTR_CMN_NAMEDATTRLIST = 1048576
-
-const ATTR_CMN_OBJID = 32
-
-const ATTR_CMN_OBJPERMANENTID = 64
-
-const ATTR_CMN_OBJTAG = 16
-
-const ATTR_CMN_OBJTYPE = 8
-
-const ATTR_CMN_OWNERID = 32768
-
-const ATTR_CMN_PARENTID = 67108864
-
-const ATTR_CMN_PAROBJID = 128
-
 const ATTR_CMN_RETURNED_ATTRS = 2147483648
-
-const ATTR_CMN_SCRIPT = 256
 
 const ATTR_CMN_SETMASK = 1372061440
 
-const ATTR_CMN_USERACCESS = 2097152
-
-const ATTR_CMN_UUID = 8388608
-
 const ATTR_CMN_VALIDMASK = 4294967295
-
-const ATTR_CMN_VOLSETMASK = 26368
 
 const ATTR_DIR_ALLOCSIZE = 8
 
 const ATTR_DIR_DATALENGTH = 32
 
-const ATTR_DIR_ENTRYCOUNT = 2
-
 const ATTR_DIR_IOBLOCKSIZE = 16
-
-const ATTR_DIR_LINKCOUNT = 1
-
-const ATTR_DIR_MOUNTSTATUS = 4
-
-const ATTR_DIR_SETMASK = 0
 
 const ATTR_DIR_VALIDMASK = 63
 
-const ATTR_FILE_ALLOCSIZE = 4
-
-const ATTR_FILE_CLUMPSIZE = 16
-
-const ATTR_FILE_DATAALLOCSIZE = 1024
-
-const ATTR_FILE_DATAEXTENTS = 2048
-
-const ATTR_FILE_DATALENGTH = 512
-
-const ATTR_FILE_DEVTYPE = 32
-
-const ATTR_FILE_FILETYPE = 64
-
-const ATTR_FILE_FORKCOUNT = 128
-
-const ATTR_FILE_FORKLIST = 256
-
-const ATTR_FILE_IOBLOCKSIZE = 8
-
-const ATTR_FILE_LINKCOUNT = 1
-
-const ATTR_FILE_RSRCALLOCSIZE = 8192
-
-const ATTR_FILE_RSRCEXTENTS = 16384
-
-const ATTR_FILE_RSRCLENGTH = 4096
-
-const ATTR_FILE_SETMASK = 32
-
-const ATTR_FILE_TOTALSIZE = 2
-
 const ATTR_FILE_VALIDMASK = 14335
-
-const ATTR_FORK_ALLOCSIZE = 2
 
 const ATTR_FORK_RESERVED = 4294967295
 
-const ATTR_FORK_SETMASK = 0
-
-const ATTR_FORK_TOTALSIZE = 1
-
-const ATTR_FORK_VALIDMASK = 3
-
-const ATTR_MAX_BUFFER = 8192
-
-const ATTR_VOL_ALLOCATIONCLUMP = 64
-
-const ATTR_VOL_ATTRIBUTES = 1073741824
-
-const ATTR_VOL_CAPABILITIES = 131072
-
-const ATTR_VOL_DIRCOUNT = 1024
-
-const ATTR_VOL_ENCODINGSUSED = 65536
-
-const ATTR_VOL_FILECOUNT = 512
-
 const ATTR_VOL_FSSUBTYPE = 2097152
-
-const ATTR_VOL_FSTYPE = 1
 
 const ATTR_VOL_FSTYPENAME = 1048576
 
-const ATTR_VOL_INFO = 2147483648
-
-const ATTR_VOL_IOBLOCKSIZE = 128
-
-const ATTR_VOL_MAXOBJCOUNT = 2048
-
-const ATTR_VOL_MINALLOCATION = 32
-
-const ATTR_VOL_MOUNTEDDEVICE = 32768
-
 const ATTR_VOL_MOUNTEXTFLAGS = 524288
-
-const ATTR_VOL_MOUNTFLAGS = 16384
-
-const ATTR_VOL_MOUNTPOINT = 4096
-
-const ATTR_VOL_NAME = 8192
-
-const ATTR_VOL_OBJCOUNT = 256
 
 const ATTR_VOL_OWNER = 4194304
 
 const ATTR_VOL_QUOTA_SIZE = 268435456
 
 const ATTR_VOL_RESERVED_SIZE = 536870912
-
-const ATTR_VOL_SETMASK = 2147491840
-
-const ATTR_VOL_SIGNATURE = 2
-
-const ATTR_VOL_SIZE = 4
-
-const ATTR_VOL_SPACEAVAIL = 16
-
-const ATTR_VOL_SPACEFREE = 8
 
 const ATTR_VOL_SPACEUSED = 8388608
 
@@ -337,12 +141,6 @@ const AT_EACCESS = 16
 const AT_FDCWD = -2
 
 const AT_FDONLY = 1024
-
-const AT_IPC_MSG = 1
-
-const AT_IPC_SEM = 2
-
-const AT_IPC_SHM = 3
 
 const AT_NODELETEBUSY = 16384
 
@@ -358,23 +156,7 @@ const AT_SYMLINK_NOFOLLOW_ANY = 2048
 
 const AT_UNIQUE = 32768
 
-const AUC_AUDITING = 1
-
-const AUC_DISABLED = -1
-
-const AUC_NOAUDIT = 2
-
-const AUC_UNSET = 0
-
 const AUDITDEV_FILENAME = "audit"
-
-const AUDIT_AHLT = 2
-
-const AUDIT_ARGE = 8
-
-const AUDIT_ARGV = 4
-
-const AUDIT_CNT = 1
 
 const AUDIT_CTLMODE_EXTERNAL = 2
 
@@ -394,8 +176,6 @@ const AUDIT_PERZONE = 8192
 
 const AUDIT_PUBLIC = 2048
 
-const AUDIT_RECORD_MAGIC = 2190085915
-
 const AUDIT_SCNT = 1024
 
 const AUDIT_SEQ = 16
@@ -409,8 +189,6 @@ const AUDIT_TRIGGER_EXPIRE_TRAILS = 8
 const AUDIT_TRIGGER_FILE = "/dev/audit"
 
 const AUDIT_TRIGGER_INITIALIZE = 7
-
-const AUDIT_TRIGGER_LOW_SPACE = 1
 
 const AUDIT_TRIGGER_MAX = 8
 
@@ -436,37 +214,17 @@ const AU_ASSIGN_ASID = -1
 
 const AU_CLASS_MASK_RESERVED = 268435456
 
-const AU_DEFAUDITID = 4294967295
-
 const AU_DEFAUDITSID = 0
-
-const AU_FS_MINFREE = 20
 
 const AU_IPv4 = 4
 
 const AU_IPv6 = 16
 
-const A_GETCAR = 9
-
-const A_GETCLASS = 22
-
 const A_GETCOND = 37
 
 const A_GETCTLMODE = 41
 
-const A_GETCWD = 8
-
 const A_GETEXPAFTER = 43
-
-const A_GETFSIZE = 27
-
-const A_GETKAUDIT = 29
-
-const A_GETKMASK = 4
-
-const A_GETPINFO = 24
-
-const A_GETPINFO_ADDR = 28
 
 const A_GETPOLICY = 33
 
@@ -475,8 +233,6 @@ const A_GETQCTRL = 35
 const A_GETSFLAGS = 39
 
 const A_GETSINFO_ADDR = 32
-
-const A_GETSTAT = 12
 
 const A_OLDGETCOND = 20
 
@@ -492,21 +248,11 @@ const A_OLDSETQCTRL = 7
 
 const A_SENDTRIGGER = 31
 
-const A_SETCLASS = 23
-
 const A_SETCOND = 38
 
 const A_SETCTLMODE = 42
 
 const A_SETEXPAFTER = 44
-
-const A_SETFSIZE = 26
-
-const A_SETKAUDIT = 30
-
-const A_SETKMASK = 5
-
-const A_SETPMASK = 25
 
 const A_SETPOLICY = 34
 
@@ -514,63 +260,7 @@ const A_SETQCTRL = 36
 
 const A_SETSFLAGS = 40
 
-const A_SETSMASK = 15
-
-const A_SETSTAT = 13
-
-const A_SETUMASK = 14
-
-const BADSIG = 18446744073709551615
-
-const BC_BASE_MAX = 99
-
-const BC_DIM_MAX = 2048
-
-const BC_SCALE_MAX = 99
-
-const BC_STRING_MAX = 1000
-
-const BLKDEV_IOSIZE = 2048
-
-const BSD = 199506
-
-const BSD4_3 = 1
-
-const BSD4_4 = 1
-
-const BUS_ADRALN = 1
-
-const BUS_ADRERR = 2
-
-const BUS_NOOP = 0
-
-const BUS_OBJERR = 3
-
 type ByteRangeLockPB2 = TByteRangeLockPB2
-
-const CBLOCK = 64
-
-const CBQSIZE = 8
-
-const CBSIZE = 48
-
-const CHILD_MAX = 266
-
-const CLBYTES = 4096
-
-const CLD_CONTINUED = 6
-
-const CLD_DUMPED = 3
-
-const CLD_EXITED = 1
-
-const CLD_KILLED = 2
-
-const CLD_NOOP = 0
-
-const CLD_STOPPED = 5
-
-const CLD_TRAPPED = 4
 
 const CLOCK_MONOTONIC = 6
 
@@ -584,61 +274,19 @@ const CLOCK_UPTIME_RAW = 8
 
 const CLOCK_UPTIME_RAW_APPROX = 9
 
-const CLOFF = 4095
-
-const CLOFSET = 4095
-
-const CLSHIFT = 12
-
-const CLSIZE = 1
-
-const CLSIZELOG2 = 0
-
-const CMASK = 18
-
 const CONNECT_DATA_AUTHENTICATED = 4
 
 const CONNECT_DATA_IDEMPOTENT = 2
 
 const CONNECT_RESUME_ON_READ_WRITE = 1
 
-const CPF_IGNORE_MODE = 2
-
-const CPF_MASK = 3
-
-const CPF_OVERWRITE = 1
-
 const CPUMON_MAKE_FATAL = 4096
 
-const CRF_MAC_ENFORCE = 2
-
-const CRF_NOMEMBERD = 1
-
-const CROUND = 63
-
 const CRYPTEX_AUTH_STRUCT_VERSION = 2
-
-const DEV_BSHIFT = 9
-
-const DEV_BSIZE = 512
-
-const DIR_MNTSTATUS_MNTPOINT = 1
 
 const DIR_MNTSTATUS_TRIGGER = 2
 
 const DYNAMIC_TARGETS_ENABLED = 0
-
-const EBADARCH = 86
-
-const EBADEXEC = 85
-
-const EBADMACHO = 88
-
-const EBADMSG = 94
-
-const ECANCELED = 89
-
-const EDEVERR = 83
 
 const EF_IS_PURGEABLE = 8
 
@@ -654,107 +302,31 @@ const EF_NO_XATTRS = 2
 
 const EF_SHARES_ALL_BLOCKS = 64
 
-const EIDRM = 90
-
-const EILSEQ = 92
-
 const ELAST = 107
-
-const EMULTIHOP = 95
-
-const ENODATA = 96
-
-const ENOLINK = 97
-
-const ENOMSG = 91
-
-const ENOPOLICY = 103
-
-const ENOSR = 98
-
-const ENOSTR = 99
 
 const ENOTCAPABLE = 107
 
 const ENOTRECOVERABLE = 104
 
-const EOPNOTSUPP = 102
-
 const EOWNERDEAD = 105
-
-const EPROTO = 100
-
-const EPWROFF = 82
 
 const EQFULL = 106
 
-const EQUIV_CLASS_MAX = 2
-
-const ESHLIBVERS = 87
-
-const ETIME = 101
-
-const FCNTL_FS_SPECIFIC_BASE = 65536
-
 const FFDSYNC = 4194304
-
-const FILESEC_GUID = 3
 
 const FOOTPRINT_INTERVAL_RESET = 1
 
-const FPE_FLTDIV = 1
-
-const FPE_FLTINV = 5
-
-const FPE_FLTOVF = 2
-
-const FPE_FLTRES = 4
-
-const FPE_FLTSUB = 6
-
-const FPE_FLTUND = 3
-
-const FPE_INTDIV = 7
-
-const FPE_INTOVF = 8
-
-const FPE_NOOP = 0
-
-const FP_INFINITE = 2
-
-const FP_QNAN = 1
-
-const FP_SUBNORMAL = 5
-
-const FP_SUPERNORMAL = 6
-
-const FP_ZERO = 3
-
-const FSCALE = 2048
-
-const FSCRED = 18446744073709551615
-
-const FSHIFT = 11
-
 const FSOPT_ATTR_CMN_EXTENDED = 32
-
-const FSOPT_NOFOLLOW = 1
 
 const FSOPT_NOFOLLOW_ANY = 2048
 
-const FSOPT_NOINMEMUPDATE = 2
-
 const FSOPT_PACK_INVAL_ATTRS = 8
-
-const FSOPT_REPORT_FULLSIZE = 4
 
 const FSOPT_RESOLVE_BENEATH = 4096
 
 const FSOPT_RETURN_REALDEV = 512
 
 const FSOPT_UNIQUE = 8192
-
-const FST_EOF = -1
 
 const F_ADDFILESIGS = 61
 
@@ -766,13 +338,7 @@ const F_ADDFILESIGS_RETURN = 97
 
 const F_ADDFILESUPPL = 104
 
-const F_ADDSIGS = 59
-
 const F_ADDSIGS_MAIN_BINARY = 113
-
-const F_ALLOCATEALL = 4
-
-const F_ALLOCATECONTIG = 2
 
 const F_ALLOCATEPERSIST = 8
 
@@ -781,8 +347,6 @@ const F_ATTRIBUTION_TAG = 111
 const F_BARRIERFSYNC = 85
 
 const F_CHECK_LV = 98
-
-const F_CHKCLEAN = 41
 
 const F_CREATE_TAG = 1
 
@@ -794,10 +358,6 @@ const F_FINDSIGS = 78
 
 const F_FLUSH_DATA = 40
 
-const F_FREEZE_FS = 53
-
-const F_FULLFSYNC = 51
-
 const F_GETCODEDIR = 72
 
 const F_GETLEASE = 107
@@ -805,8 +365,6 @@ const F_GETLEASE = 107
 const F_GETLKPID = 66
 
 const F_GETNOSIGPIPE = 74
-
-const F_GETPATH = 50
 
 const F_GETPATH_MTMINFO = 71
 
@@ -818,13 +376,7 @@ const F_GETPROTECTIONLEVEL = 77
 
 const F_GETSIGSINFO = 105
 
-const F_GLOBAL_NOCACHE = 55
-
-const F_LOG2PHYS = 49
-
 const F_LOG2PHYS_EXT = 65
-
-const F_NOCACHE = 48
 
 const F_NOCACHE_EXT = 112
 
@@ -838,19 +390,9 @@ const F_OFD_SETLKW = 91
 
 const F_OFD_SETLKWTIMEOUT = 93
 
-const F_PATHPKG_CHECK = 52
-
-const F_PEOFPOSMODE = 3
-
-const F_PREALLOCATE = 42
-
 const F_PUNCHHOLE = 99
 
 const F_QUERY_TAG = 4
-
-const F_RDADVISE = 44
-
-const F_RDAHEAD = 45
 
 const F_SETBACKINGSTORE = 70
 
@@ -862,13 +404,9 @@ const F_SETNOSIGPIPE = 73
 
 const F_SETPROTECTIONCLASS = 64
 
-const F_SETSIZE = 43
-
 const F_SINGLE_WRITER = 76
 
 const F_SPECULATIVE_READ = 101
-
-const F_THAW_FS = 54
 
 const F_TRANSCODEKEY = 75
 
@@ -876,15 +414,11 @@ const F_TRANSFEREXTENTS = 110
 
 const F_TRIM_ACTIVE_FILE = 100
 
-const F_VOLPOSMODE = 4
-
 const GETSIGSINFO_PLATFORM_BINARY = 1
 
 const GRAFTDMG_SECURE_BOOT_CRYPTEX_ARGS_VERSION = 1
 
 const GUARD_TYPE_MACH_PORT = 1
-
-const HAVE_FULLFSYNC = 1
 
 const IFCAP_AV = 256
 
@@ -996,33 +530,11 @@ const IF_NAMESIZE = 16
 
 const IF_WAKE_ON_MAGIC_PACKET = 1
 
-const ILL_BADSTK = 8
-
-const ILL_COPROC = 7
-
-const ILL_ILLADR = 5
-
-const ILL_ILLOPC = 1
-
-const ILL_ILLOPN = 4
-
-const ILL_ILLTRP = 2
-
-const ILL_NOOP = 0
-
-const ILL_PRVOPC = 3
-
-const ILL_PRVREG = 6
-
-const INFINITY = "HUGE_VALF"
-
 const IOPOL_APPLICATION = 5
 
 const IOPOL_ATIME_UPDATES_DEFAULT = 0
 
 const IOPOL_ATIME_UPDATES_OFF = 1
-
-const IOPOL_DEFAULT = 0
 
 const IOPOL_IMPORTANT = 1
 
@@ -1036,21 +548,9 @@ const IOPOL_MATERIALIZE_DATALESS_FILES_ON = 2
 
 const IOPOL_MATERIALIZE_DATALESS_FILES_ORIG = 4
 
-const IOPOL_NORMAL = 1
-
-const IOPOL_PASSIVE = 2
-
 const IOPOL_SCOPE_DARWIN_BG = 2
 
-const IOPOL_SCOPE_PROCESS = 0
-
-const IOPOL_SCOPE_THREAD = 1
-
 const IOPOL_STANDARD = 5
-
-const IOPOL_THROTTLE = 3
-
-const IOPOL_TYPE_DISK = 0
 
 const IOPOL_TYPE_VFS_ALLOW_LOW_SPACE_WRITES = 9
 
@@ -1430,10 +930,6 @@ const MAC_OS_VERSION_26_4 = 260400
 
 const MAC_OS_VERSION_26_5 = 260500
 
-const MAC_OS_X_VERSION_10_0 = 1000
-
-const MAC_OS_X_VERSION_10_1 = 1010
-
 const MAC_OS_X_VERSION_10_10 = 101000
 
 const MAC_OS_X_VERSION_10_10_2 = 101002
@@ -1482,14 +978,6 @@ const MAC_OS_X_VERSION_10_15_4 = 101504
 
 const MAC_OS_X_VERSION_10_16 = 101600
 
-const MAC_OS_X_VERSION_10_2 = 1020
-
-const MAC_OS_X_VERSION_10_3 = 1030
-
-const MAC_OS_X_VERSION_10_4 = 1040
-
-const MAC_OS_X_VERSION_10_5 = 1050
-
 const MAC_OS_X_VERSION_10_6 = 1060
 
 const MAC_OS_X_VERSION_10_7 = 1070
@@ -1512,10 +1000,6 @@ const MADV_ZERO_WIRED_PAGES = 6
 
 const MAP_JIT = 2048
 
-const MAP_NOCACHE = 1024
-
-const MAP_NOEXTEND = 256
-
 const MAP_RESILIENT_CODESIGN = 8192
 
 const MAP_RESILIENT_MEDIA = 16384
@@ -1528,43 +1012,13 @@ const MAP_UNIX03 = 262144
 
 const MAXAUDITDATA = 32767
 
-const MAXBSIZE = 1048576
-
-const MAXCOMLEN = 16
-
-const MAXDOMNAMELEN = 256
-
 const MAXFLOAT = 3.4028234663852886e+38
 
-const MAXFRAG = 8
-
-const MAXHOSTNAMELEN = 256
-
-const MAXINTERP = 64
-
-const MAXLOGNAME = 255
-
-const MAXPATHLEN = 1024
-
-const MAXPHYSIO_WIRED = 16777216
-
-const MAXPRI = 127
-
-const MAXSYMLINKS = 32
-
-const MAXUPRC = 266
-
-const MAX_AUDIT_RECORDS = 20
-
 const MAX_AUDIT_RECORD_SIZE = 32767
-
-const MAX_CANON = 1024
 
 const MAX_FATAL_kGUARD_EXC_CODE = 128
 
 const MAX_GRAFT_ARGS_SIZE = 512
-
-const MAX_INPUT = 1024
 
 const MAX_OPTIONAL_kGUARD_EXC_CODE = 524288
 
@@ -1572,103 +1026,35 @@ const MBIGCLBYTES = 4096
 
 const MBIGCLSHIFT = 12
 
-const MCLBYTES = 2048
-
-const MCLOFSET = 2047
-
-const MCLSHIFT = 11
-
-const MFSNAMELEN = 15
-
-const MFSTYPENAMELEN = 16
-
 const MINCORE_ANONYMOUS = 128
 
 const MINCORE_COPIED = 64
 
 const MINCORE_PAGED_OUT = 32
 
-const MINSIGSTKSZ = 32768
-
-const MIN_AUDIT_FILE_SIZE = 524288
-
 const MNAMELEN = 1024
-
-const MNT_ASYNC = 64
-
-const MNT_AUTOMOUNTED = 4194304
 
 const MNT_CMDFLAGS = 983040
 
 const MNT_CPROTECT = 128
 
-const MNT_DEFWRITE = 33554432
-
-const MNT_DONTBROWSE = 1048576
-
-const MNT_DOVOLFS = 32768
-
 const MNT_DWAIT = 4
-
-const MNT_EXPORTED = 256
 
 const MNT_EXT_FSKIT = 2
 
 const MNT_EXT_ROOT_DATA_VOL = 1
 
-const MNT_FORCE = 524288
-
-const MNT_IGNORE_OWNERSHIP = 2097152
-
-const MNT_JOURNALED = 8388608
-
-const MNT_LOCAL = 4096
-
-const MNT_MULTILABEL = 67108864
-
-const MNT_NOATIME = 268435456
-
 const MNT_NOBLOCK = 131072
-
-const MNT_NODEV = 16
-
-const MNT_NOEXEC = 4
 
 const MNT_NOFOLLOW = 134217728
 
-const MNT_NOSUID = 8
-
-const MNT_NOUSERXATTR = 16777216
-
-const MNT_NOWAIT = 2
-
-const MNT_QUARANTINE = 1024
-
-const MNT_QUOTA = 8192
-
-const MNT_RDONLY = 1
-
-const MNT_RELOAD = 262144
-
 const MNT_REMOVABLE = 512
-
-const MNT_ROOTFS = 16384
 
 const MNT_SNAPSHOT = 1073741824
 
 const MNT_STRICTATIME = 2147483648
 
-const MNT_SYNCHRONOUS = 2
-
-const MNT_UNION = 32
-
-const MNT_UNKNOWNPERMISSIONS = 2097152
-
-const MNT_UPDATE = 65536
-
 const MNT_VISFLAGMASK = 3757111295
-
-const MNT_WAIT = 1
 
 const MPG_FLAGS_INVALID_OPTIONS_OOL_ARRAYS = 2
 
@@ -1762,49 +1148,9 @@ const MPO_TG_BLOCK_TRACKING = 512
 
 const MPO_UNUSED_BITS = -131072
 
-const MSG_CTRUNC = 32
-
-const MSG_DONTWAIT = 128
-
-const MSG_EOF = 256
-
-const MSG_EOR = 8
-
-const MSG_FLUSH = 1024
-
-const MSG_HAVEMORE = 8192
-
-const MSG_HOLD = 2048
-
-const MSG_NEEDSA = 65536
-
 const MSG_NOSIGNAL = 524288
 
-const MSG_RCVMORE = 16384
-
-const MSG_SEND = 4096
-
-const MSG_TRUNC = 16
-
-const MSG_WAITALL = 64
-
-const MSG_WAITSTREAM = 512
-
-const MSIZE = 256
-
 const MSIZESHIFT = 8
-
-const MS_DEACTIVATE = 8
-
-const MS_KILLPAGES = 4
-
-const MS_SYNC = 16
-
-const NAME_MAX = 255
-
-const NBPG = 4096
-
-const NBPW = 4
 
 const NCARGS = 1048576
 
@@ -1818,23 +1164,9 @@ const NETSVC_MRKNG_UNKNOWN = 0
 
 const NET_MAXID = 41
 
-const NET_RT_DUMP = 1
-
-const NET_RT_DUMP2 = 7
-
-const NET_RT_FLAGS = 2
-
 const NET_RT_FLAGS_PRIV = 10
 
-const NET_RT_IFLIST = 3
-
-const NET_RT_IFLIST2 = 6
-
 const NET_RT_MAXID = 11
-
-const NET_RT_STAT = 4
-
-const NET_RT_TRASH = 5
 
 const NET_SERVICE_TYPE_AV = 6
 
@@ -1854,35 +1186,9 @@ const NET_SERVICE_TYPE_VI = 3
 
 const NET_SERVICE_TYPE_VO = 4
 
-const NFSV2_MAX_FH_SIZE = 32
-
-const NFSV3_MAX_FH_SIZE = 64
-
-const NFSV4_MAX_FH_SIZE = 128
-
-const NFS_MAX_FH_SIZE = 128
-
-const NGROUPS = 16
-
-const NOCRED = 0
-
-const NODEV = -1
-
-const NOFILE = 256
-
-const NOGROUP = 65535
-
-const NSIG = 32
-
-const NeXTBSD = 1995064
-
-const NeXTBSD4_0 = 0
-
 const OFF_MAX = 9223372036854775807
 
 const OFF_MIN = -9223372036854775808
-
-const OPEN_MAX = 10240
 
 const OS_ASSUME_PTR_ABI_SINGLE_BEGIN = "__ASSUME_PTR_ABI_SINGLE_BEGIN"
 
@@ -1892,11 +1198,7 @@ const OS_HEADER_INDEXABLE = "__header_indexable"
 
 const OS_UNSAFE_INDEXABLE = "__unsafe_indexable"
 
-const O_ALERT = 536870912
-
 const O_CLOEXEC = 16777216
-
-const O_DIRECTORY = 1048576
 
 const O_DP_AUTHENTICATE = 4
 
@@ -1906,151 +1208,27 @@ const O_DP_GETRAWUNENCRYPTED = 2
 
 const O_DSYNC = 4194304
 
-const O_EVTONLY = 32768
-
 const O_EXEC = 1073741824
 
-const O_NOCTTY = 131072
-
 const O_NOFOLLOW_ANY = 536870912
-
-const O_POPUP = 2147483648
 
 const O_RESOLVE_BENEATH = 4096
 
 const O_SEARCH = 1074790400
 
-const O_SYMLINK = 2097152
-
 const O_UNIQUE = 8192
-
-const PCATCH = 256
-
-const PDROP = 1024
-
-const PF_BOND = 1651469924
-
-const PF_CNT = 21
-
-const PF_COIP = 20
-
-const PF_INET6 = 30
-
-const PF_IPX = 23
-
-const PF_ISDN = 28
-
-const PF_KEY = 29
-
-const PF_LINK = 18
-
-const PF_LOCAL = 1
 
 const PF_MAX = 41
 
-const PF_NATM = 31
-
-const PF_NDRV = 27
-
-const PF_NETBIOS = 33
-
-const PF_PIP = 25
-
-const PF_PPP = 34
-
-const PF_RESERVED_36 = 36
-
-const PF_ROUTE = 17
-
-const PF_RTIP = 22
-
-const PF_SIP = 24
-
-const PF_SYSTEM = 32
-
 const PF_UTUN = 38
 
-const PF_VLAN = 1986814318
-
 const PF_VSOCK = 40
-
-const PF_XTP = 19
-
-const PGOFSET = 4095
-
-const PGSHIFT = 12
-
-const PINOD = 8
-
-const PLOCK = 36
-
-const POLL_ERR = 4
-
-const POLL_HUP = 6
-
-const POLL_IN = 1
-
-const POLL_MSG = 3
-
-const POLL_OUT = 2
-
-const POLL_PRI = 5
-
-const PPAUSE = 40
-
-const PRIBIO = 16
-
-const PRIMASK = 255
-
-const PRIO_DARWIN_BG = 4096
 
 const PRIO_DARWIN_NONUI = 4097
 
 const PRIO_DARWIN_PROCESS = 4
 
-const PRIO_DARWIN_THREAD = 3
-
-const PRIO_MAX = 20
-
-const PRIO_MIN = -20
-
-const PRIO_PGRP = 1
-
-const PRIO_PROCESS = 0
-
-const PRIO_USER = 2
-
-const PROXY_CONCHVERSION = 2
-
-const PROXY_HEADERLEN = 1
-
-const PROXY_HOSTIDLEN = 16
-
-const PROXY_MAXCONCHLEN = 1041
-
-const PROXY_PATHINDEX = 17
-
-const PSOCK = 24
-
 const PSPIN = 2048
-
-const PSWP = 0
-
-const PTHREAD_KEYS_MAX = 512
-
-const PTTYBLOCK = 512
-
-const PUSER = 50
-
-const PVFS = 20
-
-const PVM = 4
-
-const PWAIT = 32
-
-const PZERO = 22
-
-const P_tmpdir = "/var/tmp/"
 
 const RENAME_EXCL = 4
 
@@ -2064,55 +1242,15 @@ const RENAME_SECLUDE = 1
 
 const RENAME_SWAP = 2
 
-const RLIMIT_AS = 5
-
-const RLIMIT_CORE = 4
-
-const RLIMIT_CPU = 0
-
 const RLIMIT_CPU_USAGE_MONITOR = 2
 
-const RLIMIT_DATA = 2
-
 const RLIMIT_FOOTPRINT_INTERVAL = 4
-
-const RLIMIT_FSIZE = 1
-
-const RLIMIT_MEMLOCK = 6
-
-const RLIMIT_NOFILE = 8
-
-const RLIMIT_NPROC = 7
-
-const RLIMIT_RSS = 5
-
-const RLIMIT_STACK = 3
 
 const RLIMIT_THREAD_CPULIMITS = 3
 
 const RLIMIT_WAKEUPS_MONITOR = 1
 
-const RLIM_INFINITY = 9223372036854775807
-
-const RLIM_NLIMITS = 9
-
-const RLIM_SAVED_CUR = 9223372036854775807
-
-const RLIM_SAVED_MAX = 9223372036854775807
-
-const RTLD_FIRST = 256
-
-const RTLD_GLOBAL = 8
-
-const RTLD_LOCAL = 4
-
 const RTLD_MAIN_ONLY = 18446744073709551611
-
-const RTLD_NODELETE = 128
-
-const RTLD_NOLOAD = 16
-
-const RUSAGE_CHILDREN = -1
 
 const RUSAGE_INFO_CURRENT = 6
 
@@ -2130,8 +1268,6 @@ const RUSAGE_INFO_V5 = 5
 
 const RUSAGE_INFO_V6 = 6
 
-const RUSAGE_SELF = 0
-
 const RU_PROC_RUNS_RESLIDE = 1
 
 const SAE_ASSOCID_ALL = 4294967295
@@ -2141,26 +1277,6 @@ const SAE_ASSOCID_ANY = 0
 const SAE_CONNID_ALL = 4294967295
 
 const SAE_CONNID_ANY = 0
-
-const SA_64REGSET = 512
-
-const SA_NOCLDSTOP = 8
-
-const SA_NOCLDWAIT = 32
-
-const SA_NODEFER = 16
-
-const SA_ONSTACK = 1
-
-const SA_RESETHAND = 4
-
-const SA_RESTART = 2
-
-const SA_SIGINFO = 64
-
-const SA_USERSPACE_MASK = 127
-
-const SA_USERTRAMP = 256
 
 const SBC_ALTERNATE_SHARED_REGION = 2
 
@@ -2174,25 +1290,11 @@ const SBC_STRICT_AUTH = 16
 
 const SBC_SYSTEM_CONTENT = 4
 
-const SCM_CREDS = 3
-
-const SCM_RIGHTS = 1
-
-const SCM_TIMESTAMP = 2
-
 const SCM_TIMESTAMP_MONOTONIC = 4
-
-const SEARCHFS_MAX_SEARCHPARMS = 4096
 
 const SEEK_DATA = 4
 
 const SEEK_HOLE = 3
-
-const SEGV_ACCERR = 2
-
-const SEGV_MAPERR = 1
-
-const SEGV_NOOP = 0
 
 const SF_DATALESS = 1073741824
 
@@ -2206,99 +1308,7 @@ const SF_SUPPORTED = 10420224
 
 const SF_SYNTHETIC = 3221225472
 
-const SHUT_RD = 0
-
-const SHUT_RDWR = 2
-
-const SHUT_WR = 1
-
-const SIGABRT = 6
-
-const SIGALRM = 14
-
-const SIGBUS = 10
-
-const SIGCHLD = 20
-
-const SIGCONT = 19
-
-const SIGEMT = 7
-
 const SIGEV_KEVENT = 4
-
-const SIGEV_NONE = 0
-
-const SIGEV_SIGNAL = 1
-
-const SIGEV_THREAD = 3
-
-const SIGFPE = 8
-
-const SIGHUP = 1
-
-const SIGILL = 4
-
-const SIGINFO = 29
-
-const SIGINT = 2
-
-const SIGIO = 23
-
-const SIGIOT = 6
-
-const SIGKILL = 9
-
-const SIGPIPE = 13
-
-const SIGPROF = 27
-
-const SIGQUIT = 3
-
-const SIGSEGV = 11
-
-const SIGSTKSZ = 131072
-
-const SIGSTOP = 17
-
-const SIGSYS = 12
-
-const SIGTERM = 15
-
-const SIGTRAP = 5
-
-const SIGTSTP = 18
-
-const SIGTTIN = 21
-
-const SIGTTOU = 22
-
-const SIGURG = 16
-
-const SIGUSR1 = 30
-
-const SIGUSR2 = 31
-
-const SIGVTALRM = 26
-
-const SIGWINCH = 28
-
-const SIGXCPU = 24
-
-const SIGXFSZ = 25
-
-const SIG_BLOCK = 1
-
-const SIG_DFL = 0
-
-const SIG_ERR = 18446744073709551615
-
-const SIG_HOLD = 5
-
-const SIG_IGN = 1
-
-const SIG_SETMASK = 3
-
-const SIG_UNBLOCK = 2
 
 const SIOCADDMULTI = 2149607729
 
@@ -2430,139 +1440,43 @@ const SIOCSIFPHYS = 2149607734
 
 const SIOCSIFVLAN = 2149607806
 
-const SI_ASYNCIO = 65540
-
-const SI_MESGQ = 65541
-
-const SI_QUEUE = 65538
-
-const SI_TIMER = 65539
-
-const SI_USER = 65537
-
-const SOCK_MAXADDRLEN = 255
-
-const SOMAXCONN = 128
-
 const SONPX_SETOPTSHUT = 1
 
 const SO_BINDTODEVICE = 4404
-
-const SO_DONTTRUNC = 8192
-
-const SO_LABEL = 4112
-
-const SO_LINGER_SEC = 4224
 
 const SO_NETSVC_MARKING_LEVEL = 4377
 
 const SO_NET_SERVICE_TYPE = 4374
 
-const SO_NKE = 4129
-
-const SO_NOADDRERR = 4131
-
-const SO_NOSIGPIPE = 4130
-
-const SO_NOTIFYCONFLICT = 4134
-
 const SO_NP_EXTENSIONS = 4227
 
-const SO_NREAD = 4128
-
 const SO_NUMRCVPKT = 4370
-
-const SO_NWRITE = 4132
-
-const SO_PEERLABEL = 4113
 
 const SO_RANDOMPORT = 4226
 
 const SO_RESOLVER_SIGNATURE = 4401
 
-const SO_REUSEPORT = 512
-
-const SO_REUSESHAREUID = 4133
-
-const SO_TIMESTAMP = 1024
-
 const SO_TIMESTAMP_MONOTONIC = 2048
 
 const SO_UPCALLCLOSEWAIT = 4135
-
-const SO_WANTMORE = 16384
-
-const SO_WANTOOBFLAG = 32768
-
-const SQLITE_ENABLE_LOCKING_STYLE = 1
-
-const SRCHFS_MATCHDIRS = 4
-
-const SRCHFS_MATCHFILES = 8
-
-const SRCHFS_MATCHPARTIALNAMES = 2
-
-const SRCHFS_NEGATEPARAMS = 2147483648
 
 const SRCHFS_NOFOLLOW = 256
 
 const SRCHFS_NOFOLLOW_ANY = 512
 
-const SRCHFS_SKIPINAPPROPRIATE = 128
-
-const SRCHFS_SKIPINVISIBLE = 32
-
-const SRCHFS_SKIPLINKS = 16
-
-const SRCHFS_SKIPPACKAGES = 64
-
-const SRCHFS_START = 1
-
 const SRCHFS_VALIDOPTIONSMASK = 2147484671
-
-const SS_DISABLE = 4
-
-const SS_ONSTACK = 1
-
-const SV_INTERRUPT = 2
-
-const SV_NOCLDSTOP = 8
-
-const SV_NODEFER = 16
-
-const SV_ONSTACK = 1
-
-const SV_RESETHAND = 4
-
-const SV_SIGINFO = 64
 
 const SYNC_VOLUME_FULLSYNC = 1
 
 const SYNC_VOLUME_WAIT = 2
 
-const TARGET_CPU_68K = 0
-
-const TARGET_CPU_ALPHA = 0
-
 const TARGET_CPU_ARM = 0
-
-const TARGET_CPU_MIPS = 0
-
-const TARGET_CPU_PPC = 0
-
-const TARGET_CPU_PPC64 = 0
-
-const TARGET_CPU_SPARC = 0
-
-const TARGET_CPU_X86 = 0
 
 const TARGET_IPHONE_SIMULATOR = 0
 
 const TARGET_OS_BRIDGE = 0
 
 const TARGET_OS_DRIVERKIT = 0
-
-const TARGET_OS_EMBEDDED = 0
 
 const TARGET_OS_IOS = 0
 
@@ -2571,8 +1485,6 @@ const TARGET_OS_IOSMAC = 0
 const TARGET_OS_IPHONE = 0
 
 const TARGET_OS_LINUX = 0
-
-const TARGET_OS_MAC = 1
 
 const TARGET_OS_MACCATALYST = 0
 
@@ -2590,93 +1502,17 @@ const TARGET_OS_UEFI = 0
 
 const TARGET_OS_UIKITFORMAC = 0
 
-const TARGET_OS_UNIX = 0
-
 const TARGET_OS_VISION = 0
 
 const TARGET_OS_WATCH = 0
-
-const TARGET_OS_WIN32 = 0
 
 const TARGET_OS_WINDOWS = 0
 
 const TARGET_OS_XR = 0
 
-const TARGET_RT_64_BIT = 1
-
 const TARGET_RT_BIG_ENDIAN = 0
 
 const TARGET_RT_LITTLE_ENDIAN = 1
-
-const TARGET_RT_MAC_CFM = 0
-
-const TARGET_RT_MAC_MACHO = 1
-
-type TByteRangeLockPB2 = struct {
-	Foffset        uint64
-	Flength        uint64
-	FretRangeStart uint64
-	FunLockFlag    uint8
-	FstartEndFlag  uint8
-	Ffd            int32
-}
-
-type TFILE = struct {
-	F_p       uintptr
-	F_r       int32
-	F_w       int32
-	F_flags   int16
-	F_file    int16
-	F_bf      t__sbuf
-	F_lbfsize int32
-	F_cookie  uintptr
-	F_close   uintptr
-	F_read    uintptr
-	F_seek    uintptr
-	F_write   uintptr
-	F_ub      t__sbuf
-	F_extra   uintptr
-	F_ur      int32
-	F_ubuf    [3]uint8
-	F_nbuf    [1]uint8
-	F_lb      t__sbuf
-	F_blksize int32
-	F_offset  Tfpos_t
-}
-
-const TIOCDSIMICROCODE = 536900693
-
-const TIOCIXOFF = 536900736
-
-const TIOCIXON = 536900737
-
-const TIOCMODG = 1074033667
-
-const TIOCMODS = 2147775492
-
-const TIOCPTYGNAME = 1082160211
-
-const TIOCPTYGRANT = 536900692
-
-const TIOCPTYUNLK = 536900690
-
-const TIOCSCONS = 536900707
-
-const TRAP_BRKPT = 1
-
-const TRAP_TRACE = 2
-
-type T_RuneCharClass = struct {
-	F__name [14]int8
-	F__mask t__uint32_t
-}
-
-type T_RuneEntry = struct {
-	F__min   t__darwin_rune_t
-	F__max   t__darwin_rune_t
-	F__map   t__darwin_rune_t
-	F__types uintptr
-}
 
 type T_RuneLocale = struct {
 	F__magic        [8]int8
@@ -2696,118 +1532,15 @@ type T_RuneLocale = struct {
 	F__charclasses  uintptr
 }
 
-type T_opaque_pthread_attr_t = struct {
-	F__sig    int64
-	F__opaque [56]int8
-}
-
-type T_opaque_pthread_cond_t = struct {
-	F__sig    int64
-	F__opaque [40]int8
-}
-
-type T_opaque_pthread_condattr_t = struct {
-	F__sig    int64
-	F__opaque [8]int8
-}
-
-type T_opaque_pthread_mutex_t = struct {
-	F__sig    int64
-	F__opaque [56]int8
-}
-
-type T_opaque_pthread_mutexattr_t = struct {
-	F__sig    int64
-	F__opaque [8]int8
-}
-
-type T_opaque_pthread_once_t = struct {
-	F__sig    int64
-	F__opaque [8]int8
-}
-
-type T_opaque_pthread_rwlock_t = struct {
-	F__sig    int64
-	F__opaque [192]int8
-}
-
-type T_opaque_pthread_rwlockattr_t = struct {
-	F__sig    int64
-	F__opaque [16]int8
-}
-
 type T_opaque_pthread_t = struct {
 	F__sig           int64
 	F__cleanup_stack uintptr
 	F__opaque        [8176]int8
 }
 
-type Taccessx_descriptor = struct {
-	Fad_name_offset uint32
-	Fad_flags       int32
-	Fad_pad         [2]int32
-}
-
-// C documentation
-//
-//	/*
-//	** The afpLockingContext structure contains all afp lock specific state
-//	*/
-type TafpLockingContext = struct {
-	Freserved int32
-	FdbPath   uintptr
-}
-
-type Tattrgroup_t = uint32
-
-type Tattribute_set = Tattribute_set_t
-
-type Tattribute_set_t = struct {
-	Fcommonattr Tattrgroup_t
-	Fvolattr    Tattrgroup_t
-	Fdirattr    Tattrgroup_t
-	Ffileattr   Tattrgroup_t
-	Fforkattr   Tattrgroup_t
-}
-
-type Tattrlist = struct {
-	Fbitmapcount Tu_short
-	Freserved    Tu_int16_t
-	Fcommonattr  Tattrgroup_t
-	Fvolattr     Tattrgroup_t
-	Fdirattr     Tattrgroup_t
-	Ffileattr    Tattrgroup_t
-	Fforkattr    Tattrgroup_t
-}
-
-type Tattrreference = Tattrreference_t
-
-type Tattrreference_t = struct {
-	Fattr_dataoffset Tint32_t
-	Fattr_length     Tu_int32_t
-}
-
 type Tau_asflgs_t = uint64
 
-type Tau_asid_t = int32
-
-type Tau_class_t = uint32
-
 type Tau_ctlmode_t = uint8
-
-type Tau_emod_t = uint16
-
-type Tau_evclass_map = struct {
-	Fec_number Tau_event_t
-	Fec_class  Tau_class_t
-}
-
-type Tau_evclass_map_t = struct {
-	Fec_number Tau_event_t
-	Fec_class  Tau_class_t
-}
-
-type Tau_event_t = uint16
 
 type Tau_expire_after = struct {
 	Fage     Ttime_t
@@ -2824,18 +1557,6 @@ type Tau_expire_after_t = struct {
 type Tau_fstat_t = struct {
 	Faf_filesz Tu_int64_t
 	Faf_currsz Tu_int64_t
-}
-
-type Tau_id_t = uint32
-
-type Tau_mask = struct {
-	Fam_success uint32
-	Fam_failure uint32
-}
-
-type Tau_mask_t = struct {
-	Fam_success uint32
-	Fam_failure uint32
 }
 
 type Tau_qctrl = struct {
@@ -2881,28 +1602,6 @@ type Tau_stat_t = struct {
 	Fas_memused   uint32
 }
 
-type Tau_tid = struct {
-	Fport    Tdev_t
-	Fmachine Tu_int32_t
-}
-
-type Tau_tid_addr = struct {
-	Fat_port Tdev_t
-	Fat_type Tu_int32_t
-	Fat_addr [4]Tu_int32_t
-}
-
-type Tau_tid_addr_t = struct {
-	Fat_port Tdev_t
-	Fat_type Tu_int32_t
-	Fat_addr [4]Tu_int32_t
-}
-
-type Tau_tid_t = struct {
-	Fport    Tdev_t
-	Fmachine Tu_int32_t
-}
-
 type Taudit_fstat = struct {
 	Faf_filesz Tu_int64_t
 	Faf_currsz Tu_int64_t
@@ -2925,13 +1624,6 @@ type Taudit_stat = struct {
 	Fas_memused   uint32
 }
 
-type Tauditinfo = struct {
-	Fai_auid   Tau_id_t
-	Fai_mask   Tau_mask_t
-	Fai_termid Tau_tid_t
-	Fai_asid   Tau_asid_t
-}
-
 type Tauditinfo_addr = struct {
 	Fai_auid   Tau_id_t
 	Fai_mask   Tau_mask_t
@@ -2946,21 +1638,6 @@ type Tauditinfo_addr_t = struct {
 	Fai_termid Tau_tid_addr_t
 	Fai_asid   Tau_asid_t
 	Fai_flags  Tau_asflgs_t
-}
-
-type Tauditinfo_t = struct {
-	Fai_auid   Tau_id_t
-	Fai_mask   Tau_mask_t
-	Fai_termid Tau_tid_t
-	Fai_asid   Tau_asid_t
-}
-
-type Tauditpinfo = struct {
-	Fap_pid    Tpid_t
-	Fap_auid   Tau_id_t
-	Fap_mask   Tau_mask_t
-	Fap_termid Tau_tid_t
-	Fap_asid   Tau_asid_t
 }
 
 type Tauditpinfo_addr = struct {
@@ -2981,42 +1658,7 @@ type Tauditpinfo_addr_t = struct {
 	Fap_flags  Tau_asflgs_t
 }
 
-type Tauditpinfo_t = struct {
-	Fap_pid    Tpid_t
-	Fap_auid   Tau_id_t
-	Fap_mask   Tau_mask_t
-	Fap_termid Tau_tid_t
-	Fap_asid   Tau_asid_t
-}
-
-type Tclock_t = uint64
-
-type Tclockinfo = struct {
-	Fhz      int32
-	Ftick    int32
-	Ftickadj int32
-	Fstathz  int32
-	Fprofhz  int32
-}
-
-type Tcmsghdr = struct {
-	Fcmsg_len   Tsocklen_t
-	Fcmsg_level int32
-	Fcmsg_type  int32
-}
-
 type Tcryptex_auth_type_t = uint32
-
-type Tct_rune_t = int32
-
-type Tdaddr_t = int32
-
-type Tdiskextent = struct {
-	Fstartblock Tu_int32_t
-	Fblockcount Tu_int32_t
-}
-
-type Textentrecord = [8]Tdiskextent
 
 type Tfattributiontag = Tfattributiontag_t
 
@@ -3032,12 +1674,6 @@ type Tfchecklv_t = struct {
 	Flv_file_start         Toff_t
 	Flv_error_message_size Tsize_t
 	Flv_error_message      uintptr
-}
-
-type Tfd_mask = int32
-
-type Tfd_set = struct {
-	Ffds_bits [32]t__int32_t
 }
 
 type Tfgetsigsinfo = Tfgetsigsinfo_t
@@ -3058,10 +1694,6 @@ type Tfhandle_t = struct {
 	Ffh_data [128]uint8
 }
 
-type Tfilesec_property_t = int32
-
-type Tfilesec_t = uintptr
-
 type Tflocktimeout = struct {
 	Ffl      Tflock
 	Ftimeout Ttimespec
@@ -3076,20 +1708,6 @@ type Tfpunchhole_t = struct {
 	Ffp_length Toff_t
 }
 
-type Tfsblkcnt_t = uint32
-
-type Tfsfilcnt_t = uint32
-
-type Tfsfile_type_t = uint32
-
-type Tfsid = Tfsid_t
-
-type Tfsid_t = struct {
-	Fval [2]Tint32_t
-}
-
-type Tfsignatures = Tfsignatures_t
-
 type Tfsignatures_t = struct {
 	Ffs_file_start       Toff_t
 	Ffs_blob_start       uintptr
@@ -3098,17 +1716,6 @@ type Tfsignatures_t = struct {
 	Ffs_cdhash           [20]int8
 	Ffs_hash_type        int32
 }
-
-type Tfsobj_id = Tfsobj_id_t
-
-type Tfsobj_id_t = struct {
-	Ffid_objno      Tu_int32_t
-	Ffid_generation Tu_int32_t
-}
-
-type Tfsobj_tag_t = uint32
-
-type Tfsobj_type_t = uint32
 
 type Tfspecread = Tfspecread_t
 
@@ -3119,29 +1726,6 @@ type Tfspecread_t = struct {
 	Ffsr_length Toff_t
 }
 
-type Tfssearchblock = struct {
-	Freturnattrs         uintptr
-	Freturnbuffer        uintptr
-	Freturnbuffersize    Tsize_t
-	Fmaxmatches          Tu_long
-	Ftimelimit           Ttimeval
-	Fsearchparams1       uintptr
-	Fsizeofsearchparams1 Tsize_t
-	Fsearchparams2       uintptr
-	Fsizeofsearchparams2 Tsize_t
-	Fsearchattrs         Tattrlist
-}
-
-type Tfstore = Tfstore_t
-
-type Tfstore_t = struct {
-	Ffst_flags      uint32
-	Ffst_posmode    int32
-	Ffst_offset     Toff_t
-	Ffst_length     Toff_t
-	Ffst_bytesalloc Toff_t
-}
-
 type Tfsupplement = Tfsupplement_t
 
 type Tfsupplement_t = struct {
@@ -3150,8 +1734,6 @@ type Tfsupplement_t = struct {
 	Ffs_blob_size  Tsize_t
 	Ffs_orig_fd    int32
 }
-
-type Tfsvolid_t = uint32
 
 type Tftrimactivefile = Tftrimactivefile_t
 
@@ -3379,25 +1961,12 @@ type Tifstat = struct {
 	Fascii    [801]int8
 }
 
-type Tino64_t = uint64
-
 type Tinteger_t = int32
 
 type Tkev_dl_proto_data = struct {
 	Flink_data             Tnet_event_data
 	Fproto_family          Tu_int32_t
 	Fproto_remaining_count Tu_int32_t
-}
-
-type Tlinger = struct {
-	Fl_onoff  int32
-	Fl_linger int32
-}
-
-type Tlog2phys = struct {
-	Fl2p_flags       uint32
-	Fl2p_contigbytes Toff_t
-	Fl2p_devoffset   Toff_t
 }
 
 type Tmach_port_array_t = uintptr
@@ -3510,21 +2079,7 @@ type Tmalloc_type_id_t = uint64
 
 type Tmax_align_t = float64
 
-type Tmcontext_t = uintptr
-
-type Tmount_t = uintptr
-
 type Tmpo_flags_t = uint32
-
-type Tmsghdr = struct {
-	Fmsg_name       uintptr
-	Fmsg_namelen    Tsocklen_t
-	Fmsg_iov        uintptr
-	Fmsg_iovlen     int32
-	Fmsg_control    uintptr
-	Fmsg_controllen Tsocklen_t
-	Fmsg_flags      int32
-}
 
 type Tnatural_t = uint32
 
@@ -3542,29 +2097,9 @@ type Tnetfs_status = struct {
 	Fns_threadcount Tuint32_t
 }
 
-type Tnlink_t = uint16
-
 type Tos_block_t = uintptr
 
 type Tos_function_t = uintptr
-
-type Tostat = struct {
-	Fst_dev       t__uint16_t
-	Fst_ino       Tino_t
-	Fst_mode      Tmode_t
-	Fst_nlink     Tnlink_t
-	Fst_uid       t__uint16_t
-	Fst_gid       t__uint16_t
-	Fst_rdev      t__uint16_t
-	Fst_size      t__int32_t
-	Fst_atimespec Ttimespec
-	Fst_mtimespec Ttimespec
-	Fst_ctimespec Ttimespec
-	Fst_blksize   t__int32_t
-	Fst_blocks    t__int32_t
-	Fst_flags     t__uint32_t
-	Fst_gen       t__uint32_t
-}
 
 type Tposix_cred_t = uintptr
 
@@ -3573,98 +2108,9 @@ type Tproc_rlimit_control_wakeupmon = struct {
 	Fwm_rate  Tint32_t
 }
 
-// C documentation
-//
-//	/*
-//	** The proxyLockingContext has the path and file structures for the remote
-//	** and local proxy files in it
-//	*/
-type TproxyLockingContext = struct {
-	FconchFile         uintptr
-	FconchFilePath     uintptr
-	FlockProxy         uintptr
-	FlockProxyPath     uintptr
-	FdbPath            uintptr
-	FconchHeld         int32
-	FnFails            int32
-	FoldLockingContext uintptr
-	FpOldMethod        uintptr
-}
-
-type Tpthread_attr_t = struct {
-	F__sig    int64
-	F__opaque [56]int8
-}
-
-type Tpthread_cond_t = struct {
-	F__sig    int64
-	F__opaque [40]int8
-}
-
-type Tpthread_condattr_t = struct {
-	F__sig    int64
-	F__opaque [8]int8
-}
-
-type Tpthread_key_t = uint64
-
-type Tpthread_mutex_t = struct {
-	F__sig    int64
-	F__opaque [56]int8
-}
-
-type Tpthread_mutexattr_t = struct {
-	F__sig    int64
-	F__opaque [8]int8
-}
-
-type Tpthread_once_t = struct {
-	F__sig    int64
-	F__opaque [8]int8
-}
-
-type Tpthread_rwlock_t = struct {
-	F__sig    int64
-	F__opaque [192]int8
-}
-
-type Tpthread_rwlockattr_t = struct {
-	F__sig    int64
-	F__opaque [16]int8
-}
-
-type Tradvisory = struct {
-	Fra_offset Toff_t
-	Fra_count  int32
-}
-
-type Trlimit = struct {
-	Frlim_cur Trlim_t
-	Frlim_max Trlim_t
-}
-
 type Trslvmulti_req = struct {
 	Fsa   uintptr
 	Fllsa uintptr
-}
-
-type Trusage = struct {
-	Fru_utime    Ttimeval
-	Fru_stime    Ttimeval
-	Fru_maxrss   int64
-	Fru_ixrss    int64
-	Fru_idrss    int64
-	Fru_isrss    int64
-	Fru_minflt   int64
-	Fru_majflt   int64
-	Fru_nswap    int64
-	Fru_inblock  int64
-	Fru_oublock  int64
-	Fru_msgsnd   int64
-	Fru_msgrcv   int64
-	Fru_nsignals int64
-	Fru_nvcsw    int64
-	Fru_nivcsw   int64
 }
 
 type Trusage_info_current = struct {
@@ -3949,8 +2395,6 @@ type Tsa_endpoints_t = struct {
 	Fsae_dstaddrlen Tsocklen_t
 }
 
-type Tsa_family_t = uint8
-
 type Tsae_associd_t = uint32
 
 type Tsae_connid_t = uint32
@@ -3972,91 +2416,9 @@ type Tsecure_boot_cryptex_args_t = struct {
 	Fsbc_flags                 Tu_int64_t
 }
 
-type Tsf_hdtr = struct {
-	Fheaders  uintptr
-	Fhdr_cnt  int32
-	Ftrailers uintptr
-	Ftrl_cnt  int32
-}
-
-type Tsig_atomic_t = int32
-
-type Tsig_t = uintptr
-
-type Tsigaction = struct {
-	F__sigaction_u t__sigaction_u
-	Fsa_mask       Tsigset_t
-	Fsa_flags      int32
-}
-
-type Tsigevent = struct {
-	Fsigev_notify            int32
-	Fsigev_signo             int32
-	Fsigev_value             Tsigval
-	Fsigev_notify_function   uintptr
-	Fsigev_notify_attributes uintptr
-}
-
-type Tsiginfo_t = struct {
-	Fsi_signo  int32
-	Fsi_errno  int32
-	Fsi_code   int32
-	Fsi_pid    Tpid_t
-	Fsi_uid    Tuid_t
-	Fsi_status int32
-	Fsi_addr   uintptr
-	Fsi_value  Tsigval
-	Fsi_band   int64
-	F__pad     [7]uint64
-}
-
-type Tsigstack = struct {
-	Fss_sp      uintptr
-	Fss_onstack int32
-}
-
-type Tsigval = struct {
-	Fsival_ptr   [0]uintptr
-	Fsival_int   int32
-	F__ccgo_pad2 [4]byte
-}
-
-type Tsigvec = struct {
-	Fsv_handler uintptr
-	Fsv_mask    int32
-	Fsv_flags   int32
-}
-
 type Tso_np_extensions = struct {
 	Fnpx_flags Tu_int32_t
 	Fnpx_mask  Tu_int32_t
-}
-
-type Tsockaddr = struct {
-	Fsa_len    t__uint8_t
-	Fsa_family Tsa_family_t
-	Fsa_data   [14]int8
-}
-
-type Tsockaddr_storage = struct {
-	Fss_len     t__uint8_t
-	Fss_family  Tsa_family_t
-	F__ss_pad1  [6]int8
-	F__ss_align t__int64_t
-	F__ss_pad2  [112]int8
-}
-
-type Tsocklen_t = uint32
-
-type Tsockproto = struct {
-	Fsp_family   t__uint16_t
-	Fsp_protocol t__uint16_t
-}
-
-type Tstack_t = struct {
-	Fss_sp    uintptr
-	Fss_size  t__darwin_size_t
-	Fss_flags int32
 }
 
 type Tstat = struct {
@@ -4100,20 +2462,6 @@ type Tstatfs = struct {
 	Ff_reserved    [7]Tuint32_t
 }
 
-type Tsyscall_arg_t = uint64
-
-type Ttext_encoding_t = uint32
-
-type Ttimespec = struct {
-	Ftv_sec  t__darwin_time_t
-	Ftv_nsec int64
-}
-
-type Ttimeval = struct {
-	Ftv_sec  t__darwin_time_t
-	Ftv_usec t__darwin_suseconds_t
-}
-
 type Ttimeval32 = struct {
 	Ftv_sec  t__int32_t
 	Ftv_usec t__int32_t
@@ -4124,78 +2472,7 @@ type Ttimeval64 = struct {
 	Ftv_usec t__int64_t
 }
 
-type Tucontext_t = struct {
-	Fuc_onstack  int32
-	Fuc_sigmask  t__darwin_sigset_t
-	Fuc_stack    t__darwin_sigaltstack
-	Fuc_link     uintptr
-	Fuc_mcsize   t__darwin_size_t
-	Fuc_mcontext uintptr
-}
-
-// C documentation
-//
-//	/*
-//	** The unixFile structure is subclass of sqlite3_file specific to the unix
-//	** VFS implementations.
-//	*/
-type TunixFile = struct {
-	FpMethod               uintptr
-	FpVfs                  uintptr
-	FpInode                uintptr
-	Fh                     int32
-	FeFileLock             uint8
-	FctrlFlags             uint16
-	FlastErrno             int32
-	FlockingContext        uintptr
-	FpPreallocatedUnused   uintptr
-	FzPath                 uintptr
-	FpShm                  uintptr
-	FszChunk               int32
-	FnFetchOut             int32
-	FmmapSize              Tsqlite3_int64
-	FmmapSizeActual        Tsqlite3_int64
-	FmmapSizeMax           Tsqlite3_int64
-	FpMapRegion            uintptr
-	FsectorSize            int32
-	FdeviceCharacteristics int32
-	FopenFlags             int32
-	FfsFlags               uint32
-}
-
-/* Shared memory instance */
-type TunixInodeInfo = struct {
-	FfileId          TunixFileId
-	FpLockMutex      uintptr
-	FnShared         int32
-	FnLock           int32
-	FeFileLock       uint8
-	FbProcessLock    uint8
-	FbLockIsReadOnly uint8
-	FhLock           int32
-	FpUnused         uintptr
-	FnRef            int32
-	FpShmNode        uintptr
-	FpNext           uintptr
-	FpPrev           uintptr
-	FsharedByte      uint64
-}
-
-type Tuser_addr_t = uint64
-
-type Tuser_long_t = int64
-
 type Tuser_off_t = int64
-
-type Tuser_size_t = uint64
-
-type Tuser_ssize_t = int64
-
-type Tuser_time_t = int64
-
-type Tuser_ulong_t = uint64
-
-type Tuuid_t = [16]uint8
 
 type Tvfs_server = struct {
 	Fvs_minutes     Tint32_t
@@ -4212,78 +2489,11 @@ type Tvfsconf = struct {
 	Fvfc_reserved3 Tuint32_t
 }
 
-type Tvfsidctl = struct {
-	Fvc_vers  int32
-	Fvc_fsid  Tfsid_t
-	Fvc_ptr   uintptr
-	Fvc_len   Tsize_t
-	Fvc_spare [12]Tu_int32_t
-}
-
-type Tvfsquery = struct {
-	Fvq_flags Tu_int32_t
-	Fvq_spare [31]Tu_int32_t
-}
-
-type Tvfsstatfs = struct {
-	Ff_bsize       Tuint32_t
-	Ff_iosize      Tsize_t
-	Ff_blocks      Tuint64_t
-	Ff_bfree       Tuint64_t
-	Ff_bavail      Tuint64_t
-	Ff_bused       Tuint64_t
-	Ff_files       Tuint64_t
-	Ff_ffree       Tuint64_t
-	Ff_fsid        Tfsid_t
-	Ff_owner       Tuid_t
-	Ff_flags       Tuint64_t
-	Ff_fstypename  [16]int8
-	Ff_mntonname   [1024]int8
-	Ff_mntfromname [1024]int8
-	Ff_fssubtype   Tuint32_t
-	Ff_reserved    [2]uintptr
-}
-
 type Tvm_map_address_t = uint64
 
 type Tvm_map_offset_t = uint64
 
 type Tvm_map_size_t = uint64
-
-type Tvnode_t = uintptr
-
-type Tvol_attributes_attr = Tvol_attributes_attr_t
-
-type Tvol_attributes_attr_t = struct {
-	Fvalidattr  Tattribute_set_t
-	Fnativeattr Tattribute_set_t
-}
-
-type Tvol_capabilities_attr = Tvol_capabilities_attr_t
-
-type Tvol_capabilities_attr_t = struct {
-	Fcapabilities Tvol_capabilities_set_t
-	Fvalid        Tvol_capabilities_set_t
-}
-
-type Tvol_capabilities_set_t = [4]Tu_int32_t
-
-type Twait = struct {
-	Fw_T [0]struct {
-		F__ccgo0 uint32
-	}
-	Fw_S [0]struct {
-		F__ccgo0 uint32
-	}
-	Fw_status int32
-}
-
-type Txucred = struct {
-	Fcr_version Tu_int
-	Fcr_uid     Tuid_t
-	Fcr_ngroups int16
-	Fcr_groups  [16]Tgid_t
-}
 
 const UF_COMPRESSED = 32
 
@@ -4293,23 +2503,13 @@ const UF_TRACKED = 64
 
 const UNGRAFTDMG_NOFORCE = 2
 
-const USER_ADDR_NULL = 0
-
 const USER_FSIGNATURES_CDHASH_LEN = 20
 
-const VFS_CONF = 2
-
 const VFS_CTL_DISC = 65544
-
-const VFS_CTL_NEWADDR = 65540
-
-const VFS_CTL_NOLOCKS = 65542
 
 const VFS_CTL_NSTATUS = 65546
 
 const VFS_CTL_OSTATFS = 65537
-
-const VFS_CTL_QUERY = 65539
 
 const VFS_CTL_SADDR = 65543
 
@@ -4319,33 +2519,7 @@ const VFS_CTL_STATFS = 65547
 
 const VFS_CTL_STATFS64 = 65547
 
-const VFS_CTL_TIMEO = 65541
-
-const VFS_CTL_UMOUNT = 65538
-
-const VFS_CTL_VERS1 = 1
-
-const VFS_GENERIC = 0
-
-const VFS_MAXTYPENUM = 1
-
-const VFS_NUMMNTOPS = 1
-
-const VOL_CAPABILITIES_FORMAT = 0
-
-const VOL_CAPABILITIES_INTERFACES = 1
-
-const VOL_CAPABILITIES_RESERVED1 = 2
-
-const VOL_CAPABILITIES_RESERVED2 = 3
-
-const VOL_CAP_FMT_2TB_FILESIZE = 2048
-
 const VOL_CAP_FMT_64BIT_OBJECT_IDS = 131072
-
-const VOL_CAP_FMT_CASE_PRESERVING = 512
-
-const VOL_CAP_FMT_CASE_SENSITIVE = 256
 
 const VOL_CAP_FMT_CLONE_MAPPING = 67108864
 
@@ -4355,75 +2529,27 @@ const VOL_CAP_FMT_DIR_HARDLINKS = 262144
 
 const VOL_CAP_FMT_DOCUMENT_ID = 524288
 
-const VOL_CAP_FMT_FAST_STATFS = 1024
-
-const VOL_CAP_FMT_HARDLINKS = 4
-
-const VOL_CAP_FMT_HIDDEN_FILES = 8192
-
-const VOL_CAP_FMT_JOURNAL = 8
-
-const VOL_CAP_FMT_JOURNAL_ACTIVE = 16
-
 const VOL_CAP_FMT_NO_IMMUTABLE_FILES = 2097152
 
 const VOL_CAP_FMT_NO_PERMISSIONS = 4194304
 
-const VOL_CAP_FMT_NO_ROOT_TIMES = 32
-
 const VOL_CAP_FMT_NO_VOLUME_SIZES = 32768
-
-const VOL_CAP_FMT_OPENDENYMODES = 4096
-
-const VOL_CAP_FMT_PATH_FROM_ID = 16384
-
-const VOL_CAP_FMT_PERSISTENTOBJECTIDS = 1
 
 const VOL_CAP_FMT_SEALED = 33554432
 
 const VOL_CAP_FMT_SHARED_SPACE = 8388608
 
-const VOL_CAP_FMT_SPARSE_FILES = 64
-
-const VOL_CAP_FMT_SYMBOLICLINKS = 2
-
 const VOL_CAP_FMT_VOL_GROUPS = 16777216
 
 const VOL_CAP_FMT_WRITE_GENERATION_COUNT = 1048576
 
-const VOL_CAP_FMT_ZERO_RUNS = 128
-
-const VOL_CAP_INT_ADVLOCK = 256
-
-const VOL_CAP_INT_ALLOCATE = 64
-
 const VOL_CAP_INT_ATTRIBUTION_TAG = 4194304
-
-const VOL_CAP_INT_ATTRLIST = 2
 
 const VOL_CAP_INT_BARRIERFSYNC = 16777216
 
 const VOL_CAP_INT_CLONE = 65536
 
-const VOL_CAP_INT_COPYFILE = 32
-
-const VOL_CAP_INT_EXCHANGEDATA = 16
-
-const VOL_CAP_INT_EXTENDED_ATTR = 16384
-
-const VOL_CAP_INT_EXTENDED_SECURITY = 1024
-
-const VOL_CAP_INT_FLOCK = 512
-
-const VOL_CAP_INT_MANLOCK = 4096
-
-const VOL_CAP_INT_NAMEDSTREAMS = 8192
-
-const VOL_CAP_INT_NFSEXPORT = 4
-
 const VOL_CAP_INT_PUNCHHOLE = 8388608
-
-const VOL_CAP_INT_READDIRATTR = 8
 
 const VOL_CAP_INT_RENAME_EXCL = 524288
 
@@ -4433,17 +2559,7 @@ const VOL_CAP_INT_RENAME_SECLUDE = 2097152
 
 const VOL_CAP_INT_RENAME_SWAP = 262144
 
-const VOL_CAP_INT_SEARCHFS = 1
-
 const VOL_CAP_INT_SNAPSHOT = 131072
-
-const VOL_CAP_INT_USERACCESS = 2048
-
-const VOL_CAP_INT_VOL_RENAME = 128
-
-const VQ_ASSIST = 64
-
-const VQ_DEAD = 32
 
 const VQ_DESIRED_DISK = 16384
 
@@ -4453,17 +2569,7 @@ const VQ_FREE_SPACE_CHANGE = 32768
 
 const VQ_IDLE_PURGE_NOTIFY = 131072
 
-const VQ_LOWDISK = 4
-
-const VQ_MOUNT = 8
-
 const VQ_NEARLOWDISK = 8192
-
-const VQ_NEEDAUTH = 2
-
-const VQ_NOTRESP = 1
-
-const VQ_NOTRESPLOCK = 128
 
 const VQ_PURGEABLE_SPACE_CHANGE = 65536
 
@@ -4473,15 +2579,7 @@ const VQ_SERVEREVENT = 2048
 
 const VQ_SYNCEVENT = 1024
 
-const VQ_UNMOUNT = 16
-
-const VQ_UPDATE = 256
-
 const VQ_VERYLOWDISK = 512
-
-const WAIT_ANY = -1
-
-const WAIT_MYPGRP = 0
 
 const WAKEMON_DISABLE = 2
 
@@ -4492,18 +2590,6 @@ const WAKEMON_GET_PARAMS = 4
 const WAKEMON_MAKE_FATAL = 16
 
 const WAKEMON_SET_DEFAULTS = 8
-
-const WCONTINUED = 16
-
-const WCOREFLAG = 128
-
-const WEXITED = 4
-
-const WNOWAIT = 32
-
-const WSTOPPED = 8
-
-const XUCRED_VERSION = 0
 
 // C documentation
 //
@@ -5718,81 +3804,6 @@ func Xsqlite3_open16(tls *libc.TLS, zFilename uintptr, ppDb uintptr) (r int32) {
 	_sqlite3ValueFree(tls, pVal)
 	return rc & int32(0xff)
 }
-
-// C documentation
-//
-//	/*
-//	** Initialize the operating system interface.
-//	**
-//	** This routine registers all VFS implementations for unix-like operating
-//	** systems.  This routine, and the sqlite3_os_end() routine that follows,
-//	** should be the only routines in this file that are visible from other
-//	** files.
-//	**
-//	** This routine is called once during SQLite initialization and by a
-//	** single thread.  The memory allocation and mutex subsystems have not
-//	** necessarily been initialized when this routine is called, and so they
-//	** should not be used.
-//	*/
-func Xsqlite3_os_init(tls *libc.TLS) (r int32) {
-	var i uint32
-	_ = i
-	/* Double-check that the aSyscall[] array has been constructed
-	 ** correctly.  See ticket [bb3a86e890c8e96ab] */
-	/* Settle POSIX vs OFD locking before any file can be opened */
-	/* Register all VFSes defined in the aVfs[] array */
-	i = uint32(0)
-	for {
-		if !(uint64(i) < libc.Uint64FromInt64(1512)/libc.Uint64FromInt64(168)) {
-			break
-		}
-		Xsqlite3_vfs_register(tls, uintptr(unsafe.Pointer(&_aVfs))+uintptr(i)*168, libc.BoolInt32(i == uint32(0)))
-		goto _1
-	_1:
-		;
-		i = i + 1
-	}
-	_unixBigLock = _sqlite3MutexAlloc(tls, int32(SQLITE_MUTEX_STATIC_VFS1))
-	/* Validate lock assumptions */
-	/* Number of available locks */
-	/* Start of locking area */
-	/* Locks:
-	 **    WRITE       UNIX_SHM_BASE      120
-	 **    CKPT        UNIX_SHM_BASE+1    121
-	 **    RECOVER     UNIX_SHM_BASE+2    122
-	 **    READ-0      UNIX_SHM_BASE+3    123
-	 **    READ-1      UNIX_SHM_BASE+4    124
-	 **    READ-2      UNIX_SHM_BASE+5    125
-	 **    READ-3      UNIX_SHM_BASE+6    126
-	 **    READ-4      UNIX_SHM_BASE+7    127
-	 **    DMS         UNIX_SHM_BASE+8    128
-	 */
-	/* Byte offset of the deadman-switch */
-	/* Initialize temp file dir array. */
-	_unixTempFileInit(tls)
-	return SQLITE_OK
-}
-
-/*
- ** The following macro defines an initializer for an sqlite3_vfs object.
- ** The name of the VFS is NAME.  The pAppData is a pointer to a pointer
- ** to the "finder" function.  (pAppData is a pointer to a pointer because
- ** silly C90 rules prohibit a void* from being cast to a function pointer
- ** and so we have to go through the intermediate pointer to avoid problems
- ** when compiling with -pedantic-errors on GCC.)
- **
- ** The FINDER parameter to this macro is the name of the pointer to the
- ** finder-function.  The finder-function returns a pointer to the
- ** sqlite_io_methods object that implements the desired locking
- ** behaviors.  See the division above that contains the IOMETHODS
- ** macro for addition information on finder-functions.
- **
- ** Most finders simply return a pointer to a fixed sqlite3_io_methods
- ** object.  But the "autolockIoFinder" available on MacOSX does a little
- ** more than that; it looks at the filesystem type that hosts the
- ** database file and tries to choose an locking method appropriate for
- ** that filesystem time.
- */
 
 // C documentation
 //
@@ -7658,19 +5669,6 @@ func Xsqlite3_value_dup(tls *libc.TLS, pOrig uintptr) (r uintptr) {
 // C documentation
 //
 //	/*
-//	** Return the ON CONFLICT resolution mode in effect for the virtual
-//	** table update operation currently in progress.
-//	**
-//	** The results of this routine are undefined unless it is called from
-//	** within an xUpdate method.
-//	*/
-func Xsqlite3_vtab_on_conflict(tls *libc.TLS, db uintptr) (r int32) {
-	return libc.Int32FromUint8(_aMap1[libc.Int32FromUint8((*Tsqlite3)(unsafe.Pointer(db)).FvtabOnConflict)-int32(1)])
-}
-
-// C documentation
-//
-//	/*
 //	** Checkpoint database zDb.
 //	*/
 func Xsqlite3_wal_checkpoint_v2(tls *libc.TLS, db uintptr, zDb uintptr, eMode int32, pnLog uintptr, pnCkpt uintptr) (r int32) {
@@ -8689,10 +6687,6 @@ diff_out:
 	return rc
 }
 
-const _ACCESS_EXTENDED_MASK = 4193792
-
-const _APPEND_OK = 8192
-
 const _AU_SESSION_FLAG_HAS_AUTHENTICATED = 16384
 
 const _AU_SESSION_FLAG_HAS_CONSOLE_ACCESS = 8192
@@ -8704,8 +6698,6 @@ const _AU_SESSION_FLAG_HAS_TTY = 32
 const _AU_SESSION_FLAG_IS_INITIAL = 1
 
 const _AU_SESSION_FLAG_IS_REMOTE = 4096
-
-const _CHOWN_OK = 2097152
 
 const _CRYPTEX1_AUTH_ENV_GENERIC = 4
 
@@ -8757,73 +6749,9 @@ const _CRYPTEX_AUTH_MOBILE_ASSET_WITH_CODE = 9
 
 const _CRYPTEX_AUTH_PDI_NONCE = 6
 
-const _CS_DARWIN_USER_CACHE_DIR = 65538
-
-const _CS_DARWIN_USER_DIR = 65536
-
-const _CS_DARWIN_USER_TEMP_DIR = 65537
-
-const _CS_XBS5_ILP32_OFF32_CFLAGS = 20
-
-const _CS_XBS5_ILP32_OFF32_LDFLAGS = 21
-
-const _CS_XBS5_ILP32_OFF32_LIBS = 22
-
-const _CS_XBS5_ILP32_OFF32_LINTFLAGS = 23
-
-const _CS_XBS5_ILP32_OFFBIG_CFLAGS = 24
-
-const _CS_XBS5_ILP32_OFFBIG_LDFLAGS = 25
-
-const _CS_XBS5_ILP32_OFFBIG_LIBS = 26
-
-const _CS_XBS5_ILP32_OFFBIG_LINTFLAGS = 27
-
-const _CS_XBS5_LP64_OFF64_CFLAGS = 28
-
-const _CS_XBS5_LP64_OFF64_LDFLAGS = 29
-
-const _CS_XBS5_LP64_OFF64_LIBS = 30
-
-const _CS_XBS5_LP64_OFF64_LINTFLAGS = 31
-
-const _CS_XBS5_LPBIG_OFFBIG_CFLAGS = 32
-
-const _CS_XBS5_LPBIG_OFFBIG_LDFLAGS = 33
-
-const _CS_XBS5_LPBIG_OFFBIG_LIBS = 34
-
-const _CS_XBS5_LPBIG_OFFBIG_LINTFLAGS = 35
-
 const _DARWIN_FEATURE_64_BIT_INODE = 1
 
 const _DARWIN_FEATURE_ONLY_UNIX_CONFORMANCE = 1
-
-const _DARWIN_FEATURE_UNIX_CONFORMANCE = 3
-
-const _DELETE_OK = 4096
-
-const _EXECUTE_OK = 2048
-
-const _FILESEC_ACL = 5
-
-const _FILESEC_ACL_ALLOCSIZE = 101
-
-const _FILESEC_ACL_RAW = 100
-
-const _FILESEC_GROUP = 2
-
-const _FILESEC_GRPUUID = 6
-
-const _FILESEC_MODE = 4
-
-const _FILESEC_OWNER = 1
-
-const _FILESEC_REMOVE_ACL = 1
-
-const _FILESEC_UNSET_PROPERTY = 0
-
-const _FILESEC_UUID = 3
 
 const _FORTIFY_SOURCE = 2
 
@@ -8869,99 +6797,11 @@ const _MPO_SERVICE_PORT = 1024
 
 const _MPO_WEAK_REPLY_PORT = 16384
 
-const _PC_2_SYMLINKS = 15
-
-const _PC_ALLOC_SIZE_MIN = 16
-
-const _PC_ASYNC_IO = 17
-
-const _PC_AUTH_OPAQUE_NP = 14
-
-const _PC_CASE_PRESERVING = 12
-
-const _PC_CASE_SENSITIVE = 11
-
-const _PC_EXTENDED_SECURITY_NP = 13
-
-const _PC_FILESIZEBITS = 18
-
 const _PC_MIN_HOLE_SIZE = 27
-
-const _PC_NAME_CHARS_MAX = 10
-
-const _PC_PRIO_IO = 19
-
-const _PC_REC_INCR_XFER_SIZE = 20
-
-const _PC_REC_MAX_XFER_SIZE = 21
-
-const _PC_REC_MIN_XFER_SIZE = 22
-
-const _PC_REC_XFER_ALIGN = 23
-
-const _PC_SYMLINK_MAX = 24
-
-const _PC_SYNC_IO = 25
 
 const _PC_XATTR_SIZE_BITS = 26
 
-const _POSIX2_CHAR_TERM = 200112
-
-const _POSIX2_C_DEV = 200112
-
-const _POSIX2_EQUIV_CLASS_MAX = 2
-
-const _POSIX2_LOCALEDEF = 200112
-
-const _POSIX_BARRIERS = -1
-
-const _POSIX_CHOWN_RESTRICTED = 200112
-
 const _POSIX_CLOCKRES_MIN = 20000000
-
-const _POSIX_CPUTIME = -1
-
-const _POSIX_IPV6 = 200112
-
-const _POSIX_JOB_CONTROL = 200112
-
-const _POSIX_MEMLOCK_RANGE = -1
-
-const _POSIX_MONOTONIC_CLOCK = -1
-
-const _POSIX_NO_TRUNC = 200112
-
-const _POSIX_RAW_SOCKETS = -1
-
-const _POSIX_REGEXP = 200112
-
-const _POSIX_RTSIG_MAX = 8
-
-const _POSIX_SAVED_IDS = 200112
-
-const _POSIX_SEMAPHORES = -1
-
-const _POSIX_SEM_VALUE_MAX = 32767
-
-const _POSIX_SHARED_MEMORY_OBJECTS = -1
-
-const _POSIX_SHELL = 200112
-
-const _POSIX_SPIN_LOCKS = -1
-
-const _POSIX_SS_REPL_MAX = 4
-
-const _POSIX_THREAD_CPUTIME = -1
-
-const _POSIX_TIMEOUTS = -1
-
-const _POSIX_TRACE_EVENT_NAME_MAX = 30
-
-const _POSIX_TRACE_NAME_MAX = 8
-
-const _POSIX_TRACE_SYS_MAX = 8
-
-const _POSIX_TRACE_USER_EVENT_MAX = 32
 
 const _POSIX_V6_ILP32_OFFBIG = -1
 
@@ -8970,22 +6810,6 @@ const _POSIX_V6_LPBIG_OFFBIG = 1
 const _POSIX_V7_ILP32_OFFBIG = -1
 
 const _POSIX_V7_LPBIG_OFFBIG = 1
-
-const _P_PGID = 2
-
-const _RATTR_OK = 32768
-
-const _READ_OK = 512
-
-const _REXT_OK = 131072
-
-const _RLIMIT_POSIX_FLAG = 4096
-
-const _RMFILE_OK = 16384
-
-const _RPERM_OK = 524288
-
-const _RUNE_MAGIC_A = "RuneMagA"
 
 type _RuneCharClass = T_RuneCharClass
 
@@ -9082,43 +6906,7 @@ type _RuneLocale = T_RuneLocale
 ** not, there are still machines out there that use EBCDIC.)
  */
 
-const _SC_MAPPED_FILES = 47
-
-const _SC_PAGESIZE = 29
-
-const _SC_PAGE_SIZE = 29
-
-const _SC_PASS_MAX = 131
-
 const _SC_PHYS_PAGES = 200
-
-const _SC_SS_REPL_MAX = 126
-
-const _SC_TRACE_EVENT_NAME_MAX = 127
-
-const _SC_TRACE_NAME_MAX = 128
-
-const _SC_TRACE_SYS_MAX = 129
-
-const _SC_TRACE_USER_EVENT_MAX = 130
-
-const _SC_XBS5_ILP32_OFF32 = 122
-
-const _SC_XBS5_ILP32_OFFBIG = 123
-
-const _SC_XBS5_LP64_OFF64 = 124
-
-const _SC_XBS5_LPBIG_OFFBIG = 125
-
-const _SC_XOPEN_XCU_VERSION = 121
-
-const _SS_ALIGNSIZE = 8
-
-const _SS_MAXSIZE = 128
-
-const _SS_PAD1SIZE = 6
-
-const _SS_PAD2SIZE = 112
 
 const _STRUCT_MCONTEXT = "_STRUCT_MCONTEXT64"
 
@@ -9342,29 +7130,11 @@ const _V6_LP64_OFF64 = 1
 
 const _V6_LPBIG_OFFBIG = 1
 
-const _WATTR_OK = 65536
-
-const _WEXT_OK = 262144
-
-const _WPERM_OK = 1048576
-
-const _WRITE_OK = 1024
-
-const _WSTOPPED = 127
-
-const _XBS5_ILP32_OFF32 = -1
-
 const _XBS5_ILP32_OFFBIG = -1
 
 const _XBS5_LP64_OFF64 = 1
 
 const _XBS5_LPBIG_OFFBIG = 1
-
-const _XOPEN_NAME_MAX = 255
-
-const _XOPEN_VERSION = 600
-
-const _XOPEN_XCU_VERSION = 4
 
 const __API_TO_BE_DEPRECATED = 100000
 
@@ -9397,8 +7167,6 @@ const __API_TO_BE_DEPRECATED_WATCHOS = 100000
 const __API_TO_BE_DEPRECATED_WATCHOSAPPLICATIONEXTENSION = 100000
 
 const __APPLE_CC__ = 6000
-
-const __APPLE__ = 1
 
 const __AVAILABILITY_FILE = "AvailabilityVersions.h"
 
@@ -9514,15 +7282,9 @@ const __CLOCK_UPTIME_RAW_APPROX = 9
 
 const __DARWIN_64_BIT_INO_T = 1
 
-const __DARWIN_ALIGNBYTES = 7
-
 const __DARWIN_ALIGNBYTES32 = 3
 
-const __DARWIN_BIG_ENDIAN = 4321
-
 const __DARWIN_BYTE_ORDER = 1234
-
-const __DARWIN_CLK_TCK = 100
 
 const __DARWIN_CTYPE_TOP_inline = "__header_inline"
 
@@ -9534,37 +7296,9 @@ const __DARWIN_C_FULL = 900000
 
 const __DARWIN_C_LEVEL = 900000
 
-const __DARWIN_FD_SETSIZE = 1024
-
-const __DARWIN_LITTLE_ENDIAN = 1234
-
-const __DARWIN_NBBY = 8
-
-const __DARWIN_NFDBITS = 32
-
-const __DARWIN_NON_CANCELABLE = 0
-
 const __DARWIN_NO_LONG_LONG = 0
 
-const __DARWIN_NSIG = 32
-
-const __DARWIN_NULL = 0
-
 const __DARWIN_ONLY_UNIX_CONFORMANCE = 1
-
-const __DARWIN_PDP_ENDIAN = 3412
-
-const __DARWIN_SUF_EXTSN = "$DARWIN_EXTSN"
-
-const __DARWIN_UNIX03 = 1
-
-const __DARWIN_VERS_1050 = 1
-
-const __DARWIN_WCHAR_MAX = 2147483647
-
-const __DARWIN_WCHAR_MIN = -2147483648
-
-const __DARWIN_WEOF = -1
 
 const __DRIVERKIT_19_0 = 190000
 
@@ -9619,8 +7353,6 @@ const __DRIVERKIT_25_3 = 250300
 const __DRIVERKIT_25_4 = 250400
 
 const __DRIVERKIT_25_5 = 250500
-
-const __DYNAMIC__ = 1
 
 const __ENABLE_LEGACY_MAC_AVAILABILITY = 1
 
@@ -9824,8 +7556,6 @@ const __LP64_OFF64 = 1
 
 const __LPBIG_OFFBIG = 1
 
-const __MACH__ = 1
-
 const __MAC_10_0 = 1000
 
 const __MAC_10_1 = 1010
@@ -9981,22 +7711,6 @@ const __MAC_26_3 = 260300
 const __MAC_26_4 = 260400
 
 const __MAC_26_5 = 260500
-
-const __PTHREAD_ATTR_SIZE__ = 56
-
-const __PTHREAD_CONDATTR_SIZE__ = 8
-
-const __PTHREAD_COND_SIZE__ = 40
-
-const __PTHREAD_MUTEXATTR_SIZE__ = 8
-
-const __PTHREAD_MUTEX_SIZE__ = 56
-
-const __PTHREAD_ONCE_SIZE__ = 8
-
-const __PTHREAD_RWLOCKATTR_SIZE__ = 16
-
-const __PTHREAD_RWLOCK_SIZE__ = 192
 
 const __PTHREAD_SIZE__ = 8176
 
@@ -10295,8 +8009,6 @@ const __WATCHOS_9_5 = 90500
 const __WATCHOS_9_6 = 90600
 
 const __apple_build_version__ = 21000101
-
-const __bool_true_false_are_defined = 1
 
 var __ccgo_ts1 = "ATOMIC_INTRINSICS=1\x00COMPILER=clang-21.0.0\x00DEFAULT_AUTOVACUUM\x00DEFAULT_CACHE_SIZE=-2000\x00DEFAULT_FILE_FORMAT=4\x00DEFAULT_JOURNAL_SIZE_LIMIT=-1\x00DEFAULT_MEMSTATUS=0\x00DEFAULT_MMAP_SIZE=0\x00DEFAULT_PAGE_SIZE=4096\x00DEFAULT_PCACHE_INITSZ=20\x00DEFAULT_RECURSIVE_TRIGGERS\x00DEFAULT_SECTOR_SIZE=4096\x00DEFAULT_SYNCHRONOUS=2\x00DEFAULT_WAL_AUTOCHECKPOINT=1000\x00DEFAULT_WAL_SYNCHRONOUS=2\x00DEFAULT_WORKER_THREADS=0\x00DIRECT_OVERFLOW_READ\x00DISABLE_INTRINSIC\x00ENABLE_COLUMN_METADATA\x00ENABLE_DBPAGE_VTAB\x00ENABLE_DBSTAT_VTAB\x00ENABLE_FTS5\x00ENABLE_GEOPOLY\x00ENABLE_MATH_FUNCTIONS\x00ENABLE_MEMORY_MANAGEMENT\x00ENABLE_OFFSET_SQL_FUNC\x00ENABLE_PREUPDATE_HOOK\x00ENABLE_RBU\x00ENABLE_RTREE\x00ENABLE_SESSION\x00ENABLE_SNAPSHOT\x00ENABLE_STAT4\x00ENABLE_UNLOCK_NOTIFY\x00LIKE_DOESNT_MATCH_BLOBS\x00MALLOC_SOFT_LIMIT=1024\x00MAX_ATTACHED=10\x00MAX_COLUMN=2000\x00MAX_COMPOUND_SELECT=500\x00MAX_DEFAULT_PAGE_SIZE=8192\x00MAX_EXPR_DEPTH=1000\x00MAX_FUNCTION_ARG=1000\x00MAX_LENGTH=1000000000\x00MAX_LIKE_PATTERN_LENGTH=50000\x00MAX_MMAP_SIZE=0x7fff0000\x00MAX_PAGE_COUNT=0xfffffffe\x00MAX_PAGE_SIZE=65536\x00MAX_SQL_LENGTH=1000000000\x00MAX_TRIGGER_DEPTH=1000\x00MAX_VARIABLE_NUMBER=32766\x00MAX_VDBE_OP=250000000\x00MAX_WORKER_THREADS=8\x00MUTEX_NOOP\x00SOUNDEX\x00SYSTEM_MALLOC\x00TEMP_STORE=1\x00THREADSAFE=1\x00ANY\x00BLOB\x00INT\x00INTEGER\x00REAL\x00TEXT\x0020b:20e\x0020c:20e\x0020e\x0040f-21a-21d\x00now\x00subsec\x00subsecond\x00local time unavailable\x00auto\x00ceiling\x00floor\x00julianday\x00localtime\x00unixepoch\x00utc\x00weekday \x00start of \x00month\x00year\x00day\x0040f\x0050f\x0040f-20a-20d\x0050f-20a-20d\x00%02d\x00%2d\x00%06.3f\x00%04d-%02d-%02d\x00%04d\x00%03d\x00%.16g\x00PM\x00pm\x00AM\x00am\x00%02d:%02d\x00%.3f\x00%lld\x00%02d:%02d:%02d\x00%c%04d-%02d-%02d %02d:%02d:%06.3f\x00date\x00time\x00datetime\x00strftime\x00timediff\x00current_time\x00current_timestamp\x00current_date\x00failed to allocate %u bytes of memory\x00failed memory resize %u to %u bytes\x00out of memory\x00%\x00null\x00NaN\x00-Inf\x00\x00NULL\x00(NULL)\x00unistr('\x000123456789abcdef\x00.\x00(join-%u)\x00%u-ROW VALUES CLAUSE\x00(subquery-%u)\x00unrecognized token: \"%s\"\x00922337203685477580\x00+- \n\t0123456789\x000\x00API call with %s database connection pointer\x00unopened\x00invalid\x00Savepoint\x00AutoCommit\x00Transaction\x00Checkpoint\x00JournalMode\x00Vacuum\x00VFilter\x00VUpdate\x00Init\x00Goto\x00Gosub\x00InitCoroutine\x00Yield\x00MustBeInt\x00Jump\x00Once\x00If\x00IfNot\x00IsType\x00Not\x00IfNullRow\x00SeekLT\x00SeekLE\x00SeekGE\x00SeekGT\x00IfNotOpen\x00IfNoHope\x00NoConflict\x00NotFound\x00Found\x00SeekRowid\x00NotExists\x00Last\x00IfSizeBetween\x00SorterSort\x00Sort\x00Rewind\x00IfEmpty\x00SorterNext\x00Prev\x00Next\x00IdxLE\x00IdxGT\x00Or\x00And\x00IdxLT\x00IdxGE\x00IFindKey\x00RowSetRead\x00RowSetTest\x00Program\x00IsNull\x00NotNull\x00Ne\x00Eq\x00Gt\x00Le\x00Lt\x00Ge\x00ElseEq\x00FkIfZero\x00IfPos\x00IfNotZero\x00DecrJumpZero\x00IncrVacuum\x00VNext\x00Filter\x00PureFunc\x00Function\x00Return\x00EndCoroutine\x00HaltIfNull\x00Halt\x00Integer\x00Int64\x00String\x00BeginSubrtn\x00Null\x00SoftNull\x00Blob\x00Variable\x00Move\x00Copy\x00SCopy\x00IntCopy\x00FkCheck\x00ResultRow\x00CollSeq\x00AddImm\x00RealAffinity\x00Cast\x00Permutation\x00Compare\x00IsTrue\x00ZeroOrNull\x00Offset\x00Column\x00TypeCheck\x00Affinity\x00MakeRecord\x00Count\x00ReadCookie\x00SetCookie\x00BitAnd\x00BitOr\x00ShiftLeft\x00ShiftRight\x00Add\x00Subtract\x00Multiply\x00Divide\x00Remainder\x00Concat\x00ReopenIdx\x00OpenRead\x00BitNot\x00OpenWrite\x00OpenDup\x00String8\x00OpenAutoindex\x00OpenEphemeral\x00SorterOpen\x00SequenceTest\x00OpenPseudo\x00Close\x00ColumnsUsed\x00SeekScan\x00SeekHit\x00Sequence\x00NewRowid\x00Insert\x00RowCell\x00Delete\x00ResetCount\x00SorterCompare\x00SorterData\x00RowData\x00Rowid\x00NullRow\x00SeekEnd\x00IdxInsert\x00SorterInsert\x00IdxDelete\x00DeferredSeek\x00IdxRowid\x00FinishSeek\x00Destroy\x00Clear\x00ResetSorter\x00CreateBtree\x00SqlExec\x00ParseSchema\x00LoadAnalysis\x00DropTable\x00Real\x00DropIndex\x00DropTrigger\x00IntegrityCk\x00RowSetAdd\x00Param\x00FkCounter\x00MemMax\x00OffsetLimit\x00AggInverse\x00AggStep\x00AggStep1\x00AggValue\x00AggFinal\x00Expire\x00CursorLock\x00CursorUnlock\x00TableLock\x00VBegin\x00VCreate\x00VDestroy\x00VOpen\x00VCheck\x00VInitIn\x00VColumn\x00VRename\x00Pagecount\x00MaxPgcnt\x00ClrSubtype\x00GetSubtype\x00SetSubtype\x00FilterAdd\x00Trace\x00CursorHint\x00ReleaseReg\x00Noop\x00Explain\x00Abortable\x00open\x00close\x00access\x00getcwd\x00stat\x00fstat\x00ftruncate\x00fcntl\x00read\x00pread\x00pread64\x00write\x00pwrite\x00pwrite64\x00fchmod\x00fallocate\x00unlink\x00openDirectory\x00mkdir\x00rmdir\x00fchown\x00geteuid\x00mmap\x00munmap\x00mremap\x00getpagesize\x00readlink\x00lstat\x00ioctl\x00attempt to open \"%s\" as file descriptor %d\x00/dev/null\x00os_unix.c:%d: (%d) %s(%s) - %s\x00S\x00cannot fstat db file %s\x00file unlinked while open: %s\x00multiple links to file: %s\x00file renamed while open: %s\x00%s\x00full_fsync\x00%s-shm\x00readonly_shm\x00hfs\x00ufs\x00afpfs\x00smbfs\x00webdav\x00nfs\x00psow\x00unix-excl\x00%s.lock\x00/var/tmp\x00/usr/tmp\x00/tmp\x00SQLITE_TMPDIR\x00TMPDIR\x00%s/etilqs_%llx%c\x00modeof\x00msdos\x00exfat\x00SQLITE_FORCE_PROXY_LOCKING\x00:auto:\x00fsync\x00/dev/urandom\x00sqliteplocks\x00/\x00dummy\x00break\x00path error (len %d)\x00read error (len %d)\x00create failed (%d)\x00write failed (%d)\x00rename failed (%d)\x00broke stale lock on %s\n\x00failed to break stale lock on %s, %s\n\x00-conch\x00.lock\x00:auto: (not held)\x00unix\x00unix-none\x00unix-dotfile\x00unix-posix\x00unix-flock\x00unix-afp\x00unix-nfs\x00unix-proxy\x00memdb\x00memdb(%p,%lld)\x00PRAGMA \"%w\".page_count\x00BEGIN IMMEDIATE; COMMIT;\x00ATTACH x AS %Q\x00-mj\x00recovered %d pages from %s\x00-journal\x00-wal\x00nolock\x00immutable\x00PRAGMA table_list\x00recovered %d frames from WAL file %s\x00cannot limit WAL size: %s\x00:memory:\x00@  \x00\n\x00invalid page number %u\x002nd reference to page %u\x00Failed to read ptrmap key=%u\x00Bad ptr map entry key=%u expected=(%u,%u) got=(%u,%u)\x00failed to get page %u\x00freelist leaf count too big on page %u\x00size\x00overflow list length\x00%s is %u but should be %u\x00Tree %u page %u: \x00unable to get the page. error code=%d\x00btreeInitPage() returns error code %d\x00free space corruption\x00Tree %u page %u cell %u: \x00Tree %u page %u right child: \x00Offset %u out of range %u..%u\x00Extends off end of page\x00Rowid %lld out of order\x00Child page depth differs\x00Multiple uses for byte %u of page %u\x00Fragmentation of %u bytes reported as %u on page %u\x00Freelist: \x00max rootpage (%u) disagrees with header (%u)\x00incremental_vacuum enabled with a max rootpage of zero\x00Page %u: never used\x00Page %u: pointer map referenced\x00unknown database %s\x00destination database is in use\x00source and destination must be distinct\x00.0\x00%!.*g\x00-\x00%s%s\x00k(%d\x00BINARY\x00B\x00N.\x00,%s%s%s\x00)\x00?\x008\x0016LE\x0016BE\x00%.18s-%s\x00%s(%d)\x00%d\x00(blob)\x00vtab:%p\x00%c%u\x00]\x00program\x00subrtnsig:%d,%s\x00%.4c%s%.16c\x00MJ delete: %s\x00MJ collide: %s\x00-mj%06X9%02X\x00FOREIGN KEY constraint failed\x00a CHECK constraint\x00a generated column\x00an index\x00non-deterministic use of %s() in %s\x00API called with finalized prepared statement\x00API called with NULL prepared statement\x00string or blob too big\x00addr\x00opcode\x00p1\x00p2\x00p3\x00p4\x00p5\x00comment\x00id\x00parent\x00notused\x00detail\x00bind on a busy prepared statement: [%s]\x00-- \x00%!.15g\x00'%.*q'\x00zeroblob(%d)\x00x'\x00%02x\x00'\x00/* %s */ \x00/* unknown trigger */ \x00statement aborts at %d: %s; [%s%s]\x00NOT NULL\x00UNIQUE\x00CHECK\x00FOREIGN KEY\x00%s constraint failed\x00%z: %s\x00cannot store %s value in %s column %s.%s\x00cannot open savepoint - SQL statements in progress\x00no such savepoint: %s\x00cannot release savepoint - SQL statements in progress\x00cannot commit transaction - SQL statements in progress\x00cannot start a transaction within a transaction\x00cannot rollback - no transaction is active\x00cannot commit - no transaction is active\x00database schema has changed\x00index corruption\x00sqlite_master\x00SELECT*FROM\"%w\".%s WHERE %s ORDER BY rowid\x00too many levels of trigger recursion\x00into\x00out of\x00cannot change %s wal mode from within a transaction\x00database table is locked: %s\x00ValueList\x00-- %s\x00real\x00integer\x00cannot open value of type %s\x00no such rowid: %lld\x00cannot open virtual table: %s\x00cannot open table without rowid: %s\x00cannot open table with generated columns: %s\x00cannot open view: %s\x00no such column: \"%s\"\x00foreign key\x00indexed\x00cannot open %s column for writing\x00sqlite_\x00sqlite_temp_master\x00sqlite_temp_schema\x00sqlite_schema\x00main\x00*\x00new\x00old\x00excluded\x00misuse of aliased aggregate %s\x00misuse of aliased window function %s\x00row value misused\x00double-quoted string literal: \"%w\"\x00coalesce\x00no such column\x00ambiguous column name\x00%s: %s.%s.%s\x00%s: %s.%s\x00%s: \"%s\" - should this be a string literal in single-quotes?\x00%s: %s\x00partial index WHERE clauses\x00index expressions\x00CHECK constraints\x00generated columns\x00%s prohibited in %s\x00the \".\" operator\x00second argument to %#T() must be a constant between 0.0 and 1.0\x00not authorized to use function: %#T\x00non-deterministic functions\x00%#T() may not be used as a window function\x00window\x00aggregate\x00misuse of %s function %#T()\x00no such function: %#T\x00wrong number of arguments to function %#T()\x00FILTER may not be used with non-aggregate %#T()\x00subqueries\x00parameters\x00%r %s BY term out of range - should be between 1 and %d\x00too many terms in ORDER BY clause\x00ORDER\x00%r ORDER BY term does not match any column in the result set\x00too many terms in %s BY clause\x00HAVING clause on a non-aggregate query\x00GROUP\x00aggregate functions are not allowed in the GROUP BY clause\x00Expression tree is too large (maximum depth %d)\x00s\x00IN(...) element has %d term%s - expected %d\x00too many arguments on function %T\x00ORDER BY may not be used with non-aggregate %#T()\x00unsafe use of %#T()\x00variable number must be between ?1 and ?%d\x00too many SQL variables\x00%d columns assigned %d values\x00too many columns in %s\x00true\x00false\x00_ROWID_\x00ROWID\x00OID\x00USING ROWID SEARCH ON TABLE %s FOR IN-OPERATOR\x00USING INDEX %s FOR IN-OPERATOR\x00sub-select returns %d columns - expected %d\x00REUSE LIST SUBQUERY %d\x00CORRELATED \x00%sLIST SUBQUERY %d\x00REUSE SUBQUERY %d\x00%sSCALAR SUBQUERY %d\x000x\x00hex literal too big: %s%#T\x00generated column loop on \"%s\"\x00blob\x00text\x00numeric\x00flexnum\x00none\x00misuse of aggregate: %#T()\x00unknown function: %#T()\x00RAISE() may only be used within a trigger-program\x00more than %d aggregate terms\x00table %s may not be altered\x00SELECT 1 FROM \"%w\".sqlite_master WHERE name NOT LIKE 'sqliteX_%%' ESCAPE 'X' AND sql NOT LIKE 'create virtual%%' AND sqlite_rename_test(%Q, sql, type, name, %d, %Q, %d)=NULL \x00SELECT 1 FROM temp.sqlite_master WHERE name NOT LIKE 'sqliteX_%%' ESCAPE 'X' AND sql NOT LIKE 'create virtual%%' AND sqlite_rename_test(%Q, sql, type, name, 1, %Q, %d)=NULL \x00UPDATE \"%w\".sqlite_master SET sql = sqlite_rename_quotefix(%Q, sql)WHERE name NOT LIKE 'sqliteX_%%' ESCAPE 'X' AND sql NOT LIKE 'create virtual%%'\x00UPDATE temp.sqlite_master SET sql = sqlite_rename_quotefix('temp', sql)WHERE name NOT LIKE 'sqliteX_%%' ESCAPE 'X' AND sql NOT LIKE 'create virtual%%'\x00there is already another table or index with this name: %s\x00table\x00view %s may not be altered\x00UPDATE \"%w\".sqlite_master SET sql = sqlite_rename_table(%Q, type, name, sql, %Q, %Q, %d) WHERE (type!='index' OR tbl_name=%Q COLLATE nocase)AND   name NOT LIKE 'sqliteX_%%' ESCAPE 'X'\x00UPDATE %Q.sqlite_master SET tbl_name = %Q, name = CASE WHEN type='table' THEN %Q WHEN name LIKE 'sqliteX_autoindex%%' ESCAPE 'X'      AND type='index' THEN 'sqlite_autoindex_' || %Q || substr(name,%d+18) ELSE name END WHERE tbl_name=%Q COLLATE nocase AND (type='table' OR type='index' OR type='trigger');\x00sqlite_sequence\x00UPDATE \"%w\".sqlite_sequence set name = %Q WHERE name = %Q\x00UPDATE sqlite_temp_schema SET sql = sqlite_rename_table(%Q, type, name, sql, %Q, %Q, 1), tbl_name = CASE WHEN tbl_name=%Q COLLATE nocase AND   sqlite_rename_test(%Q, sql, type, name, 1, 'after rename', 0) THEN %Q ELSE tbl_name END WHERE type IN ('view', 'trigger')\x00after rename\x00SELECT raise(ABORT,%Q) FROM \"%w\".\"%w\"\x00Cannot add a PRIMARY KEY column\x00Cannot add a UNIQUE column\x00Cannot add a REFERENCES column with non-NULL default value\x00Cannot add a NOT NULL column with default value NULL\x00Cannot add a column with non-constant default\x00cannot add a STORED column\x00UPDATE \"%w\".sqlite_master SET sql = printf('%%.%ds, ',sql) || %Q || substr(sql,1+length(printf('%%.%ds',sql))) WHERE type = 'table' AND name = %Q\x00SELECT CASE WHEN quick_check GLOB 'CHECK*' THEN raise(ABORT,'CHECK constraint failed') WHEN quick_check GLOB 'non-* value in*' THEN raise(ABORT,'type mismatch on DEFAULT') ELSE raise(ABORT,'NOT NULL constraint failed') END  FROM pragma_quick_check(%Q,%Q) WHERE quick_check GLOB 'CHECK*' OR quick_check GLOB 'NULL*' OR quick_check GLOB 'non-* value in*'\x00virtual tables may not be altered\x00Cannot add a column to a view\x00sqlite_altertab_%s\x00view\x00virtual table\x00rename columns of\x00drop column from\x00edit constraints of\x00cannot %s %s \"%s\"\x00no such column: \"%T\"\x00UPDATE \"%w\".sqlite_master SET sql = sqlite_rename_column(sql, type, name, %Q, %Q, %d, %Q, %d, %d) WHERE name NOT LIKE 'sqliteX_%%' ESCAPE 'X'  AND (type != 'index' OR tbl_name = %Q)\x00UPDATE temp.sqlite_master SET sql = sqlite_rename_column(sql, type, name, %Q, %Q, %d, %Q, %d, 1) WHERE type IN ('trigger', 'view')\x00 \x00error in %s %s%s%s: %s\x00CREATE \x00\"%w\" \x00%Q%s\x00%.*s%s\x00PRIMARY KEY\x00cannot drop %s column: \"%s\"\x00cannot drop column \"%s\": no other columns exist\x00UPDATE \"%w\".sqlite_master SET sql = sqlite_drop_column(%d, sql, %d) WHERE (type=='table' AND tbl_name=%Q COLLATE nocase)\x00after drop column\x00constraint may not be dropped: %s\x00no such constraint: %s\x00%.*s%s%s\x00%.*s, %s%s\x00%.*s %s%s\x00no such column: %s\x00%Q\x00UPDATE \"%w\".sqlite_master SET sql = sqlite_drop_constraint(sql, %s) WHERE type='table' AND tbl_name=%Q COLLATE nocase\x00%.*s\x00SELECT sqlite_fail('constraint failed', %d) FROM %Q.%Q AS x WHERE x.%.*s IS NULL\x00UPDATE \"%w\".sqlite_master SET sql = sqlite_add_constraint(sqlite_drop_constraint(sql, %d), %.*Q, %d) WHERE type='table' AND tbl_name=%Q COLLATE nocase\x00SELECT sqlite_fail('constraint %q already exists', %d) FROM \"%w\".sqlite_master WHERE type='table' AND tbl_name=%Q COLLATE nocase AND sqlite_find_constraint(sql, %Q)\x00SELECT sqlite_fail('constraint failed', %d) FROM %Q.%Q WHERE (%.*s) IS NOT TRUE\x00UPDATE \"%w\".sqlite_master SET sql = sqlite_add_constraint(sql, %.*Q, -1) WHERE type='table' AND tbl_name=%Q COLLATE nocase\x00sqlite_rename_column\x00sqlite_rename_table\x00sqlite_rename_test\x00sqlite_drop_column\x00sqlite_rename_quotefix\x00sqlite_drop_constraint\x00sqlite_fail\x00sqlite_add_constraint\x00sqlite_find_constraint\x00sqlite_stat1\x00tbl,idx,stat\x00sqlite_stat4\x00tbl,idx,neq,nlt,ndlt,sample\x00sqlite_stat3\x00CREATE TABLE %Q.%s(%s)\x00DELETE FROM %Q.%s WHERE %s=%Q\x00DELETE FROM %Q.%s\x00stat_init\x00stat_push\x00%llu\x00 %llu\x00%llu \x00stat_get\x00sqlite\\_%\x00BBB\x00idx\x00tbl\x00unordered*\x00sz=[0-9]*\x00noskipscan*\x00SELECT idx,count(*) FROM %Q.sqlite_stat4 GROUP BY idx COLLATE nocase\x00SELECT idx,neq,nlt,ndlt,sample FROM %Q.sqlite_stat4\x00SELECT tbl,idx,stat FROM %Q.sqlite_stat1\x00x\x00\x00too many attached databases - max %d\x00database %s is already in use\x00database is already attached\x00attached databases must use the same text encoding as main database\x00unable to open database: %s\x00no such database: %s\x00cannot detach database %s\x00database %s is locked\x00sqlite_detach\x00sqlite_attach\x00%s cannot use variables\x00%s %T cannot reference objects in database %s\x00authorizer malfunction\x00%s.%s\x00%s.%z\x00access to %z is prohibited\x00not authorized\x00pragma_\x00json\x00no such view\x00no such table\x00corrupt database\x00unknown database %T\x00object name reserved for internal use: %s\x00temporary table name must be unqualified\x00%s %T already exists\x00there is already an index named %s\x00cannot use RETURNING in a trigger\x00sqlite_returning_%p\x00too many columns on %s\x00always\x00generated\x00duplicate column name: %s\x00default value of column [%s] is not constant\x00cannot use DEFAULT on a generated column\x00generated columns cannot be part of the PRIMARY KEY\x00table \"%s\" has more than one primary key\x00AUTOINCREMENT is only allowed on an INTEGER PRIMARY KEY\x00virtual tables cannot use computed columns\x00virtual\x00stored\x00error in generated column \"%s\"\x00,\x00\n  \x00,\n  \x00\n)\x00CREATE TABLE \x00 TEXT\x00 NUM\x00 INT\x00 REAL\x00unknown datatype for %s.%s: \"%s\"\x00missing datatype for %s.%s\x00AUTOINCREMENT not allowed on WITHOUT ROWID tables\x00PRIMARY KEY missing on table %s\x00must have at least one non-generated column\x00TABLE\x00VIEW\x00CREATE %s %.*s\x00UPDATE %Q.sqlite_master SET type='%s', name=%Q, tbl_name=%Q, rootpage=#%d, sql=%Q WHERE rowid=#%d\x00CREATE TABLE %Q.sqlite_sequence(name,seq)\x00tbl_name='%q' AND type!='trigger'\x00SELECT*FROM\"%w\".\"%w\"\x00parameters are not allowed in views\x00view %s is circularly defined\x00corrupt schema\x00UPDATE %Q.sqlite_master SET rootpage=%d WHERE #%d AND rootpage=#%d\x00sqlite_stat%d\x00DELETE FROM %Q.sqlite_sequence WHERE name=%Q\x00DELETE FROM %Q.sqlite_master WHERE tbl_name=%Q and type!='trigger'\x00table %s may not be dropped\x00use DROP TABLE to delete table %s\x00use DROP VIEW to delete view %s\x00foreign key on %s should reference only one column of table %T\x00number of columns in foreign key does not match the number of columns in the referenced table\x00unknown column \"%s\" in foreign key definition\x00FIRST\x00LAST\x00unsupported use of NULLS %s\x00index\x00cannot create a TEMP index on non-TEMP table \"%s\"\x00table %s may not be indexed\x00views may not be indexed\x00virtual tables may not be indexed\x00there is already a table named %s\x00index %s already exists\x00sqlite_autoindex_%s_%d\x00expressions prohibited in PRIMARY KEY and UNIQUE constraints\x00conflicting ON CONFLICT clauses specified\x00invalid rootpage\x00 UNIQUE\x00CREATE%s INDEX %.*s\x00INSERT INTO %Q.sqlite_master VALUES('index',%Q,%Q,#%d,%Q);\x00name='%q' AND type='index'\x00no such index: %S\x00index associated with UNIQUE or PRIMARY KEY constraint cannot be dropped\x00DELETE FROM %Q.sqlite_master WHERE name=%Q AND type='index'\x00too many FROM clause terms, max: %d\x00ON\x00USING\x00a JOIN clause is required before %s\x00BEGIN\x00ROLLBACK\x00COMMIT\x00RELEASE\x00unable to open a temporary database file for storing temporary tables\x00index '%q'\x00, \x00%s.rowid\x00expressions\x00unable to identify the object to be reindexed\x00duplicate WITH table name: %s\x00no such collation sequence: %s\x00unsafe use of virtual table \"%s\"\x00table %s may not be modified\x00cannot modify %s because it is a view\x00rows deleted\x00integer overflow\x00%!.*f\x00LIKE or GLOB pattern too complex\x00ESCAPE expression must be a single character\x00%!0.17g\x00%#Q\x00invalid Unicode escape\x00?000\x00MATCH\x00like\x00implies_nonnull_row\x00expr_compare\x00expr_implies_expr\x00affinity\x00soundex\x00load_extension\x00sqlite_compileoption_used\x00sqlite_compileoption_get\x00unlikely\x00likelihood\x00likely\x00sqlite_offset\x00ltrim\x00rtrim\x00trim\x00min\x00max\x00typeof\x00subtype\x00length\x00octet_length\x00instr\x00printf\x00format\x00unicode\x00char\x00abs\x00round\x00upper\x00lower\x00hex\x00unhex\x00concat\x00concat_ws\x00ifnull\x00random\x00randomblob\x00nullif\x00sqlite_version\x00sqlite_source_id\x00sqlite_log\x00unistr\x00quote\x00unistr_quote\x00last_insert_rowid\x00changes\x00total_changes\x00replace\x00zeroblob\x00substr\x00substring\x00sum\x00total\x00avg\x00count\x00group_concat\x00string_agg\x00glob\x00ceil\x00trunc\x00ln\x00log\x00log10\x00log2\x00exp\x00pow\x00power\x00mod\x00acos\x00asin\x00atan\x00atan2\x00cos\x00sin\x00tan\x00cosh\x00sinh\x00tanh\x00acosh\x00asinh\x00atanh\x00sqrt\x00radians\x00degrees\x00pi\x00sign\x00iif\x00if\x00foreign key mismatch - \"%w\" referencing \"%w\"\x00cannot INSERT into generated column \"%s\"\x00table %S has no column named %s\x00SCAN %S\x00table %S has %d columns but %d values were supplied\x00%d values for %d columns\x00UPSERT not implemented for virtual table \"%s\"\x00cannot UPSERT a view\x00rows inserted\x00dylib\x00sqlite3_extension_init\x00sqlite3_\x00lib\x00_init\x00no entry point [%s] in shared library [%s]\x00error during initialization: %s\x00unable to open shared library [%.*s]\x00automatic extension loading failed: %s\x00seq\x00from\x00to\x00on_update\x00on_delete\x00match\x00cid\x00name\x00type\x00notnull\x00dflt_value\x00pk\x00hidden\x00builtin\x00enc\x00narg\x00flags\x00schema\x00ncol\x00wr\x00strict\x00seqno\x00desc\x00coll\x00key\x00unique\x00origin\x00partial\x00wdth\x00hght\x00flgs\x00rowid\x00fkid\x00busy\x00checkpointed\x00file\x00database\x00status\x00cache_size\x00timeout\x00analysis_limit\x00application_id\x00auto_vacuum\x00automatic_index\x00busy_timeout\x00cache_spill\x00case_sensitive_like\x00cell_size_check\x00checkpoint_fullfsync\x00collation_list\x00compile_options\x00count_changes\x00data_version\x00database_list\x00default_cache_size\x00defer_foreign_keys\x00empty_result_callbacks\x00encoding\x00foreign_key_check\x00foreign_key_list\x00foreign_keys\x00freelist_count\x00full_column_names\x00fullfsync\x00function_list\x00hard_heap_limit\x00ignore_check_constraints\x00incremental_vacuum\x00index_info\x00index_list\x00index_xinfo\x00integrity_check\x00journal_mode\x00journal_size_limit\x00legacy_alter_table\x00lock_proxy_file\x00locking_mode\x00max_page_count\x00mmap_size\x00module_list\x00optimize\x00page_count\x00page_size\x00pragma_list\x00query_only\x00quick_check\x00read_uncommitted\x00recursive_triggers\x00reverse_unordered_selects\x00schema_version\x00secure_delete\x00short_column_names\x00shrink_memory\x00soft_heap_limit\x00synchronous\x00table_info\x00table_list\x00table_xinfo\x00temp_store\x00temp_store_directory\x00threads\x00trusted_schema\x00user_version\x00wal_autocheckpoint\x00wal_checkpoint\x00writable_schema\x00exclusive\x00normal\x00full\x00incremental\x00memory\x00temporary storage cannot be changed from within a transaction\x00SET NULL\x00SET DEFAULT\x00CASCADE\x00RESTRICT\x00NO ACTION\x00delete\x00persist\x00off\x00truncate\x00wal\x00utf8\x00utf16le\x00utf16be\x00w\x00a\x00sissii\x00-%T\x00fast\x00not a writable directory\x00failed to set lock proxy file\x00Safety level may not be changed inside a transaction\x00reset\x00issisii\x00issisi\x00SELECT*FROM\"%w\"\x00shadow\x00sssiii\x00iisX\x00isiX\x00c\x00u\x00isisi\x00iss\x00is\x00iissssss\x00NONE\x00siX\x00*** in database %s ***\n\x00wrong # of entries in index \x00row not in PRIMARY KEY order for %s\x00NULL value in %s.%s\x00non-%s value in %s.%s\x00NUMERIC value in %s.%s\x00C\x00TEXT value in %s.%s\x00CHECK constraint failed in %s\x00index %s stores an imprecise floating-point value for row \x00row \x00 missing from index \x00rowid not at end-of-record for row \x00 of index \x00 values differ from index \x00non-unique entry in index \x00ok\x00UTF8\x00UTF-8\x00UTF-16le\x00UTF-16be\x00UTF16le\x00UTF16be\x00UTF-16\x00UTF16\x00unsupported encoding: %s\x00restart\x00noop\x00ANALYZE \"%w\".\"%w\"\x00CREATE TABLE x\x00%c\"%s\"\x00(\"%s\"\x00,arg HIDDEN\x00,schema HIDDEN\x00PRAGMA \x00%Q.\x00=%Q\x00rename\x00drop column\x00add column\x00drop constraint\x00error in %s %s after %s: %s\x00malformed database schema (%s)\x00%z - %s\x00orphan index\x001\x00CREATE TABLE x(type text,name text,tbl_name text,rootpage int,sql text)\x00unsupported file format\x00SELECT*FROM\"%w\".%s ORDER BY rowid\x00database schema is locked: %s\x00statement too long\x00unknown join type: %T%s%T%s%T\x00a NATURAL join may not have an ON or USING clause\x00cannot join using column %s - column not present in both tables\x00ambiguous reference to %s in USING()\x00CREATE BLOOM FILTER\x00UNION ALL\x00INTERSECT\x00EXCEPT\x00UNION\x00USE TEMP B-TREE FOR %s\x00LAST TERM OF \x00USE TEMP B-TREE FOR %sORDER BY\x00USE TEMP B-TREE FOR LAST %d TERMS OF ORDER BY\x00column%d\x00%.*z:%u\x00NUM\x00VIEWs and/or subqueries nested too deep\x00cannot use window functions in recursive queries\x00recursive aggregate queries not supported\x00SETUP\x00RECURSIVE STEP\x00SCAN %d CONSTANT ROW%s\x00COMPOUND QUERY\x00LEFT-MOST SUBQUERY\x00all VALUES must have the same number of terms\x00SELECTs to the left and right of %s do not have the same number of result columns\x00MERGE (%s)\x00LEFT\x00RIGHT\x00no such index: %s\x00'%s' is not a function\x00no such index: \"%s\"\x00multiple references to recursive table: %s\x00circular reference: %s\x00table %s has %d values for %d columns\x00multiple recursive references: %s\x00recursive reference in a subquery: %s\x00%!S\x00too many references to \"%s\": max 65535\x00access to view \"%s\" prohibited\x00..%s\x00%s.%s.%s\x00no such table: %s\x00no tables specified\x00too many columns in result set\x00DISTINCT aggregates must have exactly one argument\x00USE TEMP B-TREE FOR %s(DISTINCT)\x00USE TEMP B-TREE FOR %s(ORDER BY)\x00 USING COVERING INDEX \x00SCAN %s%s%s\x00table-function argument\x00ON clause\x00%s references tables to its right\x00target object/alias may not appear in FROM clause: %s\x00expected %d columns for '%s' but got %d\x00CO-ROUTINE %!S\x00MATERIALIZE %!S\x00DISTINCT\x00GROUP BY\x00sqlite3_get_table() called with two or more incompatible queries\x00temporary trigger may not have qualified name\x00trigger\x00cannot create triggers on virtual tables\x00cannot create triggers on shadow tables\x00trigger %T already exists\x00cannot create trigger on system table\x00BEFORE\x00AFTER\x00cannot create %s trigger on view: %S\x00cannot create INSTEAD OF trigger on table: %S\x00trigger \"%s\" may not write to shadow table \"%s\"\x00INSERT INTO %Q.sqlite_master VALUES('trigger',%Q,%Q,0,'CREATE TRIGGER %q')\x00type='trigger' AND name='%q'\x00qualified table names are not allowed on INSERT, UPDATE, and DELETE statements within triggers\x00no such trigger: %S\x00DELETE FROM %Q.sqlite_master WHERE name=%Q AND type='trigger'\x00DELETE\x00UPDATE\x00%s RETURNING is not available on virtual tables\x00RETURNING may not use \"TABLE.*\" wildcards\x00triggers nested too deep\x00-- TRIGGER %s\x00cannot UPDATE generated column \"%s\"\x00rows updated\x00%r \x00%sON CONFLICT clause does not match any PRIMARY KEY or UNIQUE constraint\x00CRE\x00INS\x00cannot VACUUM from within a transaction\x00cannot VACUUM - SQL statements in progress\x00non-text filename\x00vacuum_%016llx\x00ATTACH %Q AS %s\x00output file already exists\x00reserve\x00SELECT sql FROM \"%w\".sqlite_schema WHERE type='table'AND name<>'sqlite_sequence' AND coalesce(rootpage,1)>0\x00SELECT sql FROM \"%w\".sqlite_schema WHERE type='index'\x00SELECT'INSERT INTO %s.'||quote(name)||' SELECT*FROM\"%w\".'||quote(name)FROM %s.sqlite_schema WHERE type='table'AND coalesce(rootpage,1)>0\x00INSERT INTO %s.sqlite_schema SELECT*FROM \"%w\".sqlite_schema WHERE type IN('view','trigger') OR(type='table'AND rootpage=0)\x00CREATE VIRTUAL TABLE %T\x00UPDATE %Q.sqlite_master SET type='table', name=%Q, tbl_name=%Q, rootpage=0, sql=%Q WHERE rowid=#%d\x00name=%Q AND sql=%Q\x00vtable constructor called recursively: %s\x00vtable constructor failed: %s\x00vtable constructor did not declare schema: %s\x00no such module: %s\x00syntax error\x00<expr>\x00 AND \x00(\x00 (\x00%s=?\x00ANY(%s)\x00>\x00<\x00SEARCH\x00SCAN\x00 EXISTS\x00%s %S%s\x00AUTOMATIC PARTIAL COVERING INDEX\x00AUTOMATIC COVERING INDEX\x00COVERING INDEX %s\x00INDEX %s\x00 USING \x00 USING INTEGER PRIMARY KEY (%s\x00>? AND %s\x00%c?)\x00 VIRTUAL TABLE INDEX \x000x%x:%s\x00%d:%s\x00 LEFT-JOIN\x00BLOOM FILTER ON %S (\x00rowid=?\x00MULTI-INDEX OR\x00INDEX %d\x00RIGHT-JOIN %s\x00regexp\x00NOCASE\x00too many arguments on %s() - max %d\x00automatic index on %s(%s)\x00auto-index\x00%s.xBestIndex malfunction\x00abbreviated query algorithm search\x00no query solution\x00at most %d tables in a join\x00SCAN CONSTANT ROW\x00internal query planner error\x00second argument to nth_value must be a positive integer\x00argument of ntile must be a positive integer\x00no such window: %s\x00RANGE with offset PRECEDING/FOLLOWING requires one ORDER BY expression\x00FILTER clause may only be used with aggregate window functions\x00misuse of aggregate: %s()\x00unsupported frame specification\x00PARTITION clause\x00ORDER BY clause\x00frame specification\x00cannot override %s of window: %s\x00DISTINCT is not supported for window functions\x00frame starting offset must be a non-negative integer\x00frame ending offset must be a non-negative integer\x00frame starting offset must be a non-negative number\x00frame ending offset must be a non-negative number\x00near \"%T\": syntax error\x00ORDER BY\x00LIMIT\x00%s clause should come after %s not before\x00too many terms in compound SELECT\x00syntax error after column name \"%.*s\"\x00Recursion limit\x00unknown table option: %.*s\x00set list\x00the INDEXED BY clause is not allowed on UPDATE or DELETE statements within triggers\x00the NOT INDEXED clause is not allowed on UPDATE or DELETE statements within triggers\x00incomplete input\x00unrecognized token: \"%T\"\x00%s in \"%s\"\x00create\x00temp\x00temporary\x00end\x00explain\x00unable to close due to unfinalized statements or unfinished backups\x00not an error\x00SQL logic error\x00access permission denied\x00query aborted\x00database is locked\x00database table is locked\x00attempt to write a readonly database\x00interrupted\x00disk I/O error\x00database disk image is malformed\x00unknown operation\x00database or disk is full\x00unable to open database file\x00locking protocol\x00constraint failed\x00datatype mismatch\x00bad parameter or other API misuse\x00authorization denied\x00column index out of range\x00file is not a database\x00notification message\x00warning message\x00unknown error\x00abort due to ROLLBACK\x00another row available\x00no more rows available\x00unable to delete/modify user-function due to active statements\x00unable to use function %s in the requested context\x00unknown database: %s\x00unable to delete/modify collation sequence due to active statements\x00file:\x00localhost\x00invalid uri authority: %.*s\x00vfs\x00cache\x00shared\x00private\x00mode\x00ro\x00rw\x00rwc\x00no such %s mode: %s\x00%s mode not allowed: %s\x00no such vfs: %s\x00RTRIM\x00\x00\x00\x00%s at line %d of [%.10s]\x00database corruption\x00misuse\x00cannot open file\x00no such table column: %s.%s\x00SQLITE_\x00database is deadlocked\x00array\x00object\x00JSON nested too deep\x00JSON cannot hold BLOB values\x00malformed JSON\x00inf\x009.0e999\x00infinity\x00QNaN\x00SNaN\x00json_%s() needs an odd number of arguments\x00\"\\/bfnrt\x00-9e999\x009e999\x00inity\x00\\\"\x00\\u000b\x00\\u00\x00\\u0000\x00,\n\x00: \x00*]\x00not an array element: %Q\x00JSON path too deep\x00bad JSON path: %Q\x00@\x00[\x00#\x00.\"\x00\"\x00json_object() requires an even number of arguments\x00json_object() labels must be TEXT\x00insert\x00set\x00array_insert\x00    \x00FLAGS parameter to json_valid() must be between 1 and 15\x00[]\x00}\x00{}\x00CREATE TABLE x(key,value,type,atom,id,parent,fullkey,path,json HIDDEN,root HIDDEN)\x00[%lld]\x00.\"%.*s\"\x00.%.*s\x00$\x00jsonb\x00json_array\x00jsonb_array\x00json_array_insert\x00jsonb_array_insert\x00json_array_length\x00json_error_position\x00json_extract\x00jsonb_extract\x00->\x00->>\x00json_insert\x00jsonb_insert\x00json_object\x00jsonb_object\x00json_patch\x00jsonb_patch\x00json_pretty\x00json_quote\x00json_remove\x00jsonb_remove\x00json_replace\x00jsonb_replace\x00json_set\x00jsonb_set\x00json_type\x00json_valid\x00json_group_array\x00jsonb_group_array\x00json_group_object\x00jsonb_group_object\x00json_each\x00json_tree\x00jsonb_each\x00jsonb_tree\x00data\x00DROP TABLE '%q'.'%q_node';DROP TABLE '%q'.'%q_rowid';DROP TABLE '%q'.'%q_parent';\x00RtreeMatchArg\x00SELECT * FROM %Q.%Q\x00UNIQUE constraint failed: %s.%s\x00rtree constraint failed: %s.(%s<=%s)\x00ALTER TABLE %Q.'%q_node'   RENAME TO \"%w_node\";ALTER TABLE %Q.'%q_parent' RENAME TO \"%w_parent\";ALTER TABLE %Q.'%q_rowid'  RENAME TO \"%w_rowid\";\x00SELECT stat FROM %Q.sqlite_stat1 WHERE tbl = '%q_rowid'\x00node\x00INSERT OR REPLACE INTO '%q'.'%q_node' VALUES(?1, ?2)\x00DELETE FROM '%q'.'%q_node' WHERE nodeno = ?1\x00SELECT nodeno FROM '%q'.'%q_rowid' WHERE rowid = ?1\x00INSERT OR REPLACE INTO '%q'.'%q_rowid' VALUES(?1, ?2)\x00DELETE FROM '%q'.'%q_rowid' WHERE rowid = ?1\x00SELECT parentnode FROM '%q'.'%q_parent' WHERE nodeno = ?1\x00INSERT OR REPLACE INTO '%q'.'%q_parent' VALUES(?1, ?2)\x00DELETE FROM '%q'.'%q_parent' WHERE nodeno = ?1\x00CREATE TABLE \"%w\".\"%w_rowid\"(rowid INTEGER PRIMARY KEY,nodeno\x00,a%d\x00);CREATE TABLE \"%w\".\"%w_node\"(nodeno INTEGER PRIMARY KEY,data);\x00CREATE TABLE \"%w\".\"%w_parent\"(nodeno INTEGER PRIMARY KEY,parentnode);\x00INSERT INTO \"%w\".\"%w_node\"VALUES(1,zeroblob(%d))\x00INSERT INTO\"%w\".\"%w_rowid\"(rowid,nodeno)VALUES(?1,?2)ON CONFLICT(rowid)DO UPDATE SET nodeno=excluded.nodeno\x00SELECT * FROM \"%w\".\"%w_rowid\" WHERE rowid=?1\x00UPDATE \"%w\".\"%w_rowid\"SET \x00a%d=coalesce(?%d,a%d)\x00a%d=?%d\x00 WHERE rowid=?1\x00PRAGMA %Q.page_size\x00SELECT length(data) FROM '%q'.'%q_node' WHERE nodeno = 1\x00undersize RTree blobs in \"%q_node\"\x00Wrong number of columns for an rtree table\x00Too few columns for an rtree table\x00Too many columns for an rtree table\x00Auxiliary rtree columns must be last\x00_node\x00CREATE TABLE x(%.*s INT\x00,%.*s\x00,%.*s REAL\x00,%.*s INT\x00);\x00{%lld\x00 %g\x00Invalid argument to rtreedepth()\x00%z%s%z\x00SELECT data FROM %Q.'%q_node' WHERE nodeno=?\x00Node %lld missing from database\x00SELECT parentnode FROM %Q.'%q_parent' WHERE nodeno=?1\x00SELECT nodeno FROM %Q.'%q_rowid' WHERE rowid=?1\x00%_rowid\x00%_parent\x00Mapping (%lld -> %lld) missing from %s table\x00Found (%lld -> %lld) in %s table, expected (%lld -> %lld)\x00Dimension %d of cell %d on node %lld is corrupt\x00Dimension %d of cell %d on node %lld is corrupt relative to parent\x00Node %lld is too small (%d bytes)\x00Rtree depth out of range (%d)\x00Node %lld is too small for cell count of %d (%d bytes)\x00SELECT count(*) FROM %Q.'%q%s'\x00Wrong number of entries in %%%s table - expected %lld, actual %lld\x00SELECT * FROM %Q.'%q_rowid'\x00Schema corrupt or not an rtree\x00_rowid\x00_parent\x00In RTree %s.%s:\n%z\x00wrong number of arguments to function rtreecheck()\x00[%!g,%!g],\x00[%!g,%!g]]\x00<polyline points=\x00%c%g,%g\x00 %g,%g'\x00 %s\x00></polyline>\x00Too many columns for a geopoly table\x00CREATE TABLE x(_shape\x00,%s\x00rtree\x00fullscan\x00_shape does not contain a valid polygon\x00geopoly_overlap\x00geopoly_within\x00geopoly_area\x00geopoly_blob\x00geopoly_json\x00geopoly_svg\x00geopoly_contains_point\x00geopoly_debug\x00geopoly_bbox\x00geopoly_xform\x00geopoly_regular\x00geopoly_ccw\x00geopoly_group_bbox\x00geopoly\x00rtreenode\x00rtreedepth\x00rtreecheck\x00rtree_i32\x00corrupt fossil delta\x00DROP TRIGGER IF EXISTS temp.rbu_insert_tr;DROP TRIGGER IF EXISTS temp.rbu_update1_tr;DROP TRIGGER IF EXISTS temp.rbu_update2_tr;DROP TRIGGER IF EXISTS temp.rbu_delete_tr;\x00AND rootpage!=0 AND rootpage IS NOT NULL\x00SELECT rbu_target_name(name, type='view') AS target, name FROM sqlite_schema WHERE type IN ('table', 'view') AND target IS NOT NULL  %s ORDER BY name\x00SELECT name, rootpage, sql IS NULL OR substr(8, 6)=='UNIQUE'   FROM main.sqlite_schema   WHERE type='index' AND tbl_name = ?\x00SELECT  (sql COLLATE nocase BETWEEN 'CREATE VIRTUAL' AND 'CREATE VIRTUAM'), rootpage  FROM sqlite_schema WHERE name=%Q\x00PRAGMA index_list=%Q\x00SELECT rootpage FROM sqlite_schema WHERE name = %Q\x00PRAGMA table_info=%Q\x00PRAGMA main.index_list = %Q\x00PRAGMA main.index_xinfo = %Q\x00SELECT * FROM '%q'\x00rbu_\x00rbu_rowid\x00may not have\x00requires\x00table %q %s rbu_rowid column\x00PRAGMA table_info(%Q)\x00column missing from %q: %s\x00%z%s\"%w\"\x00%z%s%s\"%w\"%s\x00SELECT max(_rowid_) FROM \"%s%w\"\x00 WHERE _rowid_ > %lld \x00 DESC\x00quote(\x00||','||\x00SELECT %s FROM \"%s%w\" ORDER BY %s LIMIT 1\x00 WHERE (%s) > (%s) \x00_rowid_\x00%z%s \"%w\" COLLATE %Q\x00%z%s \"rbu_imp_%d%w\" COLLATE %Q DESC\x00%z%s quote(\"rbu_imp_%d%w\")\x00SELECT %s FROM \"rbu_imp_%w\" ORDER BY %s LIMIT 1\x00%z%s%s\x00(%s) > (%s)\x00%z%s(%.*s) COLLATE %Q\x00%z%s\"%w\" COLLATE %Q\x00%z%s\"rbu_imp_%d%w\"%s\x00%z%s\"rbu_imp_%d%w\" %s COLLATE %Q\x00%z%s\"rbu_imp_%d%w\" IS ?\x00%z%s%s.\"%w\"\x00%z%sNULL\x00%z, %s._rowid_\x00_rowid_ = ?%d\x00%z%sc%d=?%d\x00_rowid_ = (SELECT id FROM rbu_imposter2 WHERE %z)\x00%z%s\"%w\"=?%d\x00invalid rbu_control value\x00%z%s\"%w\"=rbu_delta(\"%w\", ?%d)\x00%z%s\"%w\"=rbu_fossil_delta(\"%w\", ?%d)\x00PRIMARY KEY(\x00%z%s\"%w\"%s\x00%z)\x00SELECT name FROM sqlite_schema WHERE rootpage = ?\x00%z%sc%d %s COLLATE %Q\x00%z%sc%d%s\x00%z, id INTEGER\x00CREATE TABLE rbu_imposter2(%z, PRIMARY KEY(%z)) WITHOUT ROWID\x00PRIMARY KEY \x00 NOT NULL\x00%z%s\"%w\" %s %sCOLLATE %Q%s\x00%z, %z\x00 WITHOUT ROWID\x00CREATE TABLE \"rbu_imp_%w\"(%z)%s\x00INSERT INTO %s.'rbu_tmp_%q'(rbu_control,%s%s) VALUES(%z)\x00SELECT trim(sql) FROM sqlite_schema WHERE type='index' AND name=?\x00 LIMIT -1 OFFSET %d\x00CREATE TABLE \"rbu_imp_%w\"( %s, PRIMARY KEY( %s ) ) WITHOUT ROWID\x00INSERT INTO \"rbu_imp_%w\" VALUES(%s)\x00DELETE FROM \"rbu_imp_%w\" WHERE %s\x00AND\x00WHERE\x00SELECT %s, 0 AS rbu_control FROM '%q' %s %s %s ORDER BY %s%s\x00SELECT %s, rbu_control FROM %s.'rbu_tmp_%q' %s ORDER BY %s%s\x00SELECT %s, rbu_control FROM %s.'rbu_tmp_%q' %s UNION ALL SELECT %s, rbu_control FROM '%q' %s %s typeof(rbu_control)='integer' AND rbu_control!=1 ORDER BY %s%s\x00rbu_imp_\x00, _rowid_\x00INSERT INTO \"%s%w\"(%s%s) VALUES(%s)\x00DELETE FROM \"%s%w\" WHERE %s\x00, rbu_rowid\x00, 0 AS rbu_rowid\x00CREATE TABLE IF NOT EXISTS %s.'rbu_tmp_%q' AS SELECT *%s FROM '%q' WHERE 0;\x00CREATE TEMP TRIGGER rbu_delete_tr BEFORE DELETE ON \"%s%w\" BEGIN   SELECT rbu_tmp_insert(3, %s);END;CREATE TEMP TRIGGER rbu_update1_tr BEFORE UPDATE ON \"%s%w\" BEGIN   SELECT rbu_tmp_insert(3, %s);END;CREATE TEMP TRIGGER rbu_update2_tr AFTER UPDATE ON \"%s%w\" BEGIN   SELECT rbu_tmp_insert(4, %s);END;\x00CREATE TEMP TRIGGER rbu_insert_tr AFTER INSERT ON \"%s%w\" BEGIN   SELECT rbu_tmp_insert(0, %s);END;\x00,_rowid_ \x00,rbu_rowid\x000 AS \x00SELECT %s,%s rbu_control%s FROM '%q'%s %s %s %s\x00UPDATE \"%s%w\" SET %s WHERE %s\x00SELECT k, v FROM %s.rbu_state\x00file:///%s-vacuum?modeof=%s\x00ATTACH %Q AS stat\x00CREATE TABLE IF NOT EXISTS %s.rbu_state(k INTEGER PRIMARY KEY, v)\x00cannot vacuum wal mode database\x00&\x00file:%s-vactmp?rbu_memory=1%s%s\x00rbu_tmp_insert\x00rbu_fossil_delta\x00rbu_target_name\x00SELECT * FROM sqlite_schema\x00rbu vfs not found\x00PRAGMA main.wal_checkpoint=restart\x00rbu_exclusive_checkpoint\x00%s-oal\x00%s-wal\x00PRAGMA schema_version\x00PRAGMA schema_version = %d\x00INSERT OR REPLACE INTO %s.rbu_state(k, v) VALUES (%d, %d), (%d, %Q), (%d, %Q), (%d, %d), (%d, %lld), (%d, %lld), (%d, %lld), (%d, %lld), (%d, %lld), (%d, %Q)  \x00PRAGMA main.%s\x00PRAGMA main.%s = %d\x00PRAGMA writable_schema=1\x00SELECT sql FROM sqlite_schema WHERE sql!='' AND rootpage!=0 AND name!='sqlite_sequence'  ORDER BY type DESC\x00SELECT * FROM sqlite_schema WHERE rootpage=0 OR rootpage IS NULL\x00INSERT INTO sqlite_schema VALUES(?,?,?,?,?)\x00PRAGMA writable_schema=0\x00DELETE FROM %s.'rbu_tmp_%q'\x00rbu_state mismatch error\x00rbu_vfs_%d\x00SELECT count(*) FROM sqlite_schema WHERE type='index' AND tbl_name = %Q\x00rbu_index_cnt\x00SELECT 1 FROM sqlite_schema WHERE tbl_name = 'rbu_count'\x00SELECT sum(cnt * (1 + rbu_index_cnt(rbu_target_name(tbl))))FROM rbu_count\x00cannot update wal mode database\x00vacuum\x00update\x00database modified during rbu %s\x00BEGIN IMMEDIATE\x00PRAGMA journal_mode=off\x00-vactmp\x00DELETE FROM stat.rbu_state\x00rbu/zipvfs setup error\x00rbu(%s)/%z\x00rbu_memory\x00overflow\x00%s%.3x+%.6x\x00%s%.3x/\x00internal\x00leaf\x00corrupted\x00SELECT * FROM (SELECT 'sqlite_schema' AS name,1 AS rootpage,'table' AS type UNION ALL SELECT name,rootpage,type FROM \"%w\".sqlite_schema WHERE rootpage!=0)\x00WHERE name=%Q\x00 ORDER BY name\x00dbstat\x00CREATE TABLE x(pgno INTEGER PRIMARY KEY, data BLOB, schema HIDDEN)\x00read-only\x00cannot delete\x00cannot insert\x00no such schema\x00bad page number\x00bad page value\x00failed to open transaction\x00sqlite_dbpage\x00SELECT 0, 'tbl',  '', 0, '', 1, 0     UNION ALL SELECT 1, 'idx',  '', 0, '', 2, 0     UNION ALL SELECT 2, 'stat', '', 0, '', 0, 0\x00PRAGMA '%q'.table_xinfo('%q')\x00SELECT\x00%z%s\"%w\".\"%w\".\"%w\"=\"%w\".\"%w\".\"%w\"\x00%z%s\"%w\".\"%w\".\"%w\" IS NOT \"%w\".\"%w\".\"%w\"\x00 OR \x00_rowid_, *\x00SELECT %s FROM \"%w\".\"%w\" WHERE NOT EXISTS (  SELECT 1 FROM \"%w\".\"%w\" WHERE %s)\x00%z%s\"%w\".\"%w\".\"%w\"\x00SELECT %s,%s FROM \"%w\".\"%w\", \"%w\".\"%w\" WHERE %s AND (%z)\x00SELECT * FROM %Q.sqlite_schema\x00no such table: %s.%s\x00table schemas do not match\x00, 1\x00 AND (?6 OR ?3 IS stat)\x00tbl, idx\x00?1, (CASE WHEN ?2=X'' THEN NULL ELSE ?2 END)\x00tbl, ?2, stat\x00?%d\x00 AND (?%d OR ?%d IS %w.%w)\x00SELECT %s%s FROM %Q.%Q WHERE (%s) IS (%s)\x00SAVEPOINT changeset\x00RELEASE changeset\x00UPDATE main.\x00 SET \x00 = ?\x00 WHERE \x00idx IS CASE WHEN length(?4)=0 AND typeof(?4)='blob' THEN NULL ELSE ?4 END \x00 IS ?\x00DELETE FROM main.\x00 AND (?\x00AND \x00INSERT INTO main.\x00) VALUES(?\x00, ?\x00INSERT INTO main.sqlite_stat1 VALUES(?1, CASE WHEN length(?2)=0 AND typeof(?2)='blob' THEN NULL ELSE ?2 END, ?3)\x00DELETE FROM main.sqlite_stat1 WHERE tbl=?1 AND idx IS CASE WHEN length(?2)=0 AND typeof(?2)='blob' THEN NULL ELSE ?2 END AND (?4 OR stat IS ?3)\x00SAVEPOINT replace_op\x00RELEASE replace_op\x00PRAGMA table_list = %Q\x00SELECT %s FROM %Q WHERE (%s) IS (%s)\x00INSERT INTO %Q(%s) VALUES(%s)\x00SAVEPOINT update_op\x00ROLLBACK TO update_op\x00RELEASE update_op\x00SAVEPOINT changeset_apply\x00PRAGMA defer_foreign_keys = 1\x00sqlite3changeset_apply(): no such table: %s\x00sqlite3changeset_apply(): table %s has %d columns, expected %d or more\x00sqlite3changeset_apply(): primary key mismatch for table %s\x00PRAGMA defer_foreign_keys = 0\x00RELEASE changeset_apply\x00ROLLBACK TO changeset_apply\x00undefined\x00invalid change: %s value in PK of old.* record\x00invalid change: defined value in PK of new.* record\x00un\x00invalid change: column %d - old.* value is %sdefined but new.* is %sdefined\x00invalid change: column %d is undefined\x00invalid change: null value in PK\x00fts5: parser stack overflow\x00fts5: syntax error near \"%.*s\"\x00%z%.*s\x00wrong number of arguments to function highlight()\x00wrong number of arguments to function snippet()\x00wrong number of arguments to function fts5_get_locale()\x00non-integer argument passed to function fts5_get_locale()\x00snippet\x00highlight\x00bm25\x00fts5_get_locale\x00prefix\x00malformed prefix=... directive\x00too many prefix indexes (max %d)\x00prefix length out of range (max 999)\x00tokenize\x00multiple tokenize=... directives\x00parse error in tokenize directive\x00content\x00multiple content=... directives\x00%Q.%Q\x00contentless_delete\x00malformed contentless_delete=... directive\x00contentless_unindexed\x00content_rowid\x00multiple content_rowid=... directives\x00columnsize\x00malformed columnsize=... directive\x00locale\x00malformed locale=... directive\x00columns\x00malformed detail=... directive\x00tokendata\x00malformed tokendata=... directive\x00unrecognized option: \"%.*s\"\x00rank\x00reserved fts5 column name: %s\x00unindexed\x00unrecognized column option: %s\x00T.%Q\x00, T.%Q\x00, T.c%d\x00, NULL\x00, T.l%d\x00reserved fts5 table name: %s\x00parse error in \"%s\"\x00contentless_delete=1 requires a contentless table\x00contentless_delete=1 is incompatible with columnsize=0\x00contentless_unindexed=1 requires a contentless table\x00docsize\x00%Q.'%q_%s'\x00CREATE TABLE x(\x00%z%s%Q\x00%z, %Q HIDDEN, %s HIDDEN)\x00pgsz\x00hashsize\x00automerge\x00usermerge\x00crisismerge\x00deletemerge\x00secure-delete\x00insttoken\x00SELECT k, v FROM %Q.'%q_config'\x00version\x00invalid fts5 file format (found %d, expected %d or %d) - run 'rebuild'\x00unterminated string\x00fts5: syntax error near \"%.1s\"\x00OR\x00NOT\x00NEAR\x00expected integer, got \"%.*s\"\x00fts5: column queries are not supported (detail=none)\x00phrase\x00fts5: %s queries are not supported (detail!=full)\x00fts5 expression tree is too large (maximum depth %d)\x00fts5: corruption found reading blob %lld from table \"%s\"\x00fts5: corruption on page %d, segment %d, table \"%s\"\x00fts5: corruption in table \"%s\"\x00block\x00REPLACE INTO '%q'.'%q_data'(id, block) VALUES(?,?)\x00DELETE FROM '%q'.'%q_data' WHERE id>=? AND id<=?\x00DELETE FROM '%q'.'%q_idx' WHERE segid=?\x00\xff\x00\x00\x01\x00fts5: corrupt structure record for table \"%s\"\x00PRAGMA %Q.data_version\x00SELECT pgno FROM '%q'.'%q_idx' WHERE segid=? AND term<=? ORDER BY term DESC LIMIT 1\x00SELECT pgno FROM '%q'.'%q_idx' WHERE segid=? AND term>? ORDER BY term ASC LIMIT 1\x00INSERT INTO '%q'.'%q_idx'(segid,term,pgno) VALUES(?,?,?)\x00DELETE FROM '%q'.'%q_idx' WHERE (segid, (pgno/2)) = (?1, ?2)\x00REPLACE INTO %Q.'%q_config' VALUES ('version', %d)\x00%s_data\x00id INTEGER PRIMARY KEY, block BLOB\x00segid, term, pgno, PRIMARY KEY(segid, term)\x00\x00\x00SELECT segid, term, (pgno>>1), (pgno&1) FROM %Q.'%q_idx' WHERE segid=%d ORDER BY 1, 2\x00\x00\x00\x00\x00\x00fts5: checksum mismatch for table \"%s\"\x00recursively defined fts5 content table\x00DESC\x00ASC\x00SELECT rowid, rank FROM %Q.%Q ORDER BY %s(\"%w\"%s%s) %s\x00reads\x00unknown special query: %.*s\x00SELECT %s\x00no such function: %s\x00parse error in rank function: %s\x00%s: table does not support scanning\x00fts5: missing row %lld from content table %s\x00delete-all\x00'delete-all' may only be used with a contentless or external content fts5 table\x00rebuild\x00'rebuild' may not be used with a contentless fts5 table\x00merge\x00integrity-check\x00flush\x00%s a subset of columns on fts5 contentless-delete table: %s\x00%s contentless fts5 table: %s\x00cannot UPDATE\x00'delete' may not be used with a contentless_delete=1 table\x00cannot DELETE from contentless fts5 table: %s\x00fts5_locale() requires locale=1\x00no such cursor: %lld\x00no such tokenizer: %s\x00error in tokenizer constructor\x00fts5_api_ptr\x00fts5: 2026-07-24 19:02:57 bf7c7f30031888f4e796e429ab3978879485813aaca6f641c7b33e4e09459bcc\x00config\x00malformed inverted index for FTS5 table %s.%s\x00unable to validate the inverted index for FTS5 table %s.%s: %s\x00fts5\x00fts5_source_id\x00fts5_locale\x00fts5_insttoken\x00SELECT %s FROM %s T WHERE T.%Q >= ? AND T.%Q <= ? ORDER BY T.%Q ASC\x00SELECT %s FROM %s T WHERE T.%Q <= ? AND T.%Q >= ? ORDER BY T.%Q DESC\x00SELECT %s FROM %s T WHERE T.%Q=?\x00INSERT INTO %Q.'%q_content' VALUES(%s)\x00REPLACE INTO %Q.'%q_content' VALUES(%s)\x00DELETE FROM %Q.'%q_content' WHERE id=?\x00REPLACE INTO %Q.'%q_docsize' VALUES(?,?%s)\x00DELETE FROM %Q.'%q_docsize' WHERE id=?\x00SELECT sz%s FROM %Q.'%q_docsize' WHERE id=?\x00REPLACE INTO %Q.'%q_config' VALUES(?,?)\x00SELECT %s FROM %s AS T\x00%z%s?%d\x00%z,?%d\x00,?\x00,origin\x00DROP TABLE IF EXISTS %Q.'%q_data';DROP TABLE IF EXISTS %Q.'%q_idx';DROP TABLE IF EXISTS %Q.'%q_config';\x00DROP TABLE IF EXISTS %Q.'%q_docsize';\x00DROP TABLE IF EXISTS %Q.'%q_content';\x00ALTER TABLE %Q.'%q_%s' RENAME TO '%q_%s';\x00CREATE TABLE %Q.'%q_%q'(%s)%s\x00fts5: error creating shadow table %q_%s: %s\x00id INTEGER PRIMARY KEY\x00, c%d\x00, l%d\x00id INTEGER PRIMARY KEY, sz BLOB\x00id INTEGER PRIMARY KEY, sz BLOB, origin INTEGER\x00k PRIMARY KEY, v\x00DELETE FROM %Q.'%q_data';DELETE FROM %Q.'%q_idx';\x00DELETE FROM %Q.'%q_docsize';\x00DELETE FROM %Q.'%q_content';\x00SELECT count(*) FROM %Q.'%q_%s'\x00tokenchars\x00separators\x00L* N* Co\x00categories\x00remove_diacritics\x00unicode61\x00porter\x00al\x00ance\x00ence\x00er\x00ic\x00able\x00ible\x00ant\x00ement\x00ment\x00ent\x00ion\x00ou\x00ism\x00ate\x00iti\x00ous\x00ive\x00ize\x00at\x00bl\x00ble\x00iz\x00ational\x00tional\x00tion\x00enci\x00anci\x00izer\x00logi\x00bli\x00alli\x00entli\x00eli\x00e\x00ousli\x00ization\x00ation\x00ator\x00alism\x00iveness\x00fulness\x00ful\x00ousness\x00aliti\x00iviti\x00biliti\x00ical\x00ness\x00icate\x00iciti\x00ative\x00alize\x00eed\x00ee\x00ed\x00ing\x00case_sensitive\x00trigram\x00ascii\x00col\x00row\x00instance\x00fts5vocab: unknown table type: %Q\x00CREATE TABlE vocab(term, col, doc, cnt)\x00CREATE TABlE vocab(term, doc, cnt)\x00CREATE TABlE vocab(term, doc, col, offset)\x00wrong number of vtable arguments\x00recursive definition for %s.%s\x00SELECT t.%Q FROM %Q.%Q AS t WHERE t.%Q MATCH '*id'\x00no such fts5 table: %s.%s\x00fts5vocab\x002026-07-24 19:02:57 bf7c7f30031888f4e796e429ab3978879485813aaca6f641c7b33e4e09459bcc\x00"
 
@@ -11248,14 +8960,6 @@ var _aMap = [6]struct {
 		FpMethods:    uintptr(unsafe.Pointer(&_nolockIoMethods)),
 	},
 	5: {},
-}
-
-var _aMap1 = [5]uint8{
-	0: uint8(SQLITE_ROLLBACK),
-	1: uint8(SQLITE_ABORT),
-	2: uint8(SQLITE_FAIL),
-	3: uint8(SQLITE_IGNORE),
-	4: uint8(SQLITE_REPLACE),
 }
 
 var _aMsg = [29]uintptr{
@@ -12269,294 +9973,6 @@ func _addModuleArgument(tls *libc.TLS, pParse uintptr, pTable uintptr, zArg uint
 // C documentation
 //
 //	/*
-//	** This routine checks if there is a RESERVED lock held on the specified
-//	** file by this or any other process. If such a lock is held, set *pResOut
-//	** to a non-zero value otherwise *pResOut is set to zero.  The return value
-//	** is set to SQLITE_OK unless an I/O error occurs during lock checking.
-//	*/
-func _afpCheckReservedLock(tls *libc.TLS, id uintptr, pResOut uintptr) (r int32) {
-	var context, pFile uintptr
-	var lrc, rc, reserved int32
-	_, _, _, _, _ = context, lrc, pFile, rc, reserved
-	rc = SQLITE_OK
-	reserved = 0
-	pFile = id
-	context = (*TunixFile)(unsafe.Pointer(pFile)).FlockingContext
-	if (*TafpLockingContext)(unsafe.Pointer(context)).Freserved != 0 {
-		**(**int32)(__ccgo_up(pResOut)) = int32(1)
-		return SQLITE_OK
-	}
-	Xsqlite3_mutex_enter(tls, (*TunixInodeInfo)(unsafe.Pointer((*TunixFile)(unsafe.Pointer(pFile)).FpInode)).FpLockMutex)
-	/* Check if a thread in this process holds such a lock */
-	if libc.Int32FromUint8((*TunixInodeInfo)(unsafe.Pointer((*TunixFile)(unsafe.Pointer(pFile)).FpInode)).FeFileLock) > int32(SHARED_LOCK) {
-		reserved = int32(1)
-	}
-	/* Otherwise see if some other process holds it.
-	 */
-	if !(reserved != 0) {
-		/* lock the RESERVED byte */
-		lrc = _afpSetLock(tls, (*TafpLockingContext)(unsafe.Pointer(context)).FdbPath, pFile, libc.Uint64FromInt32(_sqlite3PendingByte+libc.Int32FromInt32(1)), uint64(1), int32(1))
-		if SQLITE_OK == lrc {
-			/* if we succeeded in taking the reserved lock, unlock it to restore
-			 ** the original state */
-			lrc = _afpSetLock(tls, (*TafpLockingContext)(unsafe.Pointer(context)).FdbPath, pFile, libc.Uint64FromInt32(_sqlite3PendingByte+libc.Int32FromInt32(1)), uint64(1), 0)
-		} else {
-			/* if we failed to get the lock then someone else must have it */
-			reserved = int32(1)
-		}
-		if lrc != SQLITE_OK && lrc != int32(SQLITE_BUSY) {
-			rc = lrc
-		}
-	}
-	Xsqlite3_mutex_leave(tls, (*TunixInodeInfo)(unsafe.Pointer((*TunixFile)(unsafe.Pointer(pFile)).FpInode)).FpLockMutex)
-	**(**int32)(__ccgo_up(pResOut)) = reserved
-	return rc
-}
-
-// C documentation
-//
-//	/*
-//	** Close a file & cleanup AFP specific locking context
-//	*/
-func _afpClose(tls *libc.TLS, id uintptr) (r int32) {
-	var pFile, pInode uintptr
-	var rc int32
-	_, _, _ = pFile, pInode, rc
-	rc = SQLITE_OK
-	pFile = id
-	_afpUnlock(tls, id, NO_LOCK)
-	_unixEnterMutex(tls)
-	if (*TunixFile)(unsafe.Pointer(pFile)).FpInode != 0 {
-		pInode = (*TunixFile)(unsafe.Pointer(pFile)).FpInode
-		Xsqlite3_mutex_enter(tls, (*TunixInodeInfo)(unsafe.Pointer(pInode)).FpLockMutex)
-		if (*TunixInodeInfo)(unsafe.Pointer(pInode)).FnLock != 0 {
-			/* If there are outstanding locks, do not actually close the file just
-			 ** yet because that would clear those locks.  Instead, add the file
-			 ** descriptor to pInode->aPending.  It will be automatically closed when
-			 ** the last lock is cleared.
-			 */
-			_setPendingFd(tls, pFile)
-		}
-		Xsqlite3_mutex_leave(tls, (*TunixInodeInfo)(unsafe.Pointer(pInode)).FpLockMutex)
-	}
-	_releaseInodeInfo(tls, pFile)
-	Xsqlite3_free(tls, (*TunixFile)(unsafe.Pointer(pFile)).FlockingContext)
-	rc = _closeUnixFile(tls, id)
-	_unixLeaveMutex(tls)
-	return rc
-}
-
-/*
-** The code above is the AFP lock implementation.  The code is specific
-** to MacOSX and does not work on other unix platforms.  No alternative
-** is available.  If you don't compile for a mac, then the "unix-afp"
-** VFS is not available.
-**
-********************* End of the AFP lock implementation **********************
-******************************************************************************/
-
-/******************************************************************************
-*************************** Begin NFS Locking ********************************/
-
-var _afpIoFinder = uintptr(0)
-
-func _afpIoFinderImpl(tls *libc.TLS, z uintptr, p uintptr) (r uintptr) {
-	_ = z
-	_ = p
-	return uintptr(unsafe.Pointer(&_afpIoMethods))
-}
-
-var _afpIoMethods = Tsqlite3_io_methods{
-	FiVersion: int32(1),
-}
-
-// C documentation
-//
-//	/*
-//	** Lock the file with the lock specified by parameter eFileLock - one
-//	** of the following:
-//	**
-//	**     (1) SHARED_LOCK
-//	**     (2) RESERVED_LOCK
-//	**     (3) PENDING_LOCK
-//	**     (4) EXCLUSIVE_LOCK
-//	**
-//	** Sometimes when requesting one lock state, additional lock states
-//	** are inserted in between.  The locking might fail on one of the later
-//	** transitions leaving the lock state different from what it started but
-//	** still short of its goal.  The following chart shows the allowed
-//	** transitions and the inserted intermediate states:
-//	**
-//	**    UNLOCKED -> SHARED
-//	**    SHARED -> RESERVED
-//	**    SHARED -> (PENDING) -> EXCLUSIVE
-//	**    RESERVED -> (PENDING) -> EXCLUSIVE
-//	**    PENDING -> EXCLUSIVE
-//	**
-//	** This routine will only increase a lock.  Use the sqlite3OsUnlock()
-//	** routine to lower a locking level.
-//	*/
-func _afpLock(tls *libc.TLS, id uintptr, eFileLock int32) (r int32) {
-	var context, pFile, pInode uintptr
-	var failed, failed1, failed2, lrc1, lrc1Errno, lrc2, rc, v1, v2 int32
-	var lk, mask int64
-	var v3 bool
-	_, _, _, _, _, _, _, _, _, _, _, _, _, _, _ = context, failed, failed1, failed2, lk, lrc1, lrc1Errno, lrc2, mask, pFile, pInode, rc, v1, v2, v3
-	rc = SQLITE_OK
-	pFile = id
-	pInode = (*TunixFile)(unsafe.Pointer(pFile)).FpInode
-	context = (*TunixFile)(unsafe.Pointer(pFile)).FlockingContext
-	/* If there is already a lock of this type or more restrictive on the
-	 ** unixFile, do nothing. Don't use the afp_end_lock: exit path, as
-	 ** unixEnterMutex() hasn't been called yet.
-	 */
-	if libc.Int32FromUint8((*TunixFile)(unsafe.Pointer(pFile)).FeFileLock) >= eFileLock {
-		return SQLITE_OK
-	}
-	/* Make sure the locking sequence is correct
-	 **  (1) We never move from unlocked to anything higher than shared lock.
-	 **  (2) SQLite never explicitly requests a pending lock.
-	 **  (3) A shared lock is always held when a reserve lock is requested.
-	 */
-	/* This mutex is needed because pFile->pInode is shared across threads
-	 */
-	pInode = (*TunixFile)(unsafe.Pointer(pFile)).FpInode
-	Xsqlite3_mutex_enter(tls, (*TunixInodeInfo)(unsafe.Pointer(pInode)).FpLockMutex)
-	/* If some thread using this PID has a lock via a different unixFile*
-	 ** handle that precludes the requested lock, return BUSY.
-	 */
-	if libc.Int32FromUint8((*TunixFile)(unsafe.Pointer(pFile)).FeFileLock) != libc.Int32FromUint8((*TunixInodeInfo)(unsafe.Pointer(pInode)).FeFileLock) && (libc.Int32FromUint8((*TunixInodeInfo)(unsafe.Pointer(pInode)).FeFileLock) >= int32(PENDING_LOCK) || eFileLock > int32(SHARED_LOCK)) {
-		rc = int32(SQLITE_BUSY)
-		goto afp_end_lock
-	}
-	/* If a SHARED lock is requested, and some thread using this PID already
-	 ** has a SHARED or RESERVED lock, then increment reference counts and
-	 ** return SQLITE_OK.
-	 */
-	if eFileLock == int32(SHARED_LOCK) && (libc.Int32FromUint8((*TunixInodeInfo)(unsafe.Pointer(pInode)).FeFileLock) == int32(SHARED_LOCK) || libc.Int32FromUint8((*TunixInodeInfo)(unsafe.Pointer(pInode)).FeFileLock) == int32(RESERVED_LOCK)) {
-		(*TunixFile)(unsafe.Pointer(pFile)).FeFileLock = uint8(SHARED_LOCK)
-		(*TunixInodeInfo)(unsafe.Pointer(pInode)).FnShared = (*TunixInodeInfo)(unsafe.Pointer(pInode)).FnShared + 1
-		(*TunixInodeInfo)(unsafe.Pointer(pInode)).FnLock = (*TunixInodeInfo)(unsafe.Pointer(pInode)).FnLock + 1
-		goto afp_end_lock
-	}
-	/* A PENDING lock is needed before acquiring a SHARED lock and before
-	 ** acquiring an EXCLUSIVE lock.  For the SHARED lock, the PENDING will
-	 ** be released.
-	 */
-	if eFileLock == int32(SHARED_LOCK) || eFileLock == int32(EXCLUSIVE_LOCK) && libc.Int32FromUint8((*TunixFile)(unsafe.Pointer(pFile)).FeFileLock) < int32(PENDING_LOCK) {
-		failed = _afpSetLock(tls, (*TafpLockingContext)(unsafe.Pointer(context)).FdbPath, pFile, libc.Uint64FromInt32(_sqlite3PendingByte), uint64(1), int32(1))
-		if failed != 0 {
-			rc = failed
-			goto afp_end_lock
-		}
-	}
-	/* If control gets to this point, then actually go ahead and make
-	 ** operating system calls for the specified lock.
-	 */
-	if eFileLock == int32(SHARED_LOCK) {
-		lrc1Errno = 0
-		mask = int64(libc.Int64FromUint32(0xffffffff) | libc.Int64FromInt32(0x7fffffff)<<libc.Int32FromInt32(32))
-		/* Now get the read-lock SHARED_LOCK */
-		/* note that the quality of the randomness doesn't matter that much */
-		lk = libc.Xrandom(tls)
-		(*TunixInodeInfo)(unsafe.Pointer(pInode)).FsharedByte = libc.Uint64FromInt64(lk & mask % int64(libc.Int32FromInt32(SHARED_SIZE)-libc.Int32FromInt32(1)))
-		lrc1 = _afpSetLock(tls, (*TafpLockingContext)(unsafe.Pointer(context)).FdbPath, pFile, libc.Uint64FromInt32(_sqlite3PendingByte+libc.Int32FromInt32(2))+(*TunixInodeInfo)(unsafe.Pointer(pInode)).FsharedByte, uint64(1), int32(1))
-		if lrc1 != SQLITE_OK && lrc1 != int32(SQLITE_BUSY) {
-			lrc1Errno = (*TunixFile)(unsafe.Pointer(pFile)).FlastErrno
-		}
-		/* Drop the temporary PENDING lock */
-		lrc2 = _afpSetLock(tls, (*TafpLockingContext)(unsafe.Pointer(context)).FdbPath, pFile, libc.Uint64FromInt32(_sqlite3PendingByte), uint64(1), 0)
-		if lrc1 != SQLITE_OK && lrc1 != int32(SQLITE_BUSY) {
-			_storeLastErrno(tls, pFile, lrc1Errno)
-			rc = lrc1
-			goto afp_end_lock
-		} else {
-			if lrc2 != SQLITE_OK && lrc2 != int32(SQLITE_BUSY) {
-				rc = lrc2
-				goto afp_end_lock
-			} else {
-				if lrc1 != SQLITE_OK {
-					rc = lrc1
-				} else {
-					(*TunixFile)(unsafe.Pointer(pFile)).FeFileLock = uint8(SHARED_LOCK)
-					(*TunixInodeInfo)(unsafe.Pointer(pInode)).FnLock = (*TunixInodeInfo)(unsafe.Pointer(pInode)).FnLock + 1
-					(*TunixInodeInfo)(unsafe.Pointer(pInode)).FnShared = int32(1)
-				}
-			}
-		}
-	} else {
-		if eFileLock == int32(EXCLUSIVE_LOCK) && (*TunixInodeInfo)(unsafe.Pointer(pInode)).FnShared > int32(1) {
-			/* We are trying for an exclusive lock but another thread in this
-			 ** same process is still holding a shared lock. */
-			rc = int32(SQLITE_BUSY)
-		} else {
-			/* The request was for a RESERVED or EXCLUSIVE lock.  It is
-			 ** assumed that there is a SHARED or greater lock on the file
-			 ** already.
-			 */
-			failed1 = 0
-			if eFileLock >= int32(RESERVED_LOCK) && libc.Int32FromUint8((*TunixFile)(unsafe.Pointer(pFile)).FeFileLock) < int32(RESERVED_LOCK) {
-				/* Acquire a RESERVED lock */
-				failed1 = _afpSetLock(tls, (*TafpLockingContext)(unsafe.Pointer(context)).FdbPath, pFile, libc.Uint64FromInt32(_sqlite3PendingByte+libc.Int32FromInt32(1)), uint64(1), int32(1))
-				if !(failed1 != 0) {
-					(*TafpLockingContext)(unsafe.Pointer(context)).Freserved = int32(1)
-				}
-			}
-			if !(failed1 != 0) && eFileLock == int32(EXCLUSIVE_LOCK) {
-				/* Acquire an EXCLUSIVE lock */
-				/* Remove the shared lock before trying the range.  we'll need to
-				 ** reestablish the shared lock if we can't get the  afpUnlock
-				 */
-				v1 = _afpSetLock(tls, (*TafpLockingContext)(unsafe.Pointer(context)).FdbPath, pFile, libc.Uint64FromInt32(_sqlite3PendingByte+libc.Int32FromInt32(2))+(*TunixInodeInfo)(unsafe.Pointer(pInode)).FsharedByte, uint64(1), 0)
-				failed1 = v1
-				if !(v1 != 0) {
-					failed2 = SQLITE_OK
-					/* now attempt to get the exclusive lock range */
-					failed1 = _afpSetLock(tls, (*TafpLockingContext)(unsafe.Pointer(context)).FdbPath, pFile, libc.Uint64FromInt32(_sqlite3PendingByte+libc.Int32FromInt32(2)), uint64(SHARED_SIZE), int32(1))
-					if v3 = failed1 != 0; v3 {
-						v1 = _afpSetLock(tls, (*TafpLockingContext)(unsafe.Pointer(context)).FdbPath, pFile, libc.Uint64FromInt32(_sqlite3PendingByte+libc.Int32FromInt32(2))+(*TunixInodeInfo)(unsafe.Pointer(pInode)).FsharedByte, uint64(1), int32(1))
-						failed2 = v1
-					}
-					if v3 && v1 != 0 {
-						/* Can't reestablish the shared lock.  Sqlite can't deal, this is
-						 ** a critical I/O error
-						 */
-						if failed1&int32(0xff) == int32(SQLITE_IOERR) {
-							v2 = failed2
-						} else {
-							v2 = libc.Int32FromInt32(SQLITE_IOERR) | libc.Int32FromInt32(15)<<libc.Int32FromInt32(8)
-						}
-						rc = v2
-						goto afp_end_lock
-					}
-				} else {
-					rc = failed1
-				}
-			}
-			if failed1 != 0 {
-				rc = failed1
-			}
-		}
-	}
-	if rc == SQLITE_OK {
-		(*TunixFile)(unsafe.Pointer(pFile)).FeFileLock = libc.Uint8FromInt32(eFileLock)
-		(*TunixInodeInfo)(unsafe.Pointer(pInode)).FeFileLock = libc.Uint8FromInt32(eFileLock)
-	} else {
-		if eFileLock == int32(EXCLUSIVE_LOCK) {
-			(*TunixFile)(unsafe.Pointer(pFile)).FeFileLock = uint8(PENDING_LOCK)
-			(*TunixInodeInfo)(unsafe.Pointer(pInode)).FeFileLock = uint8(PENDING_LOCK)
-		}
-	}
-	goto afp_end_lock
-afp_end_lock:
-	;
-	Xsqlite3_mutex_leave(tls, (*TunixInodeInfo)(unsafe.Pointer(pInode)).FpLockMutex)
-	return rc
-}
-
-// C documentation
-//
-//	/*
 //	** This is a utility for setting or clearing a bit-range lock on an
 //	** AFP filesystem.
 //	**
@@ -12595,83 +10011,6 @@ func _afpSetLock(tls *libc.TLS, path uintptr, pFile uintptr, offset uint64, leng
 		return SQLITE_OK
 	}
 	return r
-}
-
-// C documentation
-//
-//	/*
-//	** Lower the locking level on file descriptor pFile to eFileLock.  eFileLock
-//	** must be either NO_LOCK or SHARED_LOCK.
-//	**
-//	** If the locking level of the file descriptor is already at or below
-//	** the requested locking level, this routine is a no-op.
-//	*/
-func _afpUnlock(tls *libc.TLS, id uintptr, eFileLock int32) (r int32) {
-	var context, pFile, pInode uintptr
-	var rc, sharedLockByte, skipShared int32
-	var sharedLockByte1 uint64
-	_, _, _, _, _, _, _ = context, pFile, pInode, rc, sharedLockByte, sharedLockByte1, skipShared
-	rc = SQLITE_OK
-	pFile = id
-	context = (*TunixFile)(unsafe.Pointer(pFile)).FlockingContext
-	skipShared = 0
-	if libc.Int32FromUint8((*TunixFile)(unsafe.Pointer(pFile)).FeFileLock) <= eFileLock {
-		return SQLITE_OK
-	}
-	pInode = (*TunixFile)(unsafe.Pointer(pFile)).FpInode
-	Xsqlite3_mutex_enter(tls, (*TunixInodeInfo)(unsafe.Pointer(pInode)).FpLockMutex)
-	if libc.Int32FromUint8((*TunixFile)(unsafe.Pointer(pFile)).FeFileLock) > int32(SHARED_LOCK) {
-		if libc.Int32FromUint8((*TunixFile)(unsafe.Pointer(pFile)).FeFileLock) == int32(EXCLUSIVE_LOCK) {
-			rc = _afpSetLock(tls, (*TafpLockingContext)(unsafe.Pointer(context)).FdbPath, pFile, libc.Uint64FromInt32(_sqlite3PendingByte+libc.Int32FromInt32(2)), uint64(SHARED_SIZE), 0)
-			if rc == SQLITE_OK && (eFileLock == int32(SHARED_LOCK) || (*TunixInodeInfo)(unsafe.Pointer(pInode)).FnShared > int32(1)) {
-				/* only re-establish the shared lock if necessary */
-				sharedLockByte = libc.Int32FromUint64(libc.Uint64FromInt32(_sqlite3PendingByte+libc.Int32FromInt32(2)) + (*TunixInodeInfo)(unsafe.Pointer(pInode)).FsharedByte)
-				rc = _afpSetLock(tls, (*TafpLockingContext)(unsafe.Pointer(context)).FdbPath, pFile, libc.Uint64FromInt32(sharedLockByte), uint64(1), int32(1))
-			} else {
-				skipShared = int32(1)
-			}
-		}
-		if rc == SQLITE_OK && libc.Int32FromUint8((*TunixFile)(unsafe.Pointer(pFile)).FeFileLock) >= int32(PENDING_LOCK) {
-			rc = _afpSetLock(tls, (*TafpLockingContext)(unsafe.Pointer(context)).FdbPath, pFile, libc.Uint64FromInt32(_sqlite3PendingByte), uint64(1), 0)
-		}
-		if rc == SQLITE_OK && libc.Int32FromUint8((*TunixFile)(unsafe.Pointer(pFile)).FeFileLock) >= int32(RESERVED_LOCK) && (*TafpLockingContext)(unsafe.Pointer(context)).Freserved != 0 {
-			rc = _afpSetLock(tls, (*TafpLockingContext)(unsafe.Pointer(context)).FdbPath, pFile, libc.Uint64FromInt32(_sqlite3PendingByte+libc.Int32FromInt32(1)), uint64(1), 0)
-			if !(rc != 0) {
-				(*TafpLockingContext)(unsafe.Pointer(context)).Freserved = 0
-			}
-		}
-		if rc == SQLITE_OK && (eFileLock == int32(SHARED_LOCK) || (*TunixInodeInfo)(unsafe.Pointer(pInode)).FnShared > int32(1)) {
-			(*TunixInodeInfo)(unsafe.Pointer(pInode)).FeFileLock = uint8(SHARED_LOCK)
-		}
-	}
-	if rc == SQLITE_OK && eFileLock == NO_LOCK {
-		/* Decrement the shared lock counter.  Release the lock using an
-		 ** OS call only when all threads in this same process have released
-		 ** the lock.
-		 */
-		sharedLockByte1 = libc.Uint64FromInt32(_sqlite3PendingByte+libc.Int32FromInt32(2)) + (*TunixInodeInfo)(unsafe.Pointer(pInode)).FsharedByte
-		(*TunixInodeInfo)(unsafe.Pointer(pInode)).FnShared = (*TunixInodeInfo)(unsafe.Pointer(pInode)).FnShared - 1
-		if (*TunixInodeInfo)(unsafe.Pointer(pInode)).FnShared == 0 {
-			if !(skipShared != 0) {
-				rc = _afpSetLock(tls, (*TafpLockingContext)(unsafe.Pointer(context)).FdbPath, pFile, sharedLockByte1, uint64(1), 0)
-			}
-			if !(rc != 0) {
-				(*TunixInodeInfo)(unsafe.Pointer(pInode)).FeFileLock = uint8(NO_LOCK)
-				(*TunixFile)(unsafe.Pointer(pFile)).FeFileLock = uint8(NO_LOCK)
-			}
-		}
-		if rc == SQLITE_OK {
-			(*TunixInodeInfo)(unsafe.Pointer(pInode)).FnLock = (*TunixInodeInfo)(unsafe.Pointer(pInode)).FnLock - 1
-			if (*TunixInodeInfo)(unsafe.Pointer(pInode)).FnLock == 0 {
-				_closePendingFds(tls, pFile)
-			}
-		}
-	}
-	Xsqlite3_mutex_leave(tls, (*TunixInodeInfo)(unsafe.Pointer(pInode)).FpLockMutex)
-	if rc == SQLITE_OK {
-		(*TunixFile)(unsafe.Pointer(pFile)).FeFileLock = libc.Uint8FromInt32(eFileLock)
-	}
-	return rc
 }
 
 // C documentation
@@ -14171,8 +11510,6 @@ var _attach_func = TFuncDef{
 }
 
 type _audit_session_flags = int32
-
-var _autolockIoFinder = uintptr(0)
 
 // C documentation
 //
@@ -18292,38 +15629,6 @@ func _disallowAggregatesInOrderByCb(tls *libc.TLS, pWalker uintptr, pExpr uintpt
 // C documentation
 //
 //	/*
-//	** Close a file.  Make sure the lock has been released before closing.
-//	*/
-func _dotlockClose(tls *libc.TLS, id uintptr) (r int32) {
-	var pFile uintptr
-	_ = pFile
-	pFile = id
-	_dotlockUnlock(tls, id, NO_LOCK)
-	Xsqlite3_free(tls, (*TunixFile)(unsafe.Pointer(pFile)).FlockingContext)
-	return _closeUnixFile(tls, id)
-}
-
-/****************** End of the dot-file lock implementation *******************
-******************************************************************************/
-
-/******************************************************************************
-************************** Begin flock Locking ********************************
-**
-** Use the flock() system call to do file locking.
-**
-** flock() locking is like dot-file locking in that the various
-** fine-grain locking levels supported by SQLite are collapsed into
-** a single exclusive lock.  In other words, SHARED, RESERVED, and
-** PENDING locks are the same thing as an EXCLUSIVE lock.  SQLite
-** still works when you do this, but concurrency is reduced since
-** only a single process can be reading the database at a time.
-**
-** Omit this section if SQLITE_ENABLE_LOCKING_STYLE is turned off
- */
-
-// C documentation
-//
-//	/*
 //	** Remove the i-th cell from pPage.  This routine effects pPage only.
 //	** The cell content is not freed or deallocated.  It is assumed that
 //	** the cell content has been copied someplace else.  This routine just
@@ -22038,174 +19343,6 @@ func _flattenSubquery(tls *libc.TLS, pParse uintptr, p uintptr, iFrom int32, isA
 	_sqlite3WalkSelect(tls, bp, pSub1)
 	_sqlite3SelectDelete(tls, db, pSub1)
 	return int32(1)
-}
-
-// C documentation
-//
-//	/*
-//	** This routine checks if there is a RESERVED lock held on the specified
-//	** file by this or any other process. If such a lock is held, set *pResOut
-//	** to a non-zero value otherwise *pResOut is set to zero.  The return value
-//	** is set to SQLITE_OK unless an I/O error occurs during lock checking.
-//	*/
-func _flockCheckReservedLock(tls *libc.TLS, id uintptr, pResOut uintptr) (r int32) {
-	_ = id
-	/* The flock VFS only ever takes exclusive locks (see function flockLock).
-	 ** Therefore, if this connection is holding any lock at all, no other
-	 ** connection may be holding a RESERVED lock. So set *pResOut to 0
-	 ** in this case.
-	 **
-	 ** Or, this connection may be holding no lock. In that case, set *pResOut to
-	 ** 0 as well. The caller will then attempt to take an EXCLUSIVE lock on the
-	 ** db in order to roll the hot journal back. If there is another connection
-	 ** holding a lock, that attempt will fail and an SQLITE_BUSY returned to
-	 ** the user. With other VFS, we try to avoid this, in order to allow a reader
-	 ** to proceed while a writer is preparing its transaction. But that won't
-	 ** work with the flock VFS - as it always takes EXCLUSIVE locks - so it is
-	 ** not a problem in this case.  */
-	**(**int32)(__ccgo_up(pResOut)) = 0
-	return SQLITE_OK
-}
-
-// C documentation
-//
-//	/*
-//	** Close a file.
-//	*/
-func _flockClose(tls *libc.TLS, id uintptr) (r int32) {
-	_flockUnlock(tls, id, NO_LOCK)
-	return _closeUnixFile(tls, id)
-}
-
-/******************* End of the flock lock implementation *********************
-******************************************************************************/
-
-/******************************************************************************
-************************ Begin Named Semaphore Locking ************************
-**
-** Named semaphore locking is only supported on VxWorks.
-**
-** Semaphore locking is like dot-lock and flock in that it really only
-** supports EXCLUSIVE locking.  Only a single process can read or write
-** the database file at a time.  This reduces potential concurrency, but
-** makes the lock implementation much easier.
- */
-/*
-** Named semaphore locking is only available on VxWorks.
-**
-*************** End of the named semaphore lock implementation ****************
-******************************************************************************/
-
-/******************************************************************************
-*************************** Begin AFP Locking *********************************
-**
-** AFP is the Apple Filing Protocol.  AFP is a network filesystem found
-** on Apple Macintosh computers - both OS9 and OSX.
-**
-** Third-party implementations of AFP are available.  But this code here
-** only works on OSX.
- */
-
-var _flockIoFinder = uintptr(0)
-
-func _flockIoFinderImpl(tls *libc.TLS, z uintptr, p uintptr) (r uintptr) {
-	_ = z
-	_ = p
-	return uintptr(unsafe.Pointer(&_flockIoMethods))
-}
-
-var _flockIoMethods = Tsqlite3_io_methods{
-	FiVersion: int32(1),
-}
-
-// C documentation
-//
-//	/*
-//	** Lock the file with the lock specified by parameter eFileLock - one
-//	** of the following:
-//	**
-//	**     (1) SHARED_LOCK
-//	**     (2) RESERVED_LOCK
-//	**     (3) PENDING_LOCK
-//	**     (4) EXCLUSIVE_LOCK
-//	**
-//	** Sometimes when requesting one lock state, additional lock states
-//	** are inserted in between.  The locking might fail on one of the later
-//	** transitions leaving the lock state different from what it started but
-//	** still short of its goal.  The following chart shows the allowed
-//	** transitions and the inserted intermediate states:
-//	**
-//	**    UNLOCKED -> SHARED
-//	**    SHARED -> RESERVED
-//	**    SHARED -> (PENDING) -> EXCLUSIVE
-//	**    RESERVED -> (PENDING) -> EXCLUSIVE
-//	**    PENDING -> EXCLUSIVE
-//	**
-//	** flock() only really support EXCLUSIVE locks.  We track intermediate
-//	** lock states in the sqlite3_file structure, but all locks SHARED or
-//	** above are really EXCLUSIVE locks and exclude all other processes from
-//	** access the file.
-//	**
-//	** This routine will only increase a lock.  Use the sqlite3OsUnlock()
-//	** routine to lower a locking level.
-//	*/
-func _flockLock(tls *libc.TLS, id uintptr, eFileLock int32) (r int32) {
-	var pFile uintptr
-	var rc, tErrno int32
-	_, _, _ = pFile, rc, tErrno
-	rc = SQLITE_OK
-	pFile = id
-	/* if we already have a lock, it is exclusive.
-	 ** Just adjust level and punt on outta here. */
-	if libc.Int32FromUint8((*TunixFile)(unsafe.Pointer(pFile)).FeFileLock) > NO_LOCK {
-		(*TunixFile)(unsafe.Pointer(pFile)).FeFileLock = libc.Uint8FromInt32(eFileLock)
-		return SQLITE_OK
-	}
-	/* grab an exclusive lock */
-	if _robust_flock(tls, (*TunixFile)(unsafe.Pointer(pFile)).Fh, libc.Int32FromInt32(LOCK_EX)|libc.Int32FromInt32(LOCK_NB)) != 0 {
-		tErrno = **(**int32)(__ccgo_up(libc.X__error(tls)))
-		/* didn't get, must be busy */
-		rc = _sqliteErrorFromPosixError(tls, tErrno, libc.Int32FromInt32(SQLITE_IOERR)|libc.Int32FromInt32(15)<<libc.Int32FromInt32(8))
-		if rc != SQLITE_OK && rc != int32(SQLITE_BUSY) {
-			_storeLastErrno(tls, pFile, tErrno)
-		}
-	} else {
-		/* got it, set the type and return ok */
-		(*TunixFile)(unsafe.Pointer(pFile)).FeFileLock = libc.Uint8FromInt32(eFileLock)
-	}
-	return rc
-}
-
-// C documentation
-//
-//	/*
-//	** Lower the locking level on file descriptor pFile to eFileLock.  eFileLock
-//	** must be either NO_LOCK or SHARED_LOCK.
-//	**
-//	** If the locking level of the file descriptor is already at or below
-//	** the requested locking level, this routine is a no-op.
-//	*/
-func _flockUnlock(tls *libc.TLS, id uintptr, eFileLock int32) (r int32) {
-	var pFile uintptr
-	_ = pFile
-	pFile = id
-	/* no-op if possible */
-	if libc.Int32FromUint8((*TunixFile)(unsafe.Pointer(pFile)).FeFileLock) == eFileLock {
-		return SQLITE_OK
-	}
-	/* shared can just be set because we always have an exclusive */
-	if eFileLock == int32(SHARED_LOCK) {
-		(*TunixFile)(unsafe.Pointer(pFile)).FeFileLock = libc.Uint8FromInt32(eFileLock)
-		return SQLITE_OK
-	}
-	/* no, really, unlock. */
-	if _robust_flock(tls, (*TunixFile)(unsafe.Pointer(pFile)).Fh, int32(LOCK_UN)) != 0 {
-		return libc.Int32FromInt32(SQLITE_IOERR) | libc.Int32FromInt32(8)<<libc.Int32FromInt32(8)
-	} else {
-		(*TunixFile)(unsafe.Pointer(pFile)).FeFileLock = uint8(NO_LOCK)
-		return SQLITE_OK
-	}
-	return r
 }
 
 // C documentation
@@ -30924,73 +28061,6 @@ func _fts5yy_syntax_error(tls *libc.TLS, fts5yypParser uintptr, fts5yymajor int3
 	_sqlite3Fts5ParseError(tls, pParse, __ccgo_ts+37507, libc.VaList(bp+8, fts5yyminor.Fn, fts5yyminor.Fp))
 	/************ End %syntax_error code ******************************************/
 	(*Tfts5yyParser)(unsafe.Pointer(fts5yypParser)).FpParse = pParse /* Suppress warning about unused %extra_argument variable */
-}
-
-// C documentation
-//
-//	/*
-//	** The fsync() system call does not work as advertised on many
-//	** unix systems.  The following procedure is an attempt to make
-//	** it work better.
-//	**
-//	** The SQLITE_NO_SYNC macro disables all fsync()s.  This is useful
-//	** for testing when we want to run through the test suite quickly.
-//	** You are strongly advised *not* to deploy with SQLITE_NO_SYNC
-//	** enabled, however, since with SQLITE_NO_SYNC enabled, an OS crash
-//	** or power failure will likely corrupt the database file.
-//	**
-//	** SQLite sets the dataOnly flag if the size of the file is unchanged.
-//	** The idea behind dataOnly is that it should only write the file content
-//	** to disk, not the inode.  We only set dataOnly if the file size is
-//	** unchanged since the file size is part of the inode.  However,
-//	** Ted Ts'o tells us that fdatasync() will also write the inode if the
-//	** file size has changed.  The only real difference between fdatasync()
-//	** and fsync(), Ted tells us, is that fdatasync() will not flush the
-//	** inode if the mtime or owner or other inode attributes have changed.
-//	** We only care about the file size, not the other file attributes, so
-//	** as far as SQLite is concerned, an fdatasync() is always adequate.
-//	** So, we always use fdatasync() if it is available, regardless of
-//	** the value of the dataOnly flag.
-//	*/
-func _full_fsync(tls *libc.TLS, fd int32, fullSync int32, dataOnly int32) (r int32) {
-	bp := tls.Alloc(16)
-	defer tls.Free(16)
-	var rc int32
-	_ = rc
-	/* The following "ifdef/elif/else/" block has the same structure as
-	 ** the one below. It is replicated here solely to avoid cluttering
-	 ** up the real code with the UNUSED_PARAMETER() macros.
-	 */
-	_ = dataOnly
-	/* Record the number of times that we do a normal fsync() and
-	 ** FULLSYNC.  This is used during testing to verify that this procedure
-	 ** gets called with the correct arguments.
-	 */
-	/* If we compiled with the SQLITE_NO_SYNC flag, then syncing is a
-	 ** no-op.  But go ahead and call fstat() to validate the file
-	 ** descriptor as we need a method to provoke a failure during
-	 ** coverage testing.
-	 */
-	if fullSync != 0 {
-		rc = (*(*func(*libc.TLS, int32, int32, uintptr) int32)(unsafe.Pointer(&struct{ uintptr }{_aSyscall[int32(7)].FpCurrent})))(tls, fd, int32(F_FULLFSYNC), libc.VaList(bp+8, 0))
-	} else {
-		rc = int32(1)
-	}
-	/* If the FULLFSYNC failed, fall back to attempting an fsync().
-	 ** It shouldn't be possible for fullfsync to fail on the local
-	 ** file system (on OSX), so failure indicates that FULLFSYNC
-	 ** isn't supported for this file system. So, attempt an fsync
-	 ** and (for now) ignore the overhead of a superfluous fcntl call.
-	 ** It'd be better to detect fullfsync support once and avoid
-	 ** the fcntl call every time sync is called.
-	 */
-	if rc != 0 {
-		rc = libc.Xfsync(tls, fd)
-	}
-	if libc.Bool(OS_VXWORKS != 0) && rc != -int32(1) {
-		rc = 0
-	}
-	return rc
 }
 
 // C documentation
@@ -40125,52 +37195,6 @@ func _newDatabase(tls *libc.TLS, pBt uintptr) (r int32) {
 	return SQLITE_OK
 }
 
-var _nfsIoFinder = uintptr(0)
-
-func _nfsIoFinderImpl(tls *libc.TLS, z uintptr, p uintptr) (r uintptr) {
-	_ = z
-	_ = p
-	return uintptr(unsafe.Pointer(&_nfsIoMethods))
-}
-
-// C documentation
-//
-//	/* nfs lockd on OSX 10.3+ doesn't clear write locks when a read lock is set */
-var _nfsIoMethods = Tsqlite3_io_methods{
-	FiVersion: int32(1),
-}
-
-// C documentation
-//
-//	/*
-//	 ** Lower the locking level on file descriptor pFile to eFileLock.  eFileLock
-//	 ** must be either NO_LOCK or SHARED_LOCK.
-//	 **
-//	 ** If the locking level of the file descriptor is already at or below
-//	 ** the requested locking level, this routine is a no-op.
-//	 */
-func _nfsUnlock(tls *libc.TLS, id uintptr, eFileLock int32) (r int32) {
-	return _posixUnlock(tls, id, eFileLock, int32(1))
-}
-
-/*
-** The code above is the NFS lock implementation.  The code is specific
-** to MacOSX and does not work on other unix platforms.  No alternative
-** is available.
-**
-********************* End of the NFS lock implementation **********************
-******************************************************************************/
-
-/******************************************************************************
-**************** Non-locking sqlite3_file methods *****************************
-**
-** The next division contains implementations for all methods of the
-** sqlite3_file object other than the locking methods.  The locking
-** methods were defined in divisions above (one locking method per
-** division).  Those methods that are common to all locking modes
-** are gather together into this division.
- */
-
 // C documentation
 //
 //	/*
@@ -42719,153 +39743,6 @@ func _pcacheSortDirtyList(tls *libc.TLS, pIn uintptr) (r uintptr) {
 
 // C documentation
 //
-//	/*
-//	** Lower the locking level on file descriptor pFile to eFileLock.  eFileLock
-//	** must be either NO_LOCK or SHARED_LOCK.
-//	**
-//	** If the locking level of the file descriptor is already at or below
-//	** the requested locking level, this routine is a no-op.
-//	**
-//	** If handleNFSUnlock is true, then on downgrading an EXCLUSIVE_LOCK to SHARED
-//	** the byte range is divided into 2 parts and the first part is unlocked then
-//	** set to a read lock, then the other part is simply unlocked.  This works
-//	** around a bug in BSD NFS lockd (also seen on MacOSX 10.3+) that fails to
-//	** remove the write lock on a region when a read lock is set.
-//	*/
-func _posixUnlock(tls *libc.TLS, id uintptr, eFileLock int32, handleNFSUnlock int32) (r int32) {
-	bp := tls.Alloc(32)
-	defer tls.Free(32)
-	var divSize, v1 Toff_t
-	var pFile, pInode uintptr
-	var rc, tErrno int32
-	var _ /* lock at bp+0 */ Tflock
-	_, _, _, _, _, _ = divSize, pFile, pInode, rc, tErrno, v1
-	pFile = id
-	rc = SQLITE_OK
-	if libc.Int32FromUint8((*TunixFile)(unsafe.Pointer(pFile)).FeFileLock) <= eFileLock {
-		return SQLITE_OK
-	}
-	pInode = (*TunixFile)(unsafe.Pointer(pFile)).FpInode
-	Xsqlite3_mutex_enter(tls, (*TunixInodeInfo)(unsafe.Pointer(pInode)).FpLockMutex)
-	if libc.Int32FromUint8((*TunixFile)(unsafe.Pointer(pFile)).FeFileLock) > int32(SHARED_LOCK) {
-		/* downgrading to a shared lock on NFS involves clearing the write lock
-		 ** before establishing the readlock - to avoid a race condition we downgrade
-		 ** the lock in 2 blocks, so that part of the range will be covered by a
-		 ** write lock until the rest is covered by a read lock:
-		 **  1:   [WWWWW]
-		 **  2:   [....W]
-		 **  3:   [RRRRW]
-		 **  4:   [RRRR.]
-		 */
-		if eFileLock == int32(SHARED_LOCK) {
-			if handleNFSUnlock != 0 { /* Error code from system call errors */
-				divSize = int64(libc.Int32FromInt32(SHARED_SIZE) - libc.Int32FromInt32(1))
-				(**(**Tflock)(__ccgo_up(bp))).Fl_type = int16(F_UNLCK)
-				(**(**Tflock)(__ccgo_up(bp))).Fl_whence = SEEK_SET
-				(**(**Tflock)(__ccgo_up(bp))).Fl_start = int64(_sqlite3PendingByte + libc.Int32FromInt32(2))
-				(**(**Tflock)(__ccgo_up(bp))).Fl_len = divSize
-				if _unixFileLock(tls, pFile, bp) == -int32(1) {
-					tErrno = **(**int32)(__ccgo_up(libc.X__error(tls)))
-					rc = libc.Int32FromInt32(SQLITE_IOERR) | libc.Int32FromInt32(8)<<libc.Int32FromInt32(8)
-					_storeLastErrno(tls, pFile, tErrno)
-					goto end_unlock
-				}
-				(**(**Tflock)(__ccgo_up(bp))).Fl_type = int16(F_RDLCK)
-				(**(**Tflock)(__ccgo_up(bp))).Fl_whence = SEEK_SET
-				(**(**Tflock)(__ccgo_up(bp))).Fl_start = int64(_sqlite3PendingByte + libc.Int32FromInt32(2))
-				(**(**Tflock)(__ccgo_up(bp))).Fl_len = divSize
-				if _unixFileLock(tls, pFile, bp) == -int32(1) {
-					tErrno = **(**int32)(__ccgo_up(libc.X__error(tls)))
-					rc = _sqliteErrorFromPosixError(tls, tErrno, libc.Int32FromInt32(SQLITE_IOERR)|libc.Int32FromInt32(9)<<libc.Int32FromInt32(8))
-					if rc != SQLITE_OK && rc != int32(SQLITE_BUSY) {
-						_storeLastErrno(tls, pFile, tErrno)
-					}
-					goto end_unlock
-				}
-				(**(**Tflock)(__ccgo_up(bp))).Fl_type = int16(F_UNLCK)
-				(**(**Tflock)(__ccgo_up(bp))).Fl_whence = SEEK_SET
-				(**(**Tflock)(__ccgo_up(bp))).Fl_start = int64(_sqlite3PendingByte+libc.Int32FromInt32(2)) + divSize
-				(**(**Tflock)(__ccgo_up(bp))).Fl_len = int64(SHARED_SIZE) - divSize
-				if _unixFileLock(tls, pFile, bp) == -int32(1) {
-					tErrno = **(**int32)(__ccgo_up(libc.X__error(tls)))
-					rc = libc.Int32FromInt32(SQLITE_IOERR) | libc.Int32FromInt32(8)<<libc.Int32FromInt32(8)
-					_storeLastErrno(tls, pFile, tErrno)
-					goto end_unlock
-				}
-			} else {
-				(**(**Tflock)(__ccgo_up(bp))).Fl_type = int16(F_RDLCK)
-				(**(**Tflock)(__ccgo_up(bp))).Fl_whence = SEEK_SET
-				(**(**Tflock)(__ccgo_up(bp))).Fl_start = int64(_sqlite3PendingByte + libc.Int32FromInt32(2))
-				(**(**Tflock)(__ccgo_up(bp))).Fl_len = int64(SHARED_SIZE)
-				if _unixFileLock(tls, pFile, bp) != 0 {
-					/* In theory, the call to unixFileLock() cannot fail because another
-					 ** process is holding an incompatible lock. If it does, this
-					 ** indicates that the other process is not following the locking
-					 ** protocol. If this happens, return SQLITE_IOERR_RDLOCK. Returning
-					 ** SQLITE_BUSY would confuse the upper layer (in practice it causes
-					 ** an assert to fail). */
-					rc = libc.Int32FromInt32(SQLITE_IOERR) | libc.Int32FromInt32(9)<<libc.Int32FromInt32(8)
-					_storeLastErrno(tls, pFile, **(**int32)(__ccgo_up(libc.X__error(tls))))
-					goto end_unlock
-				}
-			}
-		}
-		(**(**Tflock)(__ccgo_up(bp))).Fl_type = int16(F_UNLCK)
-		(**(**Tflock)(__ccgo_up(bp))).Fl_whence = SEEK_SET
-		(**(**Tflock)(__ccgo_up(bp))).Fl_start = int64(_sqlite3PendingByte)
-		(**(**Tflock)(__ccgo_up(bp))).Fl_len = int64(2)
-		if _unixFileLock(tls, pFile, bp) == 0 {
-			(*TunixInodeInfo)(unsafe.Pointer(pInode)).FeFileLock = uint8(SHARED_LOCK)
-		} else {
-			rc = libc.Int32FromInt32(SQLITE_IOERR) | libc.Int32FromInt32(8)<<libc.Int32FromInt32(8)
-			_storeLastErrno(tls, pFile, **(**int32)(__ccgo_up(libc.X__error(tls))))
-			goto end_unlock
-		}
-	}
-	if eFileLock == NO_LOCK {
-		/* Decrement the shared lock counter.  Release the lock using an
-		 ** OS call only when all threads in this same process have released
-		 ** the lock.
-		 */
-		(*TunixInodeInfo)(unsafe.Pointer(pInode)).FnShared = (*TunixInodeInfo)(unsafe.Pointer(pInode)).FnShared - 1
-		if (*TunixInodeInfo)(unsafe.Pointer(pInode)).FnShared == 0 {
-			(**(**Tflock)(__ccgo_up(bp))).Fl_type = int16(F_UNLCK)
-			(**(**Tflock)(__ccgo_up(bp))).Fl_whence = SEEK_SET
-			v1 = libc.Int64FromInt64(0)
-			(**(**Tflock)(__ccgo_up(bp))).Fl_len = v1
-			(**(**Tflock)(__ccgo_up(bp))).Fl_start = v1
-			if _unixFileLock(tls, pFile, bp) == 0 {
-				(*TunixInodeInfo)(unsafe.Pointer(pInode)).FeFileLock = uint8(NO_LOCK)
-			} else {
-				rc = libc.Int32FromInt32(SQLITE_IOERR) | libc.Int32FromInt32(8)<<libc.Int32FromInt32(8)
-				_storeLastErrno(tls, pFile, **(**int32)(__ccgo_up(libc.X__error(tls))))
-				(*TunixInodeInfo)(unsafe.Pointer(pInode)).FeFileLock = uint8(NO_LOCK)
-				(*TunixFile)(unsafe.Pointer(pFile)).FeFileLock = uint8(NO_LOCK)
-			}
-		}
-		/* Decrement the count of locks against this same file.  When the
-		 ** count reaches zero, close any other file descriptors whose close
-		 ** was deferred because of outstanding locks.
-		 */
-		(*TunixInodeInfo)(unsafe.Pointer(pInode)).FnLock = (*TunixInodeInfo)(unsafe.Pointer(pInode)).FnLock - 1
-		if (*TunixInodeInfo)(unsafe.Pointer(pInode)).FnLock == 0 {
-			(*TunixInodeInfo)(unsafe.Pointer(pInode)).FhLock = 0
-			(*TunixInodeInfo)(unsafe.Pointer(pInode)).FbLockIsReadOnly = uint8(0)
-			_closePendingFds(tls, pFile)
-		}
-	}
-	goto end_unlock
-end_unlock:
-	;
-	Xsqlite3_mutex_leave(tls, (*TunixInodeInfo)(unsafe.Pointer(pInode)).FpLockMutex)
-	if rc == SQLITE_OK {
-		(*TunixFile)(unsafe.Pointer(pFile)).FeFileLock = libc.Uint8FromInt32(eFileLock)
-	}
-	return rc
-}
-
-// C documentation
-//
 //	/* Names of columns for pragmas that return multi-column result
 //	** or that return single-column results where the name of the
 //	** result column is different from the name of the pragma
@@ -42971,38 +39848,6 @@ func _pragmaFunclistLine(tls *libc.TLS, v uintptr, p uintptr, isBuiltin int32, s
 		;
 		p = (*TFuncDef)(unsafe.Pointer(p)).FpNext
 	}
-}
-
-// C documentation
-//
-//	/*
-//	** Locate a pragma in the aPragmaName[] array.
-//	*/
-func _pragmaLocate(tls *libc.TLS, zName uintptr) (r uintptr) {
-	var lwr, mid, rc, upr int32
-	var v1 uintptr
-	_, _, _, _, _ = lwr, mid, rc, upr, v1
-	mid = 0
-	lwr = 0
-	upr = libc.Int32FromUint64(libc.Uint64FromInt64(1608)/libc.Uint64FromInt64(24)) - libc.Int32FromInt32(1)
-	for lwr <= upr {
-		mid = (lwr + upr) / int32(2)
-		rc = Xsqlite3_stricmp(tls, zName, _aPragmaName[mid].FzName)
-		if rc == 0 {
-			break
-		}
-		if rc < 0 {
-			upr = mid - int32(1)
-		} else {
-			lwr = mid + int32(1)
-		}
-	}
-	if lwr > upr {
-		v1 = uintptr(0)
-	} else {
-		v1 = uintptr(unsafe.Pointer(&_aPragmaName)) + uintptr(mid)*24
-	}
-	return v1
 }
 
 // C documentation
@@ -43344,93 +40189,6 @@ end_breaklock:
 
 // C documentation
 //
-//	/*
-//	** This routine checks if there is a RESERVED lock held on the specified
-//	** file by this or any other process. If such a lock is held, set *pResOut
-//	** to a non-zero value otherwise *pResOut is set to zero.  The return value
-//	** is set to SQLITE_OK unless an I/O error occurs during lock checking.
-//	*/
-func _proxyCheckReservedLock(tls *libc.TLS, id uintptr, pResOut uintptr) (r int32) {
-	var pCtx, pFile, proxy uintptr
-	var rc int32
-	_, _, _, _ = pCtx, pFile, proxy, rc
-	pFile = id
-	rc = _proxyTakeConch(tls, pFile)
-	if rc == SQLITE_OK {
-		pCtx = (*TunixFile)(unsafe.Pointer(pFile)).FlockingContext
-		if (*TproxyLockingContext)(unsafe.Pointer(pCtx)).FconchHeld > 0 {
-			proxy = (*TproxyLockingContext)(unsafe.Pointer(pCtx)).FlockProxy
-			return (*(*func(*libc.TLS, uintptr, uintptr) int32)(unsafe.Pointer(&struct{ uintptr }{(*Tsqlite3_io_methods)(unsafe.Pointer((*TunixFile)(unsafe.Pointer(proxy)).FpMethod)).FxCheckReservedLock})))(tls, proxy, pResOut)
-		} else { /* conchHeld < 0 is lockless */
-			pResOut = uintptr(0)
-		}
-	}
-	return rc
-}
-
-// C documentation
-//
-//	/*
-//	** Close a file that uses proxy locks.
-//	*/
-func _proxyClose(tls *libc.TLS, id uintptr) (r int32) {
-	var conchFile, lockProxy, pCtx, pFile uintptr
-	var rc int32
-	_, _, _, _, _ = conchFile, lockProxy, pCtx, pFile, rc
-	if id != 0 {
-		pFile = id
-		pCtx = (*TunixFile)(unsafe.Pointer(pFile)).FlockingContext
-		lockProxy = (*TproxyLockingContext)(unsafe.Pointer(pCtx)).FlockProxy
-		conchFile = (*TproxyLockingContext)(unsafe.Pointer(pCtx)).FconchFile
-		rc = SQLITE_OK
-		if lockProxy != 0 {
-			rc = (*(*func(*libc.TLS, uintptr, int32) int32)(unsafe.Pointer(&struct{ uintptr }{(*Tsqlite3_io_methods)(unsafe.Pointer((*TunixFile)(unsafe.Pointer(lockProxy)).FpMethod)).FxUnlock})))(tls, lockProxy, NO_LOCK)
-			if rc != 0 {
-				return rc
-			}
-			rc = (*(*func(*libc.TLS, uintptr) int32)(unsafe.Pointer(&struct{ uintptr }{(*Tsqlite3_io_methods)(unsafe.Pointer((*TunixFile)(unsafe.Pointer(lockProxy)).FpMethod)).FxClose})))(tls, lockProxy)
-			if rc != 0 {
-				return rc
-			}
-			Xsqlite3_free(tls, lockProxy)
-			(*TproxyLockingContext)(unsafe.Pointer(pCtx)).FlockProxy = uintptr(0)
-		}
-		if conchFile != 0 {
-			if (*TproxyLockingContext)(unsafe.Pointer(pCtx)).FconchHeld != 0 {
-				rc = _proxyReleaseConch(tls, pFile)
-				if rc != 0 {
-					return rc
-				}
-			}
-			rc = (*(*func(*libc.TLS, uintptr) int32)(unsafe.Pointer(&struct{ uintptr }{(*Tsqlite3_io_methods)(unsafe.Pointer((*TunixFile)(unsafe.Pointer(conchFile)).FpMethod)).FxClose})))(tls, conchFile)
-			if rc != 0 {
-				return rc
-			}
-			Xsqlite3_free(tls, conchFile)
-		}
-		_sqlite3DbFree(tls, uintptr(0), (*TproxyLockingContext)(unsafe.Pointer(pCtx)).FlockProxyPath)
-		Xsqlite3_free(tls, (*TproxyLockingContext)(unsafe.Pointer(pCtx)).FconchFilePath)
-		_sqlite3DbFree(tls, uintptr(0), (*TproxyLockingContext)(unsafe.Pointer(pCtx)).FdbPath)
-		/* restore the original locking context and pMethod then close it */
-		(*TunixFile)(unsafe.Pointer(pFile)).FlockingContext = (*TproxyLockingContext)(unsafe.Pointer(pCtx)).FoldLockingContext
-		(*TunixFile)(unsafe.Pointer(pFile)).FpMethod = (*TproxyLockingContext)(unsafe.Pointer(pCtx)).FpOldMethod
-		Xsqlite3_free(tls, pCtx)
-		return (*(*func(*libc.TLS, uintptr) int32)(unsafe.Pointer(&struct{ uintptr }{(*Tsqlite3_io_methods)(unsafe.Pointer((*TunixFile)(unsafe.Pointer(pFile)).FpMethod)).FxClose})))(tls, id)
-	}
-	return SQLITE_OK
-}
-
-/*
-** The proxy locking style is intended for use with AFP filesystems.
-** And since AFP is only supported on MacOSX, the proxy locking is also
-** restricted to MacOSX.
-**
-**
-******************* End of the proxy lock implementation **********************
-******************************************************************************/
-
-// C documentation
-//
 //	/* Take the requested lock on the conch file and break a stale lock if the
 //	** host id matches.
 //	*/
@@ -43546,48 +40304,6 @@ func _proxyCreateConchPathname(tls *libc.TLS, dbPath uintptr, pConchPath uintptr
 	/* append the "-conch" suffix to the file */
 	libc.X__builtin___memcpy_chk(tls, conchPath+uintptr(i+int32(1)), __ccgo_ts+4350, uint64(7), ^t__predefined_size_t(0))
 	return SQLITE_OK
-}
-
-// C documentation
-//
-//	/*
-//	 ** Creates the lock file and any missing directories in lockPath
-//	 */
-func _proxyCreateLockPath(tls *libc.TLS, lockPath uintptr) (r int32) {
-	bp := tls.Alloc(1024)
-	defer tls.Free(1024)
-	var err, i, len1, start int32
-	var _ /* buf at bp+0 */ [1024]int8
-	_, _, _, _ = err, i, len1, start
-	start = 0
-	/* try to create all the intermediate directories */
-	len1 = libc.Int32FromUint64(libc.Xstrlen(tls, lockPath))
-	(**(**[1024]int8)(__ccgo_up(bp)))[0] = **(**int8)(__ccgo_up(lockPath))
-	i = int32(1)
-	for {
-		if !(i < len1) {
-			break
-		}
-		if int32(**(**int8)(__ccgo_up(lockPath + uintptr(i)))) == int32('/') && i-start > 0 {
-			/* only mkdir if leaf dir != "." or "/" or ".." */
-			if i-start > int32(2) || i-start == int32(1) && int32((**(**[1024]int8)(__ccgo_up(bp)))[start]) != int32('.') && int32((**(**[1024]int8)(__ccgo_up(bp)))[start]) != int32('/') || i-start == int32(2) && int32((**(**[1024]int8)(__ccgo_up(bp)))[start]) != int32('.') && int32((**(**[1024]int8)(__ccgo_up(bp)))[start+int32(1)]) != int32('.') {
-				(**(**[1024]int8)(__ccgo_up(bp)))[i] = int8('\000')
-				if (*(*func(*libc.TLS, uintptr, Tmode_t) int32)(unsafe.Pointer(&struct{ uintptr }{_aSyscall[int32(18)].FpCurrent})))(tls, bp, uint16(SQLITE_DEFAULT_PROXYDIR_PERMISSIONS)) != 0 {
-					err = **(**int32)(__ccgo_up(libc.X__error(tls)))
-					if err != int32(EEXIST) {
-						return err
-					}
-				}
-			}
-			start = i + int32(1)
-		}
-		(**(**[1024]int8)(__ccgo_up(bp)))[i] = **(**int8)(__ccgo_up(lockPath + uintptr(i)))
-		goto _1
-	_1:
-		;
-		i = i + 1
-	}
-	return 0
 }
 
 // C documentation
@@ -43831,82 +40547,6 @@ func _proxyGetLockPath(tls *libc.TLS, dbPath uintptr, lPath uintptr, maxLen Tsiz
 	**(**int8)(__ccgo_up(lPath + uintptr(i+len1))) = int8('\000')
 	libc.Xstrlcat(tls, lPath, __ccgo_ts+4139, maxLen)
 	return SQLITE_OK
-}
-
-var _proxyIoFinder = uintptr(0)
-
-func _proxyIoFinderImpl(tls *libc.TLS, z uintptr, p uintptr) (r uintptr) {
-	_ = z
-	_ = p
-	return uintptr(unsafe.Pointer(&_proxyIoMethods))
-}
-
-var _proxyIoMethods = Tsqlite3_io_methods{
-	FiVersion: int32(1),
-}
-
-// C documentation
-//
-//	/*
-//	** Lock the file with the lock specified by parameter eFileLock - one
-//	** of the following:
-//	**
-//	**     (1) SHARED_LOCK
-//	**     (2) RESERVED_LOCK
-//	**     (3) PENDING_LOCK
-//	**     (4) EXCLUSIVE_LOCK
-//	**
-//	** Sometimes when requesting one lock state, additional lock states
-//	** are inserted in between.  The locking might fail on one of the later
-//	** transitions leaving the lock state different from what it started but
-//	** still short of its goal.  The following chart shows the allowed
-//	** transitions and the inserted intermediate states:
-//	**
-//	**    UNLOCKED -> SHARED
-//	**    SHARED -> RESERVED
-//	**    SHARED -> (PENDING) -> EXCLUSIVE
-//	**    RESERVED -> (PENDING) -> EXCLUSIVE
-//	**    PENDING -> EXCLUSIVE
-//	**
-//	** This routine will only increase a lock.  Use the sqlite3OsUnlock()
-//	** routine to lower a locking level.
-//	*/
-func _proxyLock(tls *libc.TLS, id uintptr, eFileLock int32) (r int32) {
-	var pCtx, pFile, proxy uintptr
-	var rc int32
-	_, _, _, _ = pCtx, pFile, proxy, rc
-	pFile = id
-	rc = _proxyTakeConch(tls, pFile)
-	if rc == SQLITE_OK {
-		pCtx = (*TunixFile)(unsafe.Pointer(pFile)).FlockingContext
-		if (*TproxyLockingContext)(unsafe.Pointer(pCtx)).FconchHeld > 0 {
-			proxy = (*TproxyLockingContext)(unsafe.Pointer(pCtx)).FlockProxy
-			rc = (*(*func(*libc.TLS, uintptr, int32) int32)(unsafe.Pointer(&struct{ uintptr }{(*Tsqlite3_io_methods)(unsafe.Pointer((*TunixFile)(unsafe.Pointer(proxy)).FpMethod)).FxLock})))(tls, proxy, eFileLock)
-			(*TunixFile)(unsafe.Pointer(pFile)).FeFileLock = (*TunixFile)(unsafe.Pointer(proxy)).FeFileLock
-		} else {
-			/* conchHeld < 0 is lockless */
-		}
-	}
-	return rc
-}
-
-// C documentation
-//
-//	/*
-//	** If pFile holds a lock on a conch file, then release that lock.
-//	*/
-func _proxyReleaseConch(tls *libc.TLS, pFile uintptr) (r int32) {
-	var conchFile, pCtx uintptr
-	var rc int32
-	_, _, _ = conchFile, pCtx, rc
-	rc = SQLITE_OK /* Name of the conch file */
-	pCtx = (*TunixFile)(unsafe.Pointer(pFile)).FlockingContext
-	conchFile = (*TproxyLockingContext)(unsafe.Pointer(pCtx)).FconchFile
-	if (*TproxyLockingContext)(unsafe.Pointer(pCtx)).FconchHeld > 0 {
-		rc = (*(*func(*libc.TLS, uintptr, int32) int32)(unsafe.Pointer(&struct{ uintptr }{(*Tsqlite3_io_methods)(unsafe.Pointer((*TunixFile)(unsafe.Pointer(conchFile)).FpMethod)).FxUnlock})))(tls, conchFile, NO_LOCK)
-	}
-	(*TproxyLockingContext)(unsafe.Pointer(pCtx)).FconchHeld = 0
-	return rc
 }
 
 // C documentation
@@ -44198,34 +40838,6 @@ func _proxyTransformUnixFile(tls *libc.TLS, pFile uintptr, path uintptr) (r int3
 		_sqlite3DbFree(tls, uintptr(0), (*TproxyLockingContext)(unsafe.Pointer(pCtx)).FlockProxyPath)
 		Xsqlite3_free(tls, (*TproxyLockingContext)(unsafe.Pointer(pCtx)).FconchFilePath)
 		Xsqlite3_free(tls, pCtx)
-	}
-	return rc
-}
-
-// C documentation
-//
-//	/*
-//	** Lower the locking level on file descriptor pFile to eFileLock.  eFileLock
-//	** must be either NO_LOCK or SHARED_LOCK.
-//	**
-//	** If the locking level of the file descriptor is already at or below
-//	** the requested locking level, this routine is a no-op.
-//	*/
-func _proxyUnlock(tls *libc.TLS, id uintptr, eFileLock int32) (r int32) {
-	var pCtx, pFile, proxy uintptr
-	var rc int32
-	_, _, _, _ = pCtx, pFile, proxy, rc
-	pFile = id
-	rc = _proxyTakeConch(tls, pFile)
-	if rc == SQLITE_OK {
-		pCtx = (*TunixFile)(unsafe.Pointer(pFile)).FlockingContext
-		if (*TproxyLockingContext)(unsafe.Pointer(pCtx)).FconchHeld > 0 {
-			proxy = (*TproxyLockingContext)(unsafe.Pointer(pCtx)).FlockProxy
-			rc = (*(*func(*libc.TLS, uintptr, int32) int32)(unsafe.Pointer(&struct{ uintptr }{(*Tsqlite3_io_methods)(unsafe.Pointer((*TunixFile)(unsafe.Pointer(proxy)).FpMethod)).FxUnlock})))(tls, proxy, eFileLock)
-			(*TunixFile)(unsafe.Pointer(pFile)).FeFileLock = (*TunixFile)(unsafe.Pointer(proxy)).FeFileLock
-		} else {
-			/* conchHeld < 0 is lockless */
-		}
 	}
 	return rc
 }
@@ -50202,20 +46814,6 @@ func _resolveSelectStep(tls *libc.TLS, pWalker uintptr, p uintptr) (r int32) {
 // C documentation
 //
 //	/*
-//	** Retry flock() calls that fail with EINTR
-//	*/
-func _robust_flock(tls *libc.TLS, fd int32, op int32) (r int32) {
-	var rc int32
-	_ = rc
-	for cond := true; cond; cond = rc < 0 && **(**int32)(__ccgo_up(libc.X__error(tls))) == int32(EINTR) {
-		rc = libc.Xflock(tls, fd, op)
-	}
-	return rc
-}
-
-// C documentation
-//
-//	/*
 //	** Invoke open().  Do so multiple times, until it either succeeds or
 //	** fails for some reason other than EINTR.
 //	**
@@ -52157,67 +48755,6 @@ func _saveCursorKey(tls *libc.TLS, pCur uintptr) (r int32) {
 		} else {
 			rc = int32(SQLITE_NOMEM)
 		}
-	}
-	return rc
-}
-
-// C documentation
-//
-//	/*
-//	** Seek to the offset passed as the second argument, then read cnt
-//	** bytes into pBuf. Return the number of bytes actually read.
-//	**
-//	** To avoid stomping the errno value on a failed read the lastErrno value
-//	** is set before returning.
-//	*/
-func _seekAndRead(tls *libc.TLS, id uintptr, offset Tsqlite3_int64, pBuf uintptr, cnt int32) (r int32) {
-	var got, prior int32
-	_, _ = got, prior
-	prior = 0
-	for cond := true; cond; cond = got > 0 {
-		got = int32((*(*func(*libc.TLS, int32, uintptr, Tsize_t, Toff_t) Tssize_t)(unsafe.Pointer(&struct{ uintptr }{_aSyscall[int32(9)].FpCurrent})))(tls, (*TunixFile)(unsafe.Pointer(id)).Fh, pBuf, libc.Uint64FromInt32(cnt), offset))
-		if got == cnt {
-			break
-		}
-		if got < 0 {
-			if **(**int32)(__ccgo_up(libc.X__error(tls))) == int32(EINTR) {
-				got = int32(1)
-				continue
-			}
-			prior = 0
-			_storeLastErrno(tls, id, **(**int32)(__ccgo_up(libc.X__error(tls))))
-			break
-		} else {
-			if got > 0 {
-				cnt = cnt - got
-				offset = offset + int64(got)
-				prior = prior + got
-				pBuf = uintptr(got) + pBuf
-			}
-		}
-	}
-	return got + prior
-}
-
-// C documentation
-//
-//	/*
-//	** Attempt to seek the file-descriptor passed as the first argument to
-//	** absolute offset iOff, then attempt to write nBuf bytes of data from
-//	** pBuf to it. If an error occurs, return -1 and set *piErrno. Otherwise,
-//	** return the actual number of bytes written (which may be less than
-//	** nBuf).
-//	*/
-func _seekAndWriteFd(tls *libc.TLS, fd int32, iOff Ti64, pBuf uintptr, nBuf int32, piErrno uintptr) (r int32) {
-	var rc int32
-	_ = rc
-	rc = 0 /* Value returned by system call */
-	nBuf = nBuf & int32(0x1ffff)
-	for cond := true; cond; cond = rc < 0 && **(**int32)(__ccgo_up(libc.X__error(tls))) == int32(EINTR) {
-		rc = int32((*(*func(*libc.TLS, int32, uintptr, Tsize_t, Toff_t) Tssize_t)(unsafe.Pointer(&struct{ uintptr }{_aSyscall[int32(12)].FpCurrent})))(tls, fd, pBuf, libc.Uint64FromInt32(nBuf), iOff))
-	}
-	if rc < 0 {
-		**(**int32)(__ccgo_up(piErrno)) = **(**int32)(__ccgo_up(libc.X__error(tls)))
 	}
 	return rc
 }
@@ -96196,64 +92733,6 @@ func _unixAccess(tls *libc.TLS, NotUsed uintptr, zPath uintptr, flags int32, pRe
 // C documentation
 //
 //	/*
-//	** This routine checks if there is a RESERVED lock held on the specified
-//	** file by this or any other process. If such a lock is held, set *pResOut
-//	** to a non-zero value otherwise *pResOut is set to zero.  The return value
-//	** is set to SQLITE_OK unless an I/O error occurs during lock checking.
-//	*/
-func _unixCheckReservedLock(tls *libc.TLS, id uintptr, pResOut uintptr) (r int32) {
-	bp := tls.Alloc(48)
-	defer tls.Free(48)
-	var pFile uintptr
-	var rc, reserved int32
-	var _ /* lock at bp+0 */ Tflock
-	_, _, _ = pFile, rc, reserved
-	rc = SQLITE_OK
-	reserved = 0
-	pFile = id
-	Xsqlite3_mutex_enter(tls, (*TunixInodeInfo)(unsafe.Pointer((*TunixFile)(unsafe.Pointer(pFile)).FpInode)).FpLockMutex)
-	/* Check if a thread in this process holds such a lock */
-	if libc.Int32FromUint8((*TunixInodeInfo)(unsafe.Pointer((*TunixFile)(unsafe.Pointer(pFile)).FpInode)).FeFileLock) > int32(SHARED_LOCK) {
-		reserved = int32(1)
-	}
-	/* Otherwise see if some other process holds it.
-	 */
-	if !(reserved != 0) && !((*TunixInodeInfo)(unsafe.Pointer((*TunixFile)(unsafe.Pointer(pFile)).FpInode)).FbProcessLock != 0) {
-		(**(**Tflock)(__ccgo_up(bp))).Fl_whence = SEEK_SET
-		(**(**Tflock)(__ccgo_up(bp))).Fl_start = int64(_sqlite3PendingByte + libc.Int32FromInt32(1))
-		(**(**Tflock)(__ccgo_up(bp))).Fl_len = int64(1)
-		(**(**Tflock)(__ccgo_up(bp))).Fl_type = int16(F_WRLCK)
-		if (*(*func(*libc.TLS, int32, int32, uintptr) int32)(unsafe.Pointer(&struct{ uintptr }{_aSyscall[int32(7)].FpCurrent})))(tls, (*TunixFile)(unsafe.Pointer(pFile)).Fh, int32(F_GETLK), libc.VaList(bp+32, bp)) != 0 {
-			rc = libc.Int32FromInt32(SQLITE_IOERR) | libc.Int32FromInt32(14)<<libc.Int32FromInt32(8)
-			_storeLastErrno(tls, pFile, **(**int32)(__ccgo_up(libc.X__error(tls))))
-		} else {
-			if int32((**(**Tflock)(__ccgo_up(bp))).Fl_type) != int32(F_UNLCK) {
-				reserved = int32(1)
-			}
-		}
-	}
-	Xsqlite3_mutex_leave(tls, (*TunixInodeInfo)(unsafe.Pointer((*TunixFile)(unsafe.Pointer(pFile)).FpInode)).FpLockMutex)
-	**(**int32)(__ccgo_up(pResOut)) = reserved
-	return rc
-}
-
-/*
-** Set a posix-advisory-lock.
-**
-** There are two versions of this routine.  If compiled with
-** SQLITE_ENABLE_SETLK_TIMEOUT then the routine has an extra parameter
-** which is a pointer to a unixFile.  If the unixFile->iBusyTimeout
-** value is set, then it is the number of milliseconds to wait before
-** failing the lock.  The iBusyTimeout value is always reset back to
-** zero on each call.
-**
-** If SQLITE_ENABLE_SETLK_TIMEOUT is not defined, then do a non-blocking
-** attempt to set the lock.
- */
-
-// C documentation
-//
-//	/*
 //	** Delete the file at zPath. If the dirSync argument is true, fsync()
 //	** the directory after deleting the file.
 //	*/
@@ -96455,179 +92934,6 @@ func _unixFileSize(tls *libc.TLS, id uintptr, pSize uintptr) (r int32) {
 	}
 	return SQLITE_OK
 }
-
-// C documentation
-//
-//	/*
-//	** The xGetLastError() method is designed to return a better
-//	** low-level error message when operating-system problems come up
-//	** during SQLite operation.  Only the integer return code is currently
-//	** used.
-//	*/
-func _unixGetLastError(tls *libc.TLS, NotUsed uintptr, NotUsed2 int32, NotUsed3 uintptr) (r int32) {
-	_ = NotUsed
-	_ = NotUsed2
-	_ = NotUsed3
-	return **(**int32)(__ccgo_up(libc.X__error(tls)))
-}
-
-/*
-************************ End of sqlite3_vfs methods ***************************
-******************************************************************************/
-
-/******************************************************************************
-************************** Begin Proxy Locking ********************************
-**
-** Proxy locking is a "uber-locking-method" in this sense:  It uses the
-** other locking methods on secondary lock files.  Proxy locking is a
-** meta-layer over top of the primitive locking implemented above.  For
-** this reason, the division that implements of proxy locking is deferred
-** until late in the file (here) after all of the other I/O methods have
-** been defined - so that the primitive locking methods are available
-** as services to help with the implementation of proxy locking.
-**
-****
-**
-** The default locking schemes in SQLite use byte-range locks on the
-** database file to coordinate safe, concurrent access by multiple readers
-** and writers [http://sqlite.org/lockingv3.html].  The five file locking
-** states (UNLOCKED, PENDING, SHARED, RESERVED, EXCLUSIVE) are implemented
-** as POSIX read & write locks over fixed set of locations (via fsctl),
-** on AFP and SMB only exclusive byte-range locks are available via fsctl
-** with _IOWR('z', 23, struct ByteRangeLockPB2) to track the same 5 states.
-** To simulate a F_RDLCK on the shared range, on AFP a randomly selected
-** address in the shared range is taken for a SHARED lock, the entire
-** shared range is taken for an EXCLUSIVE lock):
-**
-**      PENDING_BYTE        0x40000000
-**      RESERVED_BYTE       0x40000001
-**      SHARED_RANGE        0x40000002 -> 0x40000200
-**
-** This works well on the local file system, but shows a nearly 100x
-** slowdown in read performance on AFP because the AFP client disables
-** the read cache when byte-range locks are present.  Enabling the read
-** cache exposes a cache coherency problem that is present on all OS X
-** supported network file systems.  NFS and AFP both observe the
-** close-to-open semantics for ensuring cache coherency
-** [http://nfs.sourceforge.net/#faq_a8], which does not effectively
-** address the requirements for concurrent database access by multiple
-** readers and writers
-** [http://www.nabble.com/SQLite-on-NFS-cache-coherency-td15655701.html].
-**
-** To address the performance and cache coherency issues, proxy file locking
-** changes the way database access is controlled by limiting access to a
-** single host at a time and moving file locks off of the database file
-** and onto a proxy file on the local file system.
-**
-**
-** Using proxy locks
-** -----------------
-**
-** C APIs
-**
-**  sqlite3_file_control(db, dbname, SQLITE_FCNTL_SET_LOCKPROXYFILE,
-**                       <proxy_path> | ":auto:");
-**  sqlite3_file_control(db, dbname, SQLITE_FCNTL_GET_LOCKPROXYFILE,
-**                       &<proxy_path>);
-**
-**
-** SQL pragmas
-**
-**  PRAGMA [database.]lock_proxy_file=<proxy_path> | :auto:
-**  PRAGMA [database.]lock_proxy_file
-**
-** Specifying ":auto:" means that if there is a conch file with a matching
-** host ID in it, the proxy path in the conch file will be used, otherwise
-** a proxy path based on the user's temp dir
-** (via confstr(_CS_DARWIN_USER_TEMP_DIR,...)) will be used and the
-** actual proxy file name is generated from the name and path of the
-** database file.  For example:
-**
-**       For database path "/Users/me/foo.db"
-**       The lock path will be "<tmpdir>/sqliteplocks/_Users_me_foo.db:auto:")
-**
-** Once a lock proxy is configured for a database connection, it can not
-** be removed, however it may be switched to a different proxy path via
-** the above APIs (assuming the conch file is not being held by another
-** connection or process).
-**
-**
-** How proxy locking works
-** -----------------------
-**
-** Proxy file locking relies primarily on two new supporting files:
-**
-**   *  conch file to limit access to the database file to a single host
-**      at a time
-**
-**   *  proxy file to act as a proxy for the advisory locks normally
-**      taken on the database
-**
-** The conch file - to use a proxy file, sqlite must first "hold the conch"
-** by taking an sqlite-style shared lock on the conch file, reading the
-** contents and comparing the host's unique host ID (see below) and lock
-** proxy path against the values stored in the conch.  The conch file is
-** stored in the same directory as the database file and the file name
-** is patterned after the database file name as ".<databasename>-conch".
-** If the conch file does not exist, or its contents do not match the
-** host ID and/or proxy path, then the lock is escalated to an exclusive
-** lock and the conch file contents is updated with the host ID and proxy
-** path and the lock is downgraded to a shared lock again.  If the conch
-** is held by another process (with a shared lock), the exclusive lock
-** will fail and SQLITE_BUSY is returned.
-**
-** The proxy file - a single-byte file used for all advisory file locks
-** normally taken on the database file.   This allows for safe sharing
-** of the database file for multiple readers and writers on the same
-** host (the conch ensures that they all use the same local lock file).
-**
-** Requesting the lock proxy does not immediately take the conch, it is
-** only taken when the first request to lock database file is made.
-** This matches the semantics of the traditional locking behavior, where
-** opening a connection to a database file does not take a lock on it.
-** The shared lock and an open file descriptor are maintained until
-** the connection to the database is closed.
-**
-** The proxy file and the lock file are never deleted so they only need
-** to be created the first time they are used.
-**
-** Configuration options
-** ---------------------
-**
-**  SQLITE_PREFER_PROXY_LOCKING
-**
-**       Database files accessed on non-local file systems are
-**       automatically configured for proxy locking, lock files are
-**       named automatically using the same logic as
-**       PRAGMA lock_proxy_file=":auto:"
-**
-**  SQLITE_PROXY_DEBUG
-**
-**       Enables the logging of error messages during host id file
-**       retrieval and creation
-**
-**  LOCKPROXYDIR
-**
-**       Overrides the default directory used for lock proxy files that
-**       are named automatically via the ":auto:" setting
-**
-**  SQLITE_DEFAULT_PROXYDIR_PERMISSIONS
-**
-**       Permissions to use when creating a directory for storing the
-**       lock proxy files, only used when LOCKPROXYDIR is not set.
-**
-**
-** As mentioned above, when compiled with SQLITE_PREFER_PROXY_LOCKING,
-** setting the environment variable SQLITE_FORCE_PROXY_LOCKING to 1 will
-** force proxy locking to be used for every database file opened, and 0
-** will force automatic proxy locking to be disabled for all database
-** files (explicitly calling the SQLITE_FCNTL_SET_LOCKPROXYFILE pragma or
-** sqlite_file_control API is not affected by SQLITE_FORCE_PROXY_LOCKING).
- */
-
-/*
-** Proxy locking is only available on MacOSX
- */
 
 // C documentation
 //
@@ -105183,8 +101489,6 @@ type accessx_descriptor = Taccessx_descriptor
 
 type afpLockingContext = TafpLockingContext
 
-const afpfsByteRangeLock2FSCTL = 3223353879
-
 type attrgroup_t = Tattrgroup_t
 
 type attribute_set = Tattribute_set
@@ -105262,8 +101566,6 @@ type auditpinfo_addr = Tauditpinfo_addr
 type auditpinfo_addr_t = Tauditpinfo_addr_t
 
 type auditpinfo_t = Tauditpinfo_t
-
-const bool1 = "_Bool"
 
 type boolean_t = Tboolean_t
 
@@ -105389,307 +101691,6 @@ type ifreq = Tifreq
 
 type ifstat = Tifstat
 
-func init() {
-	p := unsafe.Pointer(&_nfsIoMethods)
-	*(*uintptr)(unsafe.Add(p, 8)) = __ccgo_fp(_unixClose)
-	*(*uintptr)(unsafe.Add(p, 16)) = __ccgo_fp(_unixRead)
-	*(*uintptr)(unsafe.Add(p, 24)) = __ccgo_fp(_unixWrite)
-	*(*uintptr)(unsafe.Add(p, 32)) = __ccgo_fp(_unixTruncate)
-	*(*uintptr)(unsafe.Add(p, 40)) = __ccgo_fp(_unixSync)
-	*(*uintptr)(unsafe.Add(p, 48)) = __ccgo_fp(_unixFileSize)
-	*(*uintptr)(unsafe.Add(p, 56)) = __ccgo_fp(_unixLock)
-	*(*uintptr)(unsafe.Add(p, 64)) = __ccgo_fp(_nfsUnlock)
-	*(*uintptr)(unsafe.Add(p, 72)) = __ccgo_fp(_unixCheckReservedLock)
-	*(*uintptr)(unsafe.Add(p, 80)) = __ccgo_fp(_unixFileControl)
-	*(*uintptr)(unsafe.Add(p, 88)) = __ccgo_fp(_unixSectorSize)
-	*(*uintptr)(unsafe.Add(p, 96)) = __ccgo_fp(_unixDeviceCharacteristics)
-	*(*uintptr)(unsafe.Add(p, 112)) = __ccgo_fp(_unixShmLock)
-	*(*uintptr)(unsafe.Add(p, 120)) = __ccgo_fp(_unixShmBarrier)
-	*(*uintptr)(unsafe.Add(p, 128)) = __ccgo_fp(_unixShmUnmap)
-	*(*uintptr)(unsafe.Add(p, 136)) = __ccgo_fp(_unixFetch)
-	*(*uintptr)(unsafe.Add(p, 144)) = __ccgo_fp(_unixUnfetch)
-}
-
-func init() {
-	p := unsafe.Pointer(&_flockIoMethods)
-	*(*uintptr)(unsafe.Add(p, 8)) = __ccgo_fp(_flockClose)
-	*(*uintptr)(unsafe.Add(p, 16)) = __ccgo_fp(_unixRead)
-	*(*uintptr)(unsafe.Add(p, 24)) = __ccgo_fp(_unixWrite)
-	*(*uintptr)(unsafe.Add(p, 32)) = __ccgo_fp(_unixTruncate)
-	*(*uintptr)(unsafe.Add(p, 40)) = __ccgo_fp(_unixSync)
-	*(*uintptr)(unsafe.Add(p, 48)) = __ccgo_fp(_unixFileSize)
-	*(*uintptr)(unsafe.Add(p, 56)) = __ccgo_fp(_flockLock)
-	*(*uintptr)(unsafe.Add(p, 64)) = __ccgo_fp(_flockUnlock)
-	*(*uintptr)(unsafe.Add(p, 72)) = __ccgo_fp(_flockCheckReservedLock)
-	*(*uintptr)(unsafe.Add(p, 80)) = __ccgo_fp(_unixFileControl)
-	*(*uintptr)(unsafe.Add(p, 88)) = __ccgo_fp(_unixSectorSize)
-	*(*uintptr)(unsafe.Add(p, 96)) = __ccgo_fp(_unixDeviceCharacteristics)
-	*(*uintptr)(unsafe.Add(p, 112)) = __ccgo_fp(_unixShmLock)
-	*(*uintptr)(unsafe.Add(p, 120)) = __ccgo_fp(_unixShmBarrier)
-	*(*uintptr)(unsafe.Add(p, 128)) = __ccgo_fp(_unixShmUnmap)
-	*(*uintptr)(unsafe.Add(p, 136)) = __ccgo_fp(_unixFetch)
-	*(*uintptr)(unsafe.Add(p, 144)) = __ccgo_fp(_unixUnfetch)
-}
-
-func init() {
-	p := unsafe.Pointer(&_nfsIoFinder)
-	*(*uintptr)(unsafe.Add(p, 0)) = __ccgo_fp(_nfsIoFinderImpl)
-}
-
-func init() {
-	p := unsafe.Pointer(&_dotlockIoFinder)
-	*(*uintptr)(unsafe.Add(p, 0)) = __ccgo_fp(_dotlockIoFinderImpl)
-}
-
-func init() {
-	p := unsafe.Pointer(&_aSyscall)
-	*(*uintptr)(unsafe.Add(p, 8)) = __ccgo_fp(_posixOpen)
-	*(*uintptr)(unsafe.Add(p, 32)) = __ccgo_fp(libc.Xclose)
-	*(*uintptr)(unsafe.Add(p, 56)) = __ccgo_fp(libc.Xaccess)
-	*(*uintptr)(unsafe.Add(p, 80)) = __ccgo_fp(libc.Xgetcwd)
-	*(*uintptr)(unsafe.Add(p, 104)) = __ccgo_fp(libc.Xstat)
-	*(*uintptr)(unsafe.Add(p, 128)) = __ccgo_fp(libc.Xfstat)
-	*(*uintptr)(unsafe.Add(p, 152)) = __ccgo_fp(libc.Xftruncate)
-	*(*uintptr)(unsafe.Add(p, 176)) = __ccgo_fp(libc.Xfcntl)
-	*(*uintptr)(unsafe.Add(p, 200)) = __ccgo_fp(libc.Xread)
-	*(*uintptr)(unsafe.Add(p, 224)) = __ccgo_fp(libc.Xpread)
-	*(*uintptr)(unsafe.Add(p, 272)) = __ccgo_fp(libc.Xwrite)
-	*(*uintptr)(unsafe.Add(p, 296)) = __ccgo_fp(libc.Xpwrite)
-	*(*uintptr)(unsafe.Add(p, 344)) = __ccgo_fp(libc.Xfchmod)
-	*(*uintptr)(unsafe.Add(p, 392)) = __ccgo_fp(libc.Xunlink)
-	*(*uintptr)(unsafe.Add(p, 416)) = __ccgo_fp(_openDirectory)
-	*(*uintptr)(unsafe.Add(p, 440)) = __ccgo_fp(libc.Xmkdir)
-	*(*uintptr)(unsafe.Add(p, 464)) = __ccgo_fp(libc.Xrmdir)
-	*(*uintptr)(unsafe.Add(p, 488)) = __ccgo_fp(libc.Xfchown)
-	*(*uintptr)(unsafe.Add(p, 512)) = __ccgo_fp(libc.Xgeteuid)
-	*(*uintptr)(unsafe.Add(p, 536)) = __ccgo_fp(libc.Xmmap)
-	*(*uintptr)(unsafe.Add(p, 560)) = __ccgo_fp(libc.Xmunmap)
-	*(*uintptr)(unsafe.Add(p, 608)) = __ccgo_fp(_unixGetpagesize)
-	*(*uintptr)(unsafe.Add(p, 632)) = __ccgo_fp(libc.Xreadlink)
-	*(*uintptr)(unsafe.Add(p, 656)) = __ccgo_fp(libc.Xlstat)
-}
-
-/* End of the overrideable system calls */
-
-func init() {
-	p := unsafe.Pointer(&_flockIoFinder)
-	*(*uintptr)(unsafe.Add(p, 0)) = __ccgo_fp(_flockIoFinderImpl)
-}
-
-func init() {
-	p := unsafe.Pointer(&_proxyIoFinder)
-	*(*uintptr)(unsafe.Add(p, 0)) = __ccgo_fp(_proxyIoFinderImpl)
-}
-
-func init() {
-	p := unsafe.Pointer(&_aVfs)
-	*(*uintptr)(unsafe.Add(p, 32)) = uintptr(unsafe.Pointer(&_autolockIoFinder))
-	*(*uintptr)(unsafe.Add(p, 40)) = __ccgo_fp(_unixOpen)
-	*(*uintptr)(unsafe.Add(p, 48)) = __ccgo_fp(_unixDelete)
-	*(*uintptr)(unsafe.Add(p, 56)) = __ccgo_fp(_unixAccess)
-	*(*uintptr)(unsafe.Add(p, 64)) = __ccgo_fp(_unixFullPathname)
-	*(*uintptr)(unsafe.Add(p, 72)) = __ccgo_fp(_unixDlOpen)
-	*(*uintptr)(unsafe.Add(p, 80)) = __ccgo_fp(_unixDlError)
-	*(*uintptr)(unsafe.Add(p, 88)) = __ccgo_fp(_unixDlSym)
-	*(*uintptr)(unsafe.Add(p, 96)) = __ccgo_fp(_unixDlClose)
-	*(*uintptr)(unsafe.Add(p, 104)) = __ccgo_fp(_unixRandomness)
-	*(*uintptr)(unsafe.Add(p, 112)) = __ccgo_fp(_unixSleep)
-	*(*uintptr)(unsafe.Add(p, 120)) = __ccgo_fp(_unixCurrentTime)
-	*(*uintptr)(unsafe.Add(p, 128)) = __ccgo_fp(_unixGetLastError)
-	*(*uintptr)(unsafe.Add(p, 136)) = __ccgo_fp(_unixCurrentTimeInt64)
-	*(*uintptr)(unsafe.Add(p, 144)) = __ccgo_fp(_unixSetSystemCall)
-	*(*uintptr)(unsafe.Add(p, 152)) = __ccgo_fp(_unixGetSystemCall)
-	*(*uintptr)(unsafe.Add(p, 160)) = __ccgo_fp(_unixNextSystemCall)
-	*(*uintptr)(unsafe.Add(p, 200)) = uintptr(unsafe.Pointer(&_nolockIoFinder))
-	*(*uintptr)(unsafe.Add(p, 208)) = __ccgo_fp(_unixOpen)
-	*(*uintptr)(unsafe.Add(p, 216)) = __ccgo_fp(_unixDelete)
-	*(*uintptr)(unsafe.Add(p, 224)) = __ccgo_fp(_unixAccess)
-	*(*uintptr)(unsafe.Add(p, 232)) = __ccgo_fp(_unixFullPathname)
-	*(*uintptr)(unsafe.Add(p, 240)) = __ccgo_fp(_unixDlOpen)
-	*(*uintptr)(unsafe.Add(p, 248)) = __ccgo_fp(_unixDlError)
-	*(*uintptr)(unsafe.Add(p, 256)) = __ccgo_fp(_unixDlSym)
-	*(*uintptr)(unsafe.Add(p, 264)) = __ccgo_fp(_unixDlClose)
-	*(*uintptr)(unsafe.Add(p, 272)) = __ccgo_fp(_unixRandomness)
-	*(*uintptr)(unsafe.Add(p, 280)) = __ccgo_fp(_unixSleep)
-	*(*uintptr)(unsafe.Add(p, 288)) = __ccgo_fp(_unixCurrentTime)
-	*(*uintptr)(unsafe.Add(p, 296)) = __ccgo_fp(_unixGetLastError)
-	*(*uintptr)(unsafe.Add(p, 304)) = __ccgo_fp(_unixCurrentTimeInt64)
-	*(*uintptr)(unsafe.Add(p, 312)) = __ccgo_fp(_unixSetSystemCall)
-	*(*uintptr)(unsafe.Add(p, 320)) = __ccgo_fp(_unixGetSystemCall)
-	*(*uintptr)(unsafe.Add(p, 328)) = __ccgo_fp(_unixNextSystemCall)
-	*(*uintptr)(unsafe.Add(p, 368)) = uintptr(unsafe.Pointer(&_dotlockIoFinder))
-	*(*uintptr)(unsafe.Add(p, 376)) = __ccgo_fp(_unixOpen)
-	*(*uintptr)(unsafe.Add(p, 384)) = __ccgo_fp(_unixDelete)
-	*(*uintptr)(unsafe.Add(p, 392)) = __ccgo_fp(_unixAccess)
-	*(*uintptr)(unsafe.Add(p, 400)) = __ccgo_fp(_unixFullPathname)
-	*(*uintptr)(unsafe.Add(p, 408)) = __ccgo_fp(_unixDlOpen)
-	*(*uintptr)(unsafe.Add(p, 416)) = __ccgo_fp(_unixDlError)
-	*(*uintptr)(unsafe.Add(p, 424)) = __ccgo_fp(_unixDlSym)
-	*(*uintptr)(unsafe.Add(p, 432)) = __ccgo_fp(_unixDlClose)
-	*(*uintptr)(unsafe.Add(p, 440)) = __ccgo_fp(_unixRandomness)
-	*(*uintptr)(unsafe.Add(p, 448)) = __ccgo_fp(_unixSleep)
-	*(*uintptr)(unsafe.Add(p, 456)) = __ccgo_fp(_unixCurrentTime)
-	*(*uintptr)(unsafe.Add(p, 464)) = __ccgo_fp(_unixGetLastError)
-	*(*uintptr)(unsafe.Add(p, 472)) = __ccgo_fp(_unixCurrentTimeInt64)
-	*(*uintptr)(unsafe.Add(p, 480)) = __ccgo_fp(_unixSetSystemCall)
-	*(*uintptr)(unsafe.Add(p, 488)) = __ccgo_fp(_unixGetSystemCall)
-	*(*uintptr)(unsafe.Add(p, 496)) = __ccgo_fp(_unixNextSystemCall)
-	*(*uintptr)(unsafe.Add(p, 536)) = uintptr(unsafe.Pointer(&_posixIoFinder))
-	*(*uintptr)(unsafe.Add(p, 544)) = __ccgo_fp(_unixOpen)
-	*(*uintptr)(unsafe.Add(p, 552)) = __ccgo_fp(_unixDelete)
-	*(*uintptr)(unsafe.Add(p, 560)) = __ccgo_fp(_unixAccess)
-	*(*uintptr)(unsafe.Add(p, 568)) = __ccgo_fp(_unixFullPathname)
-	*(*uintptr)(unsafe.Add(p, 576)) = __ccgo_fp(_unixDlOpen)
-	*(*uintptr)(unsafe.Add(p, 584)) = __ccgo_fp(_unixDlError)
-	*(*uintptr)(unsafe.Add(p, 592)) = __ccgo_fp(_unixDlSym)
-	*(*uintptr)(unsafe.Add(p, 600)) = __ccgo_fp(_unixDlClose)
-	*(*uintptr)(unsafe.Add(p, 608)) = __ccgo_fp(_unixRandomness)
-	*(*uintptr)(unsafe.Add(p, 616)) = __ccgo_fp(_unixSleep)
-	*(*uintptr)(unsafe.Add(p, 624)) = __ccgo_fp(_unixCurrentTime)
-	*(*uintptr)(unsafe.Add(p, 632)) = __ccgo_fp(_unixGetLastError)
-	*(*uintptr)(unsafe.Add(p, 640)) = __ccgo_fp(_unixCurrentTimeInt64)
-	*(*uintptr)(unsafe.Add(p, 648)) = __ccgo_fp(_unixSetSystemCall)
-	*(*uintptr)(unsafe.Add(p, 656)) = __ccgo_fp(_unixGetSystemCall)
-	*(*uintptr)(unsafe.Add(p, 664)) = __ccgo_fp(_unixNextSystemCall)
-	*(*uintptr)(unsafe.Add(p, 704)) = uintptr(unsafe.Pointer(&_posixIoFinder))
-	*(*uintptr)(unsafe.Add(p, 712)) = __ccgo_fp(_unixOpen)
-	*(*uintptr)(unsafe.Add(p, 720)) = __ccgo_fp(_unixDelete)
-	*(*uintptr)(unsafe.Add(p, 728)) = __ccgo_fp(_unixAccess)
-	*(*uintptr)(unsafe.Add(p, 736)) = __ccgo_fp(_unixFullPathname)
-	*(*uintptr)(unsafe.Add(p, 744)) = __ccgo_fp(_unixDlOpen)
-	*(*uintptr)(unsafe.Add(p, 752)) = __ccgo_fp(_unixDlError)
-	*(*uintptr)(unsafe.Add(p, 760)) = __ccgo_fp(_unixDlSym)
-	*(*uintptr)(unsafe.Add(p, 768)) = __ccgo_fp(_unixDlClose)
-	*(*uintptr)(unsafe.Add(p, 776)) = __ccgo_fp(_unixRandomness)
-	*(*uintptr)(unsafe.Add(p, 784)) = __ccgo_fp(_unixSleep)
-	*(*uintptr)(unsafe.Add(p, 792)) = __ccgo_fp(_unixCurrentTime)
-	*(*uintptr)(unsafe.Add(p, 800)) = __ccgo_fp(_unixGetLastError)
-	*(*uintptr)(unsafe.Add(p, 808)) = __ccgo_fp(_unixCurrentTimeInt64)
-	*(*uintptr)(unsafe.Add(p, 816)) = __ccgo_fp(_unixSetSystemCall)
-	*(*uintptr)(unsafe.Add(p, 824)) = __ccgo_fp(_unixGetSystemCall)
-	*(*uintptr)(unsafe.Add(p, 832)) = __ccgo_fp(_unixNextSystemCall)
-	*(*uintptr)(unsafe.Add(p, 872)) = uintptr(unsafe.Pointer(&_flockIoFinder))
-	*(*uintptr)(unsafe.Add(p, 880)) = __ccgo_fp(_unixOpen)
-	*(*uintptr)(unsafe.Add(p, 888)) = __ccgo_fp(_unixDelete)
-	*(*uintptr)(unsafe.Add(p, 896)) = __ccgo_fp(_unixAccess)
-	*(*uintptr)(unsafe.Add(p, 904)) = __ccgo_fp(_unixFullPathname)
-	*(*uintptr)(unsafe.Add(p, 912)) = __ccgo_fp(_unixDlOpen)
-	*(*uintptr)(unsafe.Add(p, 920)) = __ccgo_fp(_unixDlError)
-	*(*uintptr)(unsafe.Add(p, 928)) = __ccgo_fp(_unixDlSym)
-	*(*uintptr)(unsafe.Add(p, 936)) = __ccgo_fp(_unixDlClose)
-	*(*uintptr)(unsafe.Add(p, 944)) = __ccgo_fp(_unixRandomness)
-	*(*uintptr)(unsafe.Add(p, 952)) = __ccgo_fp(_unixSleep)
-	*(*uintptr)(unsafe.Add(p, 960)) = __ccgo_fp(_unixCurrentTime)
-	*(*uintptr)(unsafe.Add(p, 968)) = __ccgo_fp(_unixGetLastError)
-	*(*uintptr)(unsafe.Add(p, 976)) = __ccgo_fp(_unixCurrentTimeInt64)
-	*(*uintptr)(unsafe.Add(p, 984)) = __ccgo_fp(_unixSetSystemCall)
-	*(*uintptr)(unsafe.Add(p, 992)) = __ccgo_fp(_unixGetSystemCall)
-	*(*uintptr)(unsafe.Add(p, 1000)) = __ccgo_fp(_unixNextSystemCall)
-	*(*uintptr)(unsafe.Add(p, 1040)) = uintptr(unsafe.Pointer(&_afpIoFinder))
-	*(*uintptr)(unsafe.Add(p, 1048)) = __ccgo_fp(_unixOpen)
-	*(*uintptr)(unsafe.Add(p, 1056)) = __ccgo_fp(_unixDelete)
-	*(*uintptr)(unsafe.Add(p, 1064)) = __ccgo_fp(_unixAccess)
-	*(*uintptr)(unsafe.Add(p, 1072)) = __ccgo_fp(_unixFullPathname)
-	*(*uintptr)(unsafe.Add(p, 1080)) = __ccgo_fp(_unixDlOpen)
-	*(*uintptr)(unsafe.Add(p, 1088)) = __ccgo_fp(_unixDlError)
-	*(*uintptr)(unsafe.Add(p, 1096)) = __ccgo_fp(_unixDlSym)
-	*(*uintptr)(unsafe.Add(p, 1104)) = __ccgo_fp(_unixDlClose)
-	*(*uintptr)(unsafe.Add(p, 1112)) = __ccgo_fp(_unixRandomness)
-	*(*uintptr)(unsafe.Add(p, 1120)) = __ccgo_fp(_unixSleep)
-	*(*uintptr)(unsafe.Add(p, 1128)) = __ccgo_fp(_unixCurrentTime)
-	*(*uintptr)(unsafe.Add(p, 1136)) = __ccgo_fp(_unixGetLastError)
-	*(*uintptr)(unsafe.Add(p, 1144)) = __ccgo_fp(_unixCurrentTimeInt64)
-	*(*uintptr)(unsafe.Add(p, 1152)) = __ccgo_fp(_unixSetSystemCall)
-	*(*uintptr)(unsafe.Add(p, 1160)) = __ccgo_fp(_unixGetSystemCall)
-	*(*uintptr)(unsafe.Add(p, 1168)) = __ccgo_fp(_unixNextSystemCall)
-	*(*uintptr)(unsafe.Add(p, 1208)) = uintptr(unsafe.Pointer(&_nfsIoFinder))
-	*(*uintptr)(unsafe.Add(p, 1216)) = __ccgo_fp(_unixOpen)
-	*(*uintptr)(unsafe.Add(p, 1224)) = __ccgo_fp(_unixDelete)
-	*(*uintptr)(unsafe.Add(p, 1232)) = __ccgo_fp(_unixAccess)
-	*(*uintptr)(unsafe.Add(p, 1240)) = __ccgo_fp(_unixFullPathname)
-	*(*uintptr)(unsafe.Add(p, 1248)) = __ccgo_fp(_unixDlOpen)
-	*(*uintptr)(unsafe.Add(p, 1256)) = __ccgo_fp(_unixDlError)
-	*(*uintptr)(unsafe.Add(p, 1264)) = __ccgo_fp(_unixDlSym)
-	*(*uintptr)(unsafe.Add(p, 1272)) = __ccgo_fp(_unixDlClose)
-	*(*uintptr)(unsafe.Add(p, 1280)) = __ccgo_fp(_unixRandomness)
-	*(*uintptr)(unsafe.Add(p, 1288)) = __ccgo_fp(_unixSleep)
-	*(*uintptr)(unsafe.Add(p, 1296)) = __ccgo_fp(_unixCurrentTime)
-	*(*uintptr)(unsafe.Add(p, 1304)) = __ccgo_fp(_unixGetLastError)
-	*(*uintptr)(unsafe.Add(p, 1312)) = __ccgo_fp(_unixCurrentTimeInt64)
-	*(*uintptr)(unsafe.Add(p, 1320)) = __ccgo_fp(_unixSetSystemCall)
-	*(*uintptr)(unsafe.Add(p, 1328)) = __ccgo_fp(_unixGetSystemCall)
-	*(*uintptr)(unsafe.Add(p, 1336)) = __ccgo_fp(_unixNextSystemCall)
-	*(*uintptr)(unsafe.Add(p, 1376)) = uintptr(unsafe.Pointer(&_proxyIoFinder))
-	*(*uintptr)(unsafe.Add(p, 1384)) = __ccgo_fp(_unixOpen)
-	*(*uintptr)(unsafe.Add(p, 1392)) = __ccgo_fp(_unixDelete)
-	*(*uintptr)(unsafe.Add(p, 1400)) = __ccgo_fp(_unixAccess)
-	*(*uintptr)(unsafe.Add(p, 1408)) = __ccgo_fp(_unixFullPathname)
-	*(*uintptr)(unsafe.Add(p, 1416)) = __ccgo_fp(_unixDlOpen)
-	*(*uintptr)(unsafe.Add(p, 1424)) = __ccgo_fp(_unixDlError)
-	*(*uintptr)(unsafe.Add(p, 1432)) = __ccgo_fp(_unixDlSym)
-	*(*uintptr)(unsafe.Add(p, 1440)) = __ccgo_fp(_unixDlClose)
-	*(*uintptr)(unsafe.Add(p, 1448)) = __ccgo_fp(_unixRandomness)
-	*(*uintptr)(unsafe.Add(p, 1456)) = __ccgo_fp(_unixSleep)
-	*(*uintptr)(unsafe.Add(p, 1464)) = __ccgo_fp(_unixCurrentTime)
-	*(*uintptr)(unsafe.Add(p, 1472)) = __ccgo_fp(_unixGetLastError)
-	*(*uintptr)(unsafe.Add(p, 1480)) = __ccgo_fp(_unixCurrentTimeInt64)
-	*(*uintptr)(unsafe.Add(p, 1488)) = __ccgo_fp(_unixSetSystemCall)
-	*(*uintptr)(unsafe.Add(p, 1496)) = __ccgo_fp(_unixGetSystemCall)
-	*(*uintptr)(unsafe.Add(p, 1504)) = __ccgo_fp(_unixNextSystemCall)
-}
-
-func init() {
-	p := unsafe.Pointer(&_afpIoFinder)
-	*(*uintptr)(unsafe.Add(p, 0)) = __ccgo_fp(_afpIoFinderImpl)
-}
-
-func init() {
-	p := unsafe.Pointer(&_proxyIoMethods)
-	*(*uintptr)(unsafe.Add(p, 8)) = __ccgo_fp(_proxyClose)
-	*(*uintptr)(unsafe.Add(p, 16)) = __ccgo_fp(_unixRead)
-	*(*uintptr)(unsafe.Add(p, 24)) = __ccgo_fp(_unixWrite)
-	*(*uintptr)(unsafe.Add(p, 32)) = __ccgo_fp(_unixTruncate)
-	*(*uintptr)(unsafe.Add(p, 40)) = __ccgo_fp(_unixSync)
-	*(*uintptr)(unsafe.Add(p, 48)) = __ccgo_fp(_unixFileSize)
-	*(*uintptr)(unsafe.Add(p, 56)) = __ccgo_fp(_proxyLock)
-	*(*uintptr)(unsafe.Add(p, 64)) = __ccgo_fp(_proxyUnlock)
-	*(*uintptr)(unsafe.Add(p, 72)) = __ccgo_fp(_proxyCheckReservedLock)
-	*(*uintptr)(unsafe.Add(p, 80)) = __ccgo_fp(_unixFileControl)
-	*(*uintptr)(unsafe.Add(p, 88)) = __ccgo_fp(_unixSectorSize)
-	*(*uintptr)(unsafe.Add(p, 96)) = __ccgo_fp(_unixDeviceCharacteristics)
-	*(*uintptr)(unsafe.Add(p, 112)) = __ccgo_fp(_unixShmLock)
-	*(*uintptr)(unsafe.Add(p, 120)) = __ccgo_fp(_unixShmBarrier)
-	*(*uintptr)(unsafe.Add(p, 128)) = __ccgo_fp(_unixShmUnmap)
-	*(*uintptr)(unsafe.Add(p, 136)) = __ccgo_fp(_unixFetch)
-	*(*uintptr)(unsafe.Add(p, 144)) = __ccgo_fp(_unixUnfetch)
-}
-
-func init() {
-	p := unsafe.Pointer(&_afpIoMethods)
-	*(*uintptr)(unsafe.Add(p, 8)) = __ccgo_fp(_afpClose)
-	*(*uintptr)(unsafe.Add(p, 16)) = __ccgo_fp(_unixRead)
-	*(*uintptr)(unsafe.Add(p, 24)) = __ccgo_fp(_unixWrite)
-	*(*uintptr)(unsafe.Add(p, 32)) = __ccgo_fp(_unixTruncate)
-	*(*uintptr)(unsafe.Add(p, 40)) = __ccgo_fp(_unixSync)
-	*(*uintptr)(unsafe.Add(p, 48)) = __ccgo_fp(_unixFileSize)
-	*(*uintptr)(unsafe.Add(p, 56)) = __ccgo_fp(_afpLock)
-	*(*uintptr)(unsafe.Add(p, 64)) = __ccgo_fp(_afpUnlock)
-	*(*uintptr)(unsafe.Add(p, 72)) = __ccgo_fp(_afpCheckReservedLock)
-	*(*uintptr)(unsafe.Add(p, 80)) = __ccgo_fp(_unixFileControl)
-	*(*uintptr)(unsafe.Add(p, 88)) = __ccgo_fp(_unixSectorSize)
-	*(*uintptr)(unsafe.Add(p, 96)) = __ccgo_fp(_unixDeviceCharacteristics)
-	*(*uintptr)(unsafe.Add(p, 112)) = __ccgo_fp(_unixShmLock)
-	*(*uintptr)(unsafe.Add(p, 120)) = __ccgo_fp(_unixShmBarrier)
-	*(*uintptr)(unsafe.Add(p, 128)) = __ccgo_fp(_unixShmUnmap)
-	*(*uintptr)(unsafe.Add(p, 136)) = __ccgo_fp(_unixFetch)
-	*(*uintptr)(unsafe.Add(p, 144)) = __ccgo_fp(_unixUnfetch)
-}
-
-func init() {
-	p := unsafe.Pointer(&_autolockIoFinder)
-	*(*uintptr)(unsafe.Add(p, 0)) = __ccgo_fp(_autolockIoFinderImpl)
-}
-
 type ino64_t = Tino64_t
 
 type integer_t = Tinteger_t
@@ -105802,25 +101803,11 @@ type proc_rlimit_control_wakeupmon = Tproc_rlimit_control_wakeupmon
 
 type proxyLockingContext = TproxyLockingContext
 
-const pseudo_AF_HDRCMPLT = 35
-
-const pseudo_AF_KEY = 29
-
-const pseudo_AF_PIP = 25
-
-const pseudo_AF_RTIP = 22
-
-const pseudo_AF_XTP = 19
-
 type radvisory = Tradvisory
 
 type rlimit = Trlimit
 
 type rslvmulti_req = Trslvmulti_req
-
-const ru_first = "ru_ixrss"
-
-const ru_last = "ru_nivcsw"
 
 type rusage = Trusage
 
@@ -105884,151 +101871,11 @@ type socklen_t = Tsocklen_t
 
 type statfs = Tstatfs
 
-const sv_onstack = "sv_flags"
-
 type syscall_arg_t = Tsyscall_arg_t
-
-type t__darwin_blkcnt_t = int64
-
-type t__darwin_blksize_t = int32
-
-type t__darwin_clock_t = uint64
-
-type t__darwin_ct_rune_t = int32
-
-type t__darwin_dev_t = int32
-
-type t__darwin_fsblkcnt_t = uint32
-
-type t__darwin_fsfilcnt_t = uint32
-
-type t__darwin_gid_t = uint32
-
-type t__darwin_id_t = uint32
-
-type t__darwin_ino64_t = uint64
 
 type t__darwin_ino_t = uint64
 
-type t__darwin_intptr_t = int64
-
-type t__darwin_mach_port_name_t = uint32
-
-type t__darwin_mach_port_t = uint32
-
-type t__darwin_mbstate_t = struct {
-	F_mbstateL  [0]int64
-	F__mbstate8 [128]int8
-}
-
-type t__darwin_mode_t = uint16
-
-type t__darwin_natural_t = uint32
-
-type t__darwin_nl_item = int32
-
-type t__darwin_off_t = int64
-
-type t__darwin_pid_t = int32
-
-type t__darwin_pthread_attr_t = struct {
-	F__sig    int64
-	F__opaque [56]int8
-}
-
-type t__darwin_pthread_cond_t = struct {
-	F__sig    int64
-	F__opaque [40]int8
-}
-
-type t__darwin_pthread_condattr_t = struct {
-	F__sig    int64
-	F__opaque [8]int8
-}
-
-type t__darwin_pthread_handler_rec = struct {
-	F__routine uintptr
-	F__arg     uintptr
-	F__next    uintptr
-}
-
-type t__darwin_pthread_key_t = uint64
-
-type t__darwin_pthread_mutex_t = struct {
-	F__sig    int64
-	F__opaque [56]int8
-}
-
-type t__darwin_pthread_mutexattr_t = struct {
-	F__sig    int64
-	F__opaque [8]int8
-}
-
-type t__darwin_pthread_once_t = struct {
-	F__sig    int64
-	F__opaque [8]int8
-}
-
-type t__darwin_pthread_rwlock_t = struct {
-	F__sig    int64
-	F__opaque [192]int8
-}
-
-type t__darwin_pthread_rwlockattr_t = struct {
-	F__sig    int64
-	F__opaque [16]int8
-}
-
-type t__darwin_pthread_t = uintptr
-
-type t__darwin_ptrdiff_t = int64
-
-type t__darwin_rune_t = int32
-
-type t__darwin_sigaltstack = struct {
-	Fss_sp    uintptr
-	Fss_size  t__darwin_size_t
-	Fss_flags int32
-}
-
-type t__darwin_sigset_t = uint32
-
-type t__darwin_size_t = uint64
-
-type t__darwin_socklen_t = uint32
-
-type t__darwin_ssize_t = int64
-
-type t__darwin_suseconds_t = int32
-
-type t__darwin_time_t = int64
-
-type t__darwin_ucontext = struct {
-	Fuc_onstack  int32
-	Fuc_sigmask  t__darwin_sigset_t
-	Fuc_stack    t__darwin_sigaltstack
-	Fuc_link     uintptr
-	Fuc_mcsize   t__darwin_size_t
-	Fuc_mcontext uintptr
-}
-
-type t__darwin_uid_t = uint32
-
-type t__darwin_useconds_t = uint32
-
 type t__darwin_uuid_string_t = [37]int8
-
-type t__darwin_uuid_t = [16]uint8
-
-type t__darwin_va_list = uintptr
-
-type t__darwin_wchar_t = int32
-
-type t__darwin_wctrans_t = int32
-
-type t__darwin_wctype_t = uint32
-
-type t__darwin_wint_t = int32
 
 type t__double2 = struct {
 	F__sinval float64
@@ -106039,25 +101886,6 @@ type t__float2 = struct {
 	F__sinval float32
 	F__cosval float32
 }
-
-type t__mbstate_t = struct {
-	F_mbstateL  [0]int64
-	F__mbstate8 [128]int8
-}
-
-type t__sigaction = struct {
-	F__sigaction_u t__sigaction_u
-	Fsa_tramp      uintptr
-	Fsa_mask       Tsigset_t
-	Fsa_flags      int32
-}
-
-type t__sigaction_u = struct {
-	F__sa_sigaction [0]uintptr
-	F__sa_handler   uintptr
-}
-
-type t__siginfo = Tsiginfo_t
 
 type t__sockaddr_header = struct {
 	Fsa_len    t__uint8_t

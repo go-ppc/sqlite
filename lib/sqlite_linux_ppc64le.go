@@ -95,10 +95,6 @@ type Tstat = struct {
 	F__unused   [3]uint64
 }
 
-const _ARCH_PPC = 1
-
-const _ARCH_PPC64 = 1
-
 const _ARCH_PPCGR = 1
 
 const _ARCH_PPCSQ = 1
@@ -124,8 +120,6 @@ const _IOC_NONE = 1
 const _IOC_WRITE = 4
 
 const _LITTLE_ENDIAN = 1
-
-const __ALTIVEC__ = 1
 
 const __APPLE_ALTIVEC__ = 1
 
@@ -162,8 +156,6 @@ const __SIZEOF_IEEE128__ = 16
 const __STRUCT_PARM_ALIGN__ = 16
 
 const __VEC_ELEMENT_REG_ORDER__ = 1234
-
-const __VEC__ = 10206
 
 const __VSX__ = 1
 

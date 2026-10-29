@@ -16,8 +16,6 @@ const TARGET_ABI_USES_IOS_VALUES = 1
 
 const TARGET_CPU_ARM64 = 1
 
-const TARGET_CPU_X86_64 = 0
-
 const TARGET_OS_ARROW = 1
 
 type Tboolean_t = int32

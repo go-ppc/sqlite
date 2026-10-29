@@ -12,8 +12,6 @@ import (
 
 const CLOCK_BOOTTIME = 5
 
-const TIOCTIMESTAMP = 1074295897
-
 type T_RuneLocale = struct {
 	F__magic        [8]int8
 	F__encoding     [32]int8
@@ -37273,37 +37271,6 @@ shmpage_out:
 	Xsqlite3_mutex_leave(tls, (*TunixShmNode)(unsafe.Pointer(pShmNode)).FpShmMutex)
 	return rc
 }
-
-// C documentation
-//
-//	/*
-//	** Sleep for a little while.  Return the amount of time slept.
-//	** The argument is the number of microseconds we want to sleep.
-//	** The return value is the number of microseconds of sleep actually
-//	** requested from the underlying operating system, a number which
-//	** might be greater than or equal to the argument, but not less
-//	** than the argument.
-//	*/
-func _unixSleep(tls *libc.TLS, NotUsed uintptr, microseconds int32) (r int32) {
-	bp := tls.Alloc(16)
-	defer tls.Free(16)
-	var _ /* sp at bp+0 */ Ttimespec
-	(**(**Ttimespec)(__ccgo_up(bp))).Ftv_sec = microseconds / int32(1000000)
-	(**(**Ttimespec)(__ccgo_up(bp))).Ftv_nsec = microseconds % int32(1000000) * int32(1000)
-	/* Almost all modern unix systems support nanosleep().  But if you are
-	 ** compiling for one of the rare exceptions, you can use
-	 ** -DHAVE_NANOSLEEP=0 (perhaps in conjunction with -DHAVE_USLEEP if
-	 ** usleep() is available) in order to bypass the use of nanosleep() */
-	libc.Xnanosleep(tls, bp, libc.UintptrFromInt32(0))
-	_ = NotUsed
-	return microseconds
-}
-
-/*
-** The following variable, if set to a non-zero value, is interpreted as
-** the number of seconds since 1970 and is used to set the result of
-** sqlite3OsCurrentTime() during testing.
- */
 
 // C documentation
 //
