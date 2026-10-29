@@ -69,6 +69,12 @@ editor:
 		--prefix-external X
 	sed -i 's/\<sqlite3_snprintf\>/sqlite3.Xsqlite3_snprintf/' $(FN)
 	sed -i 's/\<sqlite3_malloc\>/sqlite3.Xsqlite3_malloc/' $(FN)
+	# Adélie musl assert.h takes int, but non-musl libc.go takes uint32.
+	# BSD callers require uint32, so a shared signature change is unsafe.
+	# Bridge only positive line literals until goppc-mfpo7.10.2.4 splits libc's ABI.
+	if [ "$$(go env GOOS)/$$(go env GOARCH)" = linux/ppc ]; then \
+		sed -i '/libc\.X__assert_fail(tls,/s/, int32(\([0-9][0-9]*\)),/, uint32(\1),/' $(FN); \
+	fi
 	go build -v
 	gofmt -l -s -w *.go
 	go test -o /dev/null -c
