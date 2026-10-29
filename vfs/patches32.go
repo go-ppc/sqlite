@@ -2,8 +2,10 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-//go:build 386 || arm
-// +build 386 arm
+//go:build 386 || arm || ppc
+// +build 386 arm ppc
+
+// ppc32 is ILP32: pointer slots and size_t lengths are 4 bytes.
 
 package vfs
 
