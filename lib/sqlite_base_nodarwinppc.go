@@ -10,6 +10,12 @@
 
 package sqlite3
 
+import (
+	"unsafe"
+
+	"modernc.org/libc"
+)
+
 const SQLITE_ATOMIC_INTRINSICS = 1
 
 // C documentation
